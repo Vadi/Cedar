@@ -3,91 +3,95 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Cedar.Balancer;
+using System.Data;
+using System.Data.SqlClient;
+using Dapper;
 namespace Cedar
 {
     public class CedarSession: ICedarSession
     {
-        //BalancerFactory factory = null;
-
-        //public Cedar()
-        //{
-        //    factory = new BalancerFactory();
-        //}
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="appName"></param>
-        ///// <returns></returns>
-        //public long SetupSchema(string appName)
-        //{
-        //    // get conn string, shard id from cedar db
-        //   long shardId = 0;
-           
-        //    IBalancer balancer = factory.GetBalancer();
-           
-        //    shardId =  balancer.Run(appName);
-
-        //   Key key =  Utility.GenerateKey(shardId);
-           
-        //    return key.GetKey();
-            
-        //}
-        
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="key"></param>
-        ///// <param name="sql"></param>
-        ///// <param name="param"></param>
-        ///// <returns></returns>
-        //public int Execute(long key, string sql, object param)
-        //{
-         
-        //    long shardId = Utility.DecomposeKey(key);
-        //    // DB calls
-         
-        //}
-
+        private SqlConnection _sqlConnection = null;
         private long _uuid;
-
+        String _connectionString = String.Empty;
+        private int _commandTimeout = 30;
+        public int CommandTimeout { get { return _commandTimeout; } set { _commandTimeout = value; } }
+        private IDbTransaction _transaction=null ;
         public CedarSession(long uuid)
         {
             _uuid = uuid;
+            setConnectionString();
+            GetSqlOpenConnection();
         }
+        /// <summary>
+        /// Dispose the object
+        /// </summary>
         public void Close()
         {
-            throw new NotImplementedException();
+           Dispose();
         }
-
+        private void setConnectionString()
+        {
+            
+        }
         public AppContext GetAppContext()
         {
             throw new NotImplementedException();
         }
-
-        public void Insert(string sql)
+        /// <summary>
+        /// Execute the query 
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="param"></param>
+        /// <param name="commandType"></param>
+        /// <returns>>Number of rows affected</returns>
+        public int Insert(string sql, dynamic param = null, CommandType? commandType = null)
         {
-            throw new NotImplementedException();
+          return SqlMapper.Execute(_sqlConnection,sql,param ,_transaction ,_commandTimeout ,commandType);
         }
 
-        public void Update(string sql)
+        public void Update(string sql, dynamic param = null,  CommandType? commandType = null)
         {
-            throw new NotImplementedException();
+            SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, commandType);
         }
 
-        public void Delete(string sql)
+        public void Delete(string sql, dynamic param = null, CommandType? commandType = null)
         {
-            throw new NotImplementedException();
+            SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, commandType);
         }
 
-        public void Select(string sql)
+        public IEnumerable<dynamic> Select(string sql, dynamic param = null,  CommandType? commandType = null)
         {
-            throw new NotImplementedException();
+            return SqlMapper.Query<dynamic>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, commandType);
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            //dispose connection
+            if(_sqlConnection !=null )
+            {
+                _transaction = null;
+                _sqlConnection.Close();
+                _sqlConnection.Dispose();
+                _sqlConnection =null ;
+            }
+           
         }
+
+
+        private void GetSqlOpenConnection()
+        {
+            if(_sqlConnection ==null && !String.IsNullOrEmpty(_connectionString))
+            {
+                _sqlConnection = new System.Data.SqlClient.SqlConnection
+                {
+                    ConnectionString = _connectionString,
+
+                };
+                _sqlConnection.Open();
+            }
+
+        }
+     
     }
 
     
