@@ -1,0 +1,13 @@
+C:\Projects\Cedar\CedarTest\bin\Debug\CedarTest.dll
+C:\Projects\Cedar\CedarTest\bin\Debug\CedarTest.pdb
+C:\Projects\Cedar\CedarTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Cedar\CedarTest\obj\Debug\CedarTest.dll
+C:\Projects\Cedar\CedarTest\obj\Debug\CedarTest.pdb
+D:\Projects\CedarTest\bin\Debug\CedarTest.dll
+D:\Projects\CedarTest\bin\Debug\CedarTest.pdb
+D:\Projects\CedarTest\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\CedarTest\obj\Debug\CedarTest.dll
+D:\Projects\CedarTest\obj\Debug\CedarTest.pdb
+D:\Projects\CedarTest\bin\Debug\Data\CedarData.sdf
+D:\Projects\CedarTest\bin\Debug\Cedar.dll
+D:\Projects\CedarTest\bin\Debug\Cedar.pdb
