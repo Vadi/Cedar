@@ -7,9 +7,10 @@ namespace Cedar.DataManager
 {
     public interface IDataReader
     {
-        // read from xml
-
-        // read from sql
+        List<Shard> GetAllShardByAppname(string appName);
+        Shard GetShardById(long shardId);
+        List<Shard> GetAllShard();            
+            
     }
   
 }
