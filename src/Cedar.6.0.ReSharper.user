@@ -14,42 +14,42 @@
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:ICedar.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:ICedarSession.cs" caret="252" fromTop="10" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Shard.cs" caret="280" fromTop="18" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:IDataReader.cs" caret="242" fromTop="10" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/d:Factory/f:IDataFactory.cs" caret="210" fromTop="14" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:SqlDataReader.cs" caret="158" fromTop="7" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="242" fromTop="4" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:IDataReader.cs" caret="173" fromTop="9" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="1010" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="28" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="2" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="35" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="2" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="35" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IDbQueryBehaviour.cs" caret="511" fromTop="14" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="25" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="27" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="32" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="37" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="31" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="7" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="19" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="20" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="11" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="25" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="19" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="20" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="18" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="23" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3215" fromTop="38" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="25" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="27" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="32" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="37" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="7" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="25" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="18" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3674" fromTop="23" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3219" fromTop="38" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="227" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="2668" fromTop="34" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="2672" fromTop="34" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="906" fromTop="9" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3105" fromTop="31" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3228" fromTop="37" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="2454" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3109" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3232" fromTop="37" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="2458" fromTop="11" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="426" fromTop="15" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3639" fromTop="32" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:IDataReader.cs" caret="296" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3643" fromTop="32" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:SqlDataReader.cs" caret="128" fromTop="7" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="1119" fromTop="29" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:IDataReader.cs" caret="190" fromTop="10" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:IDataReader.cs" caret="173" fromTop="9" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="1010" fromTop="25" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

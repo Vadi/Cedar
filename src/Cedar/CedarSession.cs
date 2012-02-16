@@ -32,8 +32,7 @@ namespace Cedar
         }
         private void setConnectionString()
         {
-           // var shard = new Cedar.DataManager.SqlDataReader().GetShardById(_uuid);
-            //_connectionString = shard.;
+            _connectionString = String.Empty;
         }
         public AppContext GetAppContext()
         {
