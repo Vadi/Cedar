@@ -20,7 +20,7 @@ namespace CedarTest
         {
             // Generate a dummy 64 bit key with shard id, timestamp, 
 
-
+            return 0;
         }
     }
 }

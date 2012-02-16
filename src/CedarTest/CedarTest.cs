@@ -49,11 +49,7 @@ namespace CedarTest
         public int MaxWorkerId {get; set; }
 
 
-        public void Init(datacenterid, workerId)
-        {
-
-
-        }
+     
 
         public void Validate()
         {

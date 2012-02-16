@@ -15,7 +15,7 @@ namespace CedarTest
 
             Assert.IsTrue(session0 != null, "Session should be null");
 
-            var session1 = ctx.GetSession(MeaningfulKey());
+           // var session1 = ctx.GetSession(MeaningfulKey());
 
         }
 

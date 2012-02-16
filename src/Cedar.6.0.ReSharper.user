@@ -1,9 +1,56 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1388" fromTop="15" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1323" fromTop="14" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Utility.cs" caret="47" fromTop="1" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContextFactory.cs" caret="0" fromTop="0" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:WithUtilitySupport.cs" caret="496" fromTop="25" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Key.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IDbQueryBehaviour.cs" caret="556" fromTop="17" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.cs" caret="0" fromTop="0" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="493" fromTop="17" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:SqlDapper.cs" caret="18748" fromTop="2" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="781" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:ICedar.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:ICedarSession.cs" caret="252" fromTop="10" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Shard.cs" caret="280" fromTop="18" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:IDataReader.cs" caret="242" fromTop="10" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/d:Factory/f:IDataFactory.cs" caret="210" fromTop="14" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:SqlDataReader.cs" caret="158" fromTop="7" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="242" fromTop="4" />
     </RecentFiles>
-    <RecentEdits />
+    <RecentEdits>
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="2" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="35" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IDbQueryBehaviour.cs" caret="511" fromTop="14" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="25" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="27" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="32" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="37" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="7" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="25" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="18" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3670" fromTop="23" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3215" fromTop="38" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="227" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="2668" fromTop="34" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="906" fromTop="9" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3105" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3228" fromTop="37" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="2454" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="426" fromTop="15" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="3639" fromTop="32" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:IDataReader.cs" caret="296" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:DataManager/f:SqlDataReader.cs" caret="128" fromTop="7" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="1119" fromTop="29" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -23,4 +70,79 @@
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="return" priority="191" />
+      <Item value="internal" priority="31" />
+      <Item value="static" priority="31" />
+      <Item value="string" priority="63" />
+      <Item value="using" priority="154" />
+      <Item value="System" priority="123" />
+      <Item value="Data" priority="107" />
+      <Item value="Common" priority="53" />
+      <Item value="OleDb" priority="26" />
+      <Item value="Odbc" priority="26" />
+      <Item value="connection" priority="128" />
+      <Item value="new" priority="63" />
+      <Item value="SqlConnection" priority="28" />
+      <Item value="connectionString" priority="95" />
+      <Item value="OleDbConnection`0" priority="31" />
+      <Item value="private" priority="255" />
+      <Item value="dynamic" priority="63" />
+      <Item value="null" priority="255" />
+      <Item value="Sql" priority="26" />
+      <Item value="SqlClient" priority="53" />
+      <Item value="SqlTypes" priority="26" />
+      <Item value="CedarSession`0" priority="63" />
+      <Item value="cedarSession" priority="32" />
+      <Item value="if" priority="63" />
+      <Item value="_sqlConnection" priority="255" />
+      <Item value="void" priority="63" />
+      <Item value="Type`0" priority="63" />
+      <Item value="T`0" priority="31" />
+      <Item value="throw" priority="30" />
+      <Item value="IEnumerable" priority="31" />
+      <Item value="sql" priority="31" />
+      <Item value="param" priority="31" />
+      <Item value="transaction" priority="31" />
+      <Item value="commandTimeout" priority="31" />
+      <Item value="commandType" priority="31" />
+      <Item value="SqlMapper`0" priority="31" />
+      <Item value="public" priority="31" />
+      <Item value="int" priority="95" />
+      <Item value="_commandTimeout" priority="63" />
+      <Item value="value" priority="31" />
+      <Item value="true" priority="31" />
+      <Item value="Dispose`0" priority="63" />
+      <Item value="this" priority="31" />
+      <Item value="_transaction" priority="31" />
+      <Item value="var" priority="31" />
+      <Item value="String`0" priority="127" />
+      <Item value="_connectionString" priority="31" />
+      <Item value="base" priority="31" />
+      <Item value="CedarSession" priority="32" />
+      <Item value="false" priority="31" />
+      <Item value="Cedar" priority="28" />
+      <Item value="DataManager" priority="25" />
+      <Item value="SqlDataReader" priority="25" />
+      <Item value="shard" priority="31" />
+      <Item value="_uuid" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlConnection">
+      <Item value="ConnectionString" priority="26" />
+      <Item value="Open`0" priority="26" />
+      <Item value="Close`0" priority="26" />
+      <Item value="Dispose`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Dapper.SqlMapper">
+      <Item value="Query`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.CedarSession">
+      <Item value="Dispose`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="80" />
+      <Item value="IsNullOrEmpty`0" priority="27" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

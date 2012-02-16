@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Config\App.config" />
   </ItemGroup>
   <ItemGroup />

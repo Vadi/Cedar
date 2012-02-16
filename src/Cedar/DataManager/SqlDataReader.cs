@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cedar.DataManager
 {
-    class SqlDataReader : IDataReader
+    public class SqlDataReader : IDataReader
     {
     }
 }

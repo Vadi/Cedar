@@ -7,9 +7,7 @@ namespace Cedar.DataManager
 {
     public interface IDataReader
     {
-        // read from xml
-
-        // read from sql
+         
     }
   
 }
