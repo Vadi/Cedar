@@ -27,7 +27,16 @@ namespace Cedar
         /// </summary>
         public void Close()
         {
-           Dispose();
+          
+            //dispose connection
+            if(_sqlConnection !=null )
+            {
+                _transaction = null;
+                _sqlConnection.Close();
+                _sqlConnection.Dispose();
+                _sqlConnection =null ;
+            }
+            Dispose();
         }
         private void setConnectionString()
         {
@@ -66,15 +75,7 @@ namespace Cedar
 
         public void Dispose()
         {
-            //dispose connection
-            if(_sqlConnection !=null )
-            {
-                _transaction = null;
-                _sqlConnection.Close();
-                _sqlConnection.Dispose();
-                _sqlConnection =null ;
-            }
-           
+           Close();
         }
 
 
