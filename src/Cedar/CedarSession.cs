@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace Cedar
         private SqlConnection _sqlConnection = null;
         private long _uuid;
         String _connectionString = String.Empty;
+        public bool disposed { get; set; }
         private int _commandTimeout = 30;
         public int CommandTimeout { get { return _commandTimeout; } set { _commandTimeout = value; } }
         private IDbTransaction _transaction=null ;
@@ -27,20 +28,11 @@ namespace Cedar
         /// </summary>
         public void Close()
         {
-          
-            //dispose connection
-            if(_sqlConnection !=null )
-            {
-                _transaction = null;
-                _sqlConnection.Close();
-                _sqlConnection.Dispose();
-                _sqlConnection =null ;
-            }
-            Dispose();
+           Dispose();
         }
         private void setConnectionString()
         {
-            
+            _connectionString = String.Empty;
         }
         public AppContext GetAppContext()
         {
@@ -73,11 +65,36 @@ namespace Cedar
             return SqlMapper.Query<dynamic>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, commandType);
         }
 
+        
         public void Dispose()
         {
-           Close();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    //dispose connection
+                    if (_sqlConnection != null)
+                    {
+                        _transaction = null;
+                        _sqlConnection.Close();
+                        _sqlConnection.Dispose();
+                        _sqlConnection = null;
+                    }
+                }
+               
+                disposed = true;
+            }
+        }
+        ~CedarSession()
+        {
+            Dispose(false);
+        }
 
         private void GetSqlOpenConnection()
         {
@@ -92,7 +109,8 @@ namespace Cedar
             }
 
         }
-     
+
+       
     }
 
     
