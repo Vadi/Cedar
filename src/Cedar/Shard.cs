@@ -15,7 +15,8 @@ namespace Cedar
 #endif
         class Shard
     {
-        internal long ShardId { get; set; }
-        internal string ConnectionString { get; set; }
+        internal  long shard_id { get; set; }
+        internal string application_name { get; set; }
+        internal string connection_string { get; set; }
     }
 }
