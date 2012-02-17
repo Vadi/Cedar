@@ -156,49 +156,7 @@ namespace Cedar
         public string GetProvider(string connectionString)
         {
             string  provider = "SQL";
-            object objProvider = null;
-            try
-            {
-                //try to build connection string for sql
-                var builder = new SqlConnectionStringBuilder(connectionString);
-                
-            }
-            catch (Exception)
-            {
-                try
-                {
-                    //try to build connection string for oracle
-                    var builder = new OracleConnectionStringBuilder(connectionString);
-                    provider = "ORACLE";
-                }
-                catch (Exception)
-                {
-
-                    try
-                    {
-                        //try to build connection string for oracle
-                        var builder = new OdbcConnectionStringBuilder(connectionString);
-                        provider = "ODBC";
-                    }
-                    catch (Exception)
-                    {
-                        try
-                        {
-                            //try to build connection string for oracle
-                            var builder = new OleDbConnectionStringBuilder(connectionString);
-                            provider = "OLEDB";
-                        }
-                        catch (Exception)
-                        {
-                            throw;
-
-                        }
-
-                    }
-                }
-                
-            } 
-           
+            
            
             return provider;
         }
