@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContextTests.cs" />
+    <Compile Include="CedarSessionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CedarTest.cs" />
+    <Compile Include="SqlDataReader.cs" />
     <Compile Include="WithUtilitySupport.cs" />
   </ItemGroup>
   <ItemGroup>
