@@ -57,6 +57,15 @@
     <Compile Include="ICedar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shard.cs" />
+    <Compile Include="Sharding\Shards.cs" />
+    <Compile Include="Sharding\ShardStrategy\IShardStrategy.cs" />
+    <Compile Include="Sharding\ShardStrategy\ShardAccess\IShardAccessStrategy.cs" />
+    <Compile Include="Sharding\ShardStrategy\ShardAccess\SequentialShardAccessStrategy.cs" />
+    <Compile Include="Sharding\ShardStrategy\ShardResolution\AllShardsResolutionStrategy.cs" />
+    <Compile Include="Sharding\ShardStrategy\ShardResolution\IShardResolutionStrategy.cs" />
+    <Compile Include="Sharding\ShardStrategy\ShardResolution\ShardResolutionStrategyData.cs" />
+    <Compile Include="Sharding\ShardStrategy\ShardSelection\ShardSelectionStrategy.cs" />
+    <Compile Include="Sharding\ShardStrategy\ShardSelection\IShardSelectionStrategy.cs" />
     <Compile Include="SqlDapper.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
@@ -68,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Config\App.config" />
   </ItemGroup>
   <ItemGroup />

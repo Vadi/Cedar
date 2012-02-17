@@ -1,0 +1,179 @@
+[1mdiff --git a/src/Cedar.suo b/src/Cedar.suo[m
+[1mindex fbceba6..1fcaa07 100644[m
+Binary files a/src/Cedar.suo and b/src/Cedar.suo differ
+[1mdiff --git a/src/Cedar/Cedar.csproj b/src/Cedar/Cedar.csproj[m
+[1mindex 173cec6..1af05ed 100644[m
+[1m--- a/src/Cedar/Cedar.csproj[m
+[1m+++ b/src/Cedar/Cedar.csproj[m
+[36m@@ -57,6 +57,15 @@[m
+     <Compile Include="ICedar.cs" />[m
+     <Compile Include="Properties\AssemblyInfo.cs" />[m
+     <Compile Include="Shard.cs" />[m
+[32m+[m[32m    <Compile Include="Sharding\Shards.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\IShardStrategy.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\ShardAccess\IShardAccessStrategy.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\ShardAccess\SequentialShardAccessStrategy.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\ShardResolution\AllShardsResolutionStrategy.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\ShardResolution\IShardResolutionStrategy.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\ShardResolution\ShardResolutionStrategyData.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\ShardSelection\ShardSelectionStrategy.cs" />[m[41m[m
+[32m+[m[32m    <Compile Include="Sharding\ShardStrategy\ShardSelection\IShardSelectionStrategy.cs" />[m[41m[m
+     <Compile Include="SqlDapper.cs" />[m
+     <Compile Include="Utility.cs" />[m
+   </ItemGroup>[m
+[36m@@ -68,6 +77,7 @@[m
+   </ItemGroup>[m
+   <ItemGroup>[m
+     <None Include="App.Config" />[m
+[32m+[m[32m    <None Include="ClassDiagram1.cd" />[m[41m[m
+     <None Include="Config\App.config" />[m
+   </ItemGroup>[m
+   <ItemGroup />[m
+[1mdiff --git a/src/Cedar/Utility.cs b/src/Cedar/Utility.cs[m
+[1mindex d50a036..6f543d7 100644[m
+[1m--- a/src/Cedar/Utility.cs[m
+[1m+++ b/src/Cedar/Utility.cs[m
+[36m@@ -1,25 +1,25 @@[m
+[31m-ï»¿using System;[m
+[32m+[m[32mï»¿using System;[m[41m[m
+ using System.Collections.Generic;[m
+[31m-using System.Linq;[m
+[31m-using System.Text;[m
+[31m-[m
+[31m-namespace Cedar[m
+[31m-{[m
+[31m-    internal static class Utility[m
+[31m-    {[m
+[31m-        internal static Key GenerateKey(long shardId)[m
+[31m-        {[m
+[31m-            return new Key();[m
+[31m-        }[m
+[31m-[m
+[31m-        /// <summary>[m
+[31m-        /// returns Shardid[m
+[31m-        /// </summary>[m
+[31m-        /// <returns></returns>[m
+[31m-        internal static long DecomposeKey(long key)[m
+[31m-        {[m
+[31m-            return 0;[m
+[31m-        }[m
+[31m-[m
+[31m-    }[m
+[31m-}[m
+[32m+[m[32musing System.Linq;[m[41m[m
+[32m+[m[32musing System.Text;[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mnamespace Cedar[m[41m[m
+[32m+[m[32m{[m[41m[m
+[32m+[m[32m    internal static class Utility[m[41m[m
+[32m+[m[32m    {[m[41m[m
+[32m+[m[32m        internal static Key GenerateKey(long shardId)[m[41m[m
+[32m+[m[32m        {[m[41m[m
+[32m+[m[32m            return new Key();[m[41m[m
+[32m+[m[32m        }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m        /// <summary>[m[41m[m
+[32m+[m[32m        /// returns Shardid[m[41m[m
+[32m+[m[32m        /// </summary>[m[41m[m
+[32m+[m[32m        /// <returns></returns>[m[41m[m
+[32m+[m[32m        internal static long DecomposeKey(long key)[m[41m[m
+[32m+[m[32m        {[m[41m[m
+[32m+[m[32m            return 0;[m[41m[m
+[32m+[m[32m        }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    }[m[41m[m
+[32m+[m[32m}[m[41m[m
+[1mdiff --git a/src/Cedar/bin/Debug/Cedar.dll b/src/Cedar/bin/Debug/Cedar.dll[m
+[1mindex b4e64cb..a2a6d49 100644[m
+Binary files a/src/Cedar/bin/Debug/Cedar.dll and b/src/Cedar/bin/Debug/Cedar.dll differ
+[1mdiff --git a/src/Cedar/bin/Debug/Cedar.pdb b/src/Cedar/bin/Debug/Cedar.pdb[m
+[1mindex e3e5d17..81b2e11 100644[m
+Binary files a/src/Cedar/bin/Debug/Cedar.pdb and b/src/Cedar/bin/Debug/Cedar.pdb differ
+[1mdiff --git a/src/Cedar/obj/Debug/Cedar.dll b/src/Cedar/obj/Debug/Cedar.dll[m
+[1mindex b4e64cb..a2a6d49 100644[m
+Binary files a/src/Cedar/obj/Debug/Cedar.dll and b/src/Cedar/obj/Debug/Cedar.dll differ
+[1mdiff --git a/src/Cedar/obj/Debug/Cedar.pdb b/src/Cedar/obj/Debug/Cedar.pdb[m
+[1mindex e3e5d17..81b2e11 100644[m
+Binary files a/src/Cedar/obj/Debug/Cedar.pdb and b/src/Cedar/obj/Debug/Cedar.pdb differ
+[1mdiff --git a/src/Cedar/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache b/src/Cedar/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache[m
+[1mindex 8739b02..83eeefe 100644[m
+Binary files a/src/Cedar/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache and b/src/Cedar/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache differ
+[1mdiff --git a/src/CedarTest/bin/Debug/Cedar.dll b/src/CedarTest/bin/Debug/Cedar.dll[m
+[1mindex b4e64cb..a2a6d49 100644[m
+Binary files a/src/CedarTest/bin/Debug/Cedar.dll and b/src/CedarTest/bin/Debug/Cedar.dll differ
+[1mdiff --git a/src/CedarTest/bin/Debug/Cedar.pdb b/src/CedarTest/bin/Debug/Cedar.pdb[m
+[1mindex e3e5d17..81b2e11 100644[m
+Binary files a/src/CedarTest/bin/Debug/Cedar.pdb and b/src/CedarTest/bin/Debug/Cedar.pdb differ
+[1mdiff --git a/src/CedarTest/bin/Debug/CedarTest.dll b/src/CedarTest/bin/Debug/CedarTest.dll[m
+[1mindex 48f9cd6..a2595b5 100644[m
+Binary files a/src/CedarTest/bin/Debug/CedarTest.dll and b/src/CedarTest/bin/Debug/CedarTest.dll differ
+[1mdiff --git a/src/CedarTest/bin/Debug/CedarTest.pdb b/src/CedarTest/bin/Debug/CedarTest.pdb[m
+[1mindex c619308..b8a6c1c 100644[m
+Binary files a/src/CedarTest/bin/Debug/CedarTest.pdb and b/src/CedarTest/bin/Debug/CedarTest.pdb differ
+[1mdiff --git a/src/CedarTest/obj/Debug/CedarTest.dll b/src/CedarTest/obj/Debug/CedarTest.dll[m
+[1mindex 48f9cd6..a2595b5 100644[m
+Binary files a/src/CedarTest/obj/Debug/CedarTest.dll and b/src/CedarTest/obj/Debug/CedarTest.dll differ
+[1mdiff --git a/src/CedarTest/obj/Debug/CedarTest.pdb b/src/CedarTest/obj/Debug/CedarTest.pdb[m
+[1mindex c619308..b8a6c1c 100644[m
+Binary files a/src/CedarTest/obj/Debug/CedarTest.pdb and b/src/CedarTest/obj/Debug/CedarTest.pdb differ
+[1mdiff --git a/src/CedarTest/obj/Debug/ResolveAssemblyReference.cache b/src/CedarTest/obj/Debug/ResolveAssemblyReference.cache[m
+[1mindex 8475ae2..2500f92 100644[m
+Binary files a/src/CedarTest/obj/Debug/ResolveAssemblyReference.cache and b/src/CedarTest/obj/Debug/ResolveAssemblyReference.cache differ
+[1mdiff --git a/src/_ReSharper.Cedar/BuildScriptCache/.crc b/src/_ReSharper.Cedar/BuildScriptCache/.crc[m
+[1mindex 249fa3d..908bf04 100644[m
+[1m--- a/src/_ReSharper.Cedar/BuildScriptCache/.crc[m
+[1m+++ b/src/_ReSharper.Cedar/BuildScriptCache/.crc[m
+[36m@@ -1 +1 @@[m
+[31m-O«é[m
+\ No newline at end of file[m
+[32m+[m[32môØÓ[m
+\ No newline at end of file[m
+[1mdiff --git a/src/_ReSharper.Cedar/JavaScriptCache/3/7dac24aa.dat b/src/_ReSharper.Cedar/JavaScriptCache/3/7dac24aa.dat[m
+[1mdeleted file mode 100644[m
+[1mindex 0d0a981..0000000[m
+Binary files a/src/_ReSharper.Cedar/JavaScriptCache/3/7dac24aa.dat and /dev/null differ
+[1mdiff --git a/src/_ReSharper.Cedar/JbPdbInfo/019dbd152908c18b960f25ea5decee32687e8741 b/src/_ReSharper.Cedar/JbPdbInfo/019dbd152908c18b960f25ea5decee32687e8741[m
+[1mindex a8b60c2..3e91cec 100644[m
+Binary files a/src/_ReSharper.Cedar/JbPdbInfo/019dbd152908c18b960f25ea5decee32687e8741 and b/src/_ReSharper.Cedar/JbPdbInfo/019dbd152908c18b960f25ea5decee32687e8741 differ
+[1mdiff --git a/src/_ReSharper.Cedar/JbPdbInfo/1b8d66ae0a704a830e7ed88a92c29c207ed8568a b/src/_ReSharper.Cedar/JbPdbInfo/1b8d66ae0a704a830e7ed88a92c29c207ed8568a[m
+[1mindex e640f00..5e331ef 100644[m
+Binary files a/src/_ReSharper.Cedar/JbPdbInfo/1b8d66ae0a704a830e7ed88a92c29c207ed8568a and b/src/_ReSharper.Cedar/JbPdbInfo/1b8d66ae0a704a830e7ed88a92c29c207ed8568a differ
+[1mdiff --git a/src/_ReSharper.Cedar/NamedArguments/.crc b/src/_ReSharper.Cedar/NamedArguments/.crc[m
+[1mindex f26ab65..47fe321 100644[m
+[1m--- a/src/_ReSharper.Cedar/NamedArguments/.crc[m
+[1m+++ b/src/_ReSharper.Cedar/NamedArguments/.crc[m
+[36m@@ -1 +1 @@[m
+[31m-<lîe[m
+\ No newline at end of file[m
+[32m+[m[32mºkÅg[m
+\ No newline at end of file[m
+[1mdiff --git a/src/_ReSharper.Cedar/NamedArguments/3/7dac24aa.dat b/src/_ReSharper.Cedar/NamedArguments/3/7dac24aa.dat[m
+[1mindex cb7485a..666e24a 100644[m
+Binary files a/src/_ReSharper.Cedar/NamedArguments/3/7dac24aa.dat and b/src/_ReSharper.Cedar/NamedArguments/3/7dac24aa.dat differ
+[1mdiff --git a/src/_ReSharper.Cedar/SymbolCache.bin b/src/_ReSharper.Cedar/SymbolCache.bin[m
+[1mindex 63888c8..baffaf1 100644[m
+Binary files a/src/_ReSharper.Cedar/SymbolCache.bin and b/src/_ReSharper.Cedar/SymbolCache.bin differ
+[1mdiff --git a/src/_ReSharper.Cedar/TodoCache/.crc b/src/_ReSharper.Cedar/TodoCache/.crc[m
+[1mindex 22d2276..fb1ad41 100644[m
+[1m--- a/src/_ReSharper.Cedar/TodoCache/.crc[m
+[1m+++ b/src/_ReSharper.Cedar/TodoCache/.crc[m
+[36m@@ -1 +1 @@[m
+[31m-(€	ß[m
+\ No newline at end of file[m
+[32m+[m[32m6Û$2[m
+\ No newline at end of file[m
+[1mdiff --git a/src/_ReSharper.Cedar/TodoCache/3/7dac24aa.dat b/src/_ReSharper.Cedar/TodoCache/3/7dac24aa.dat[m
+[1mindex 0bf97e5..bab1eda 100644[m
+Binary files a/src/_ReSharper.Cedar/TodoCache/3/7dac24aa.dat and b/src/_ReSharper.Cedar/TodoCache/3/7dac24aa.dat differ
+[1mdiff --git a/src/_ReSharper.Cedar/WordIndex/.crc b/src/_ReSharper.Cedar/WordIndex/.crc[m
+[1mindex bf80e37..b2416d4 100644[m
+[1m--- a/src/_ReSharper.Cedar/WordIndex/.crc[m
+[1m+++ b/src/_ReSharper.Cedar/WordIndex/.crc[m
+[36m@@ -1 +1 @@[m
+[31m-v®òB[m
+\ No newline at end of file[m
+[32m+[m[32mÿï=[m
+\ No newline at end of file[m
+[1mdiff --git a/src/_ReSharper.Cedar/WordIndex/3/7dac24aa.dat b/src/_ReSharper.Cedar/WordIndex/3/7dac24aa.dat[m
+[1mindex 3233dac..4e76d90 100644[m
+Binary files a/src/_ReSharper.Cedar/WordIndex/3/7dac24aa.dat and b/src/_ReSharper.Cedar/WordIndex/3/7dac24aa.dat differ
