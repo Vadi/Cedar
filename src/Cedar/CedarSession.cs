@@ -155,8 +155,7 @@ namespace Cedar
         }
         public string GetProvider(string connectionString)
         {
-            string  provider = "SQL";
-            
+            string  provider = "SQL";            
            
             return provider;
         }
