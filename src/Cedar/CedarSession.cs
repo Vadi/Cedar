@@ -129,35 +129,48 @@ namespace Cedar
 
         private void GetOpenConnection()
         {
-            if(_sqlConnection ==null && !String.IsNullOrEmpty(_connectionString))
+            if (_sqlConnection == null && !String.IsNullOrEmpty(_connectionString))
             {
-                string provider = GetProvider(_connectionString);
-                switch(provider)
-                {
-                    case "SQL":
-                        _sqlConnection = new SqlConnection(_connectionString);
-                       break;
-                    case "ORACLE":
-                        _sqlConnection = new OracleConnection(_connectionString);
-                        break;
-                    case "ODBC":
-                        _sqlConnection = new OdbcConnection(_connectionString);
-                        break;
-                    case "OLEDB":
-                        _sqlConnection = new OleDbConnection(_connectionString);
-                        break;
-                }
-                
-                _sqlConnection.Open();
-               
+                _sqlConnection = GetConnection(_connectionString);
+               if(_sqlConnection!=null )
+               {
+                   _sqlConnection.Open();   
+               }
+               else
+               {
+                   throw new Exception("Connection string can not be null, you may not specified the provider name");
+               }
+
             }
 
         }
-        public string GetProvider(string connectionString)
+        private DbConnection GetConnection(string connectionString)
         {
-            string  provider = "SQL";            
-           
-            return provider;
+            string providerName=String.Empty ;
+
+
+            //try to build connection string for sql
+            var builder = new DbConnectionStringBuilder();
+            builder.ConnectionString = connectionString.ToLower();
+
+            if (builder.ContainsKey("provider"))
+            {
+                providerName = builder["provider"].ToString();
+            }
+            if (!String.IsNullOrEmpty(providerName))
+            {
+                var providerExists = DbProviderFactories
+                                            .GetFactoryClasses()
+                                            .Rows.Cast<DataRow>()
+                                            .Any(r => r[2].Equals(providerName));
+                if (providerExists)
+                {
+                    var factory = DbProviderFactories.GetFactory(providerName);
+                    return factory.CreateConnection();
+                }
+            }
+            
+            return null;
         }
 
      
