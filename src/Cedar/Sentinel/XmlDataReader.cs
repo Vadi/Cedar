@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cedar.DataManager
+namespace Cedar
 {
     class XmlDataReader : IDataReader
     {
@@ -22,6 +22,12 @@ namespace Cedar.DataManager
             throw new NotImplementedException();
         }
         public void SetupSchema(long shardId, long uuid)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public IList<ShardWile> GetShardStrategyById(long shardId)
         {
             throw new NotImplementedException();
         }

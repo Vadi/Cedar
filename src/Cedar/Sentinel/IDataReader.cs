@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cedar.DataManager
+namespace Cedar
 {
     public interface IDataReader
     {
@@ -11,6 +11,7 @@ namespace Cedar.DataManager
         Shard GetShardById(long shardId);
         List<Shard> GetAllShard();
         void SetupSchema(long shardId, long uuid);
+        IList<ShardWile> GetShardStrategyById(long shardId);
     }
   
 }

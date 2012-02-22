@@ -4,10 +4,15 @@ using Cedar.Sharding.ShardStrategy.ShardSelection;
 
 namespace Cedar.Sharding.ShardStrategy
 {
-    public interface IShardStrategy
+    public interface IShardStrategy<T>
     {
-        IShardSelectionStrategy ShardSelectionStrategy { get; }
+        IShardSelectionStrategy<T> ShardSelectionStrategy { get; }
         IShardResolutionStrategy ShardResolutionStrategy { get; }
         IShardAccessStrategy ShardAccessStrategy { get; }
+    }
+    public enum Strategy
+    {
+        Sequential,
+        Regional
     }
 }

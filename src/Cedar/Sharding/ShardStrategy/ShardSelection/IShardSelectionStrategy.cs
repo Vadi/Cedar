@@ -1,8 +1,8 @@
 ﻿namespace Cedar.Sharding.ShardStrategy.ShardSelection
 {
-    public interface IShardSelectionStrategy
+    public interface IShardSelectionStrategy<T>
     {
-        string SelectShardIdForNewObject(object obj);
-        string SelectShardIdForExistingObject(object obj);
+        long SelectShardIdForNewObject(T obj);
+        long  SelectShardIdForExistingObject(T obj);
     }
 }

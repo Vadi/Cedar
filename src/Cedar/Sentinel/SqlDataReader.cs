@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cedar.DataManager
+namespace Cedar
 {
     public class SqlDataReader : IDataReader
     {
         public List<Shard> GetAllShardByAppname(string appName)
         {
-            throw new NotImplementedException();
+            var shardRepository = new ShardRepository();
+            return shardRepository.GetAllShard().ToList();
         }
 
         public Shard GetShardById(long shardId)
@@ -43,5 +44,11 @@ namespace Cedar.DataManager
             cedarSession.SetupSchema(app,appSchema );
             cedarSession.Close();
         }
+        public IList<ShardWile> GetShardStrategyById(long shardId)
+        {
+            var shardStrategy = new ShardStrategyRepository();
+            return shardStrategy.GetShardStrategyById(shardId);
+        }
+
     }
 }

@@ -8,7 +8,7 @@ namespace Cedar
     public interface ICedarSession : IDbQueryBehaviour, IDisposable
     {
         void Close(); //Equal to dispose
-        AppContext GetAppContext();
+        
     }
 
 }

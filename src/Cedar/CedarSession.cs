@@ -136,13 +136,16 @@ namespace Cedar
                 _sqlConnection = GetConnection(_connectionString);
                if(_sqlConnection!=null )
                {
+
                    _sqlConnection.ConnectionString = _connectionString;
+
                    _sqlConnection.Open();   
                }
                else
                {
                    throw new Exception("Connection string can not be null, you may not specified the provider name");
                }
+
             }
 
         }
@@ -153,17 +156,24 @@ namespace Cedar
 
             //try to build connection string for sql
             var builder = new DbConnectionStringBuilder();
+
             builder.ConnectionString = connectionString;
 
             if (builder.ContainsKey("provider"))
             {
                 providerName = builder["provider"].ToString();
             }
+
             if (String.IsNullOrEmpty(providerName))
             {
                 providerName = "System.Data.SqlClient";
             }
-            var providerExists = DbProviderFactories
+            
+
+            if (!String.IsNullOrEmpty(providerName))
+            {
+                var providerExists = DbProviderFactories
+
                                             .GetFactoryClasses()
                                             .Rows.Cast<DataRow>()
                                             .Any(r => r[2].Equals(providerName));
@@ -172,7 +182,11 @@ namespace Cedar
                     var factory = DbProviderFactories.GetFactory(providerName);
                     return factory.CreateConnection();
                 }
+
             
+
+            }
+
             
             return null;
         }

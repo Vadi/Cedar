@@ -7,7 +7,7 @@ using Dapper;
 using System.Data.OleDb;
 
 
-namespace Cedar.DataManager
+namespace Cedar
 {
     /*public class ShardRepository : DataRepository<Shard>
     {
@@ -45,7 +45,7 @@ namespace Cedar.DataManager
            
             using (var connection = GetConnection())
             {
-                string query = "Select shard_id,application_name connection_string from shard" +
+                string query = "Select shard_id,application_name, connection_string from shard" +
                                      " WHERE shard_id = @shard_id";
 
                 var parameters = new DynamicParameters();
