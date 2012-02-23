@@ -13,46 +13,47 @@ using System.Data.OleDb;
 using Dapper;
 namespace Cedar
 {
-    public class CedarSession: ICedarSession
+    public class CedarSession : ICedarSession
     {
         private IDbConnection _sqlConnection = null;
         private long _uuid;
         String _connectionString = String.Empty;
         public bool disposed { get; set; }
         private int _commandTimeout = 30;
-        private System.Data.CommandType? _commandType = null; 
+        private System.Data.CommandType? _commandType = null;
         public int CommandTimeout { get { return _commandTimeout; } set { _commandTimeout = value; } }
-        private IDbTransaction _transaction=null ;
+        private IDbTransaction _transaction = null;
         public bool EnableTrasaction { get; set; }
         public CedarSession(long uuid)
         {
             _uuid = uuid;
-            setConnectionString();
+            SetConnectionString();
             GetOpenConnection();
-            
+
         }
+
+
         /// <summary>
         /// Dispose the object
         /// </summary>
         public void Close()
         {
-           Dispose();
+            Dispose();
         }
-        private void setConnectionString()
+        private void SetConnectionString()
         {
-            var reader = new Cedar.DataManager.SqlDataReader();
+            var reader = new Cedar.SqlDataReader();
+            IdWorker worker=new IdWorker(_uuid);
+            //worker.DecomposeKey()
             var shard = reader.GetShardById(_uuid);
-            _connectionString = shard.connection_string  ;
+            _connectionString = shard.connection_string;
         }
-        public AppContext GetAppContext()
-        {
-            throw new NotImplementedException();
-        }
-        internal void SetupSchema(App app,AppSchema appSchema)
+       
+        internal void SetupSchema(App app, AppSchema appSchema)
         {
             _commandType = System.Data.CommandType.Text;
             _transaction = _sqlConnection.BeginTransaction();
-            SqlMapper.Execute(_sqlConnection, appSchema.schema , app.AppId, _transaction, _commandTimeout, _commandType);
+            SqlMapper.Execute(_sqlConnection, appSchema.schema, app.AppId, _transaction, _commandTimeout, _commandType);
 
         }
         /// <summary>
@@ -62,13 +63,13 @@ namespace Cedar
         /// <param name="param"></param>
         /// <param name="commandType"></param>
         /// <returns>>Number of rows affected</returns>
-        public int Insert(string sql, dynamic param = null, Cedar.CommandType ? commandType = null)
+        public int Insert(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType!=null )
+            if (commandType != null)
                 _commandType = System.Data.CommandType.Text;
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
-          return SqlMapper.Execute(_sqlConnection,sql,param ,_transaction ,_commandTimeout ,_commandType);
+            return SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
         }
 
         public void Update(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
@@ -97,7 +98,7 @@ namespace Cedar
                 _transaction = _sqlConnection.BeginTransaction();
             return SqlMapper.Query<dynamic>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, _commandType);
         }
-      
+
         public void Dispose()
         {
             Dispose(true);
@@ -119,7 +120,7 @@ namespace Cedar
                         _sqlConnection = null;
                     }
                 }
-               
+
                 disposed = true;
             }
         }
@@ -135,6 +136,9 @@ namespace Cedar
                 _sqlConnection = GetConnection(_connectionString);
                if(_sqlConnection!=null )
                {
+
+                   _sqlConnection.ConnectionString = _connectionString;
+
                    _sqlConnection.Open();   
                }
                else
@@ -152,15 +156,24 @@ namespace Cedar
 
             //try to build connection string for sql
             var builder = new DbConnectionStringBuilder();
-            builder.ConnectionString = connectionString.ToLower();
+
+            builder.ConnectionString = connectionString;
 
             if (builder.ContainsKey("provider"))
             {
                 providerName = builder["provider"].ToString();
             }
+
+            if (String.IsNullOrEmpty(providerName))
+            {
+                providerName = "System.Data.SqlClient";
+            }
+            
+
             if (!String.IsNullOrEmpty(providerName))
             {
                 var providerExists = DbProviderFactories
+
                                             .GetFactoryClasses()
                                             .Rows.Cast<DataRow>()
                                             .Any(r => r[2].Equals(providerName));
@@ -169,12 +182,16 @@ namespace Cedar
                     var factory = DbProviderFactories.GetFactory(providerName);
                     return factory.CreateConnection();
                 }
+
+            
+
             }
+
             
             return null;
         }
 
-     
+
     }
 
     public enum CommandType
@@ -182,5 +199,5 @@ namespace Cedar
         Query,
         StoredProcedure
     }
-    
+
 }

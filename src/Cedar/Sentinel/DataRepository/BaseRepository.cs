@@ -6,16 +6,17 @@ using System.Text;
 using System.Data.OleDb;
 using System.Configuration;
 
-namespace Cedar.DataManager
+namespace Cedar
 {
     public class BaseRepository
     {
 
         public OleDbConnection GetConnection()
         {            
-            //string strCon = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=D:\Projects\Cedar\src\Cedar\Data\CedarData.sdf";
-            // string connectionString = ConfigurationManager.ConnectionStrings["Cedar.Connection"].ConnectionString;
-            string connectionString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf";
+           
+          //  string connectionString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf";
+            string connectionString = Properties.Settings.Default.CedarDataConnectionString ;
+           
             var connection = new OleDbConnection(connectionString);
             
             if (connection.State != ConnectionState.Open)

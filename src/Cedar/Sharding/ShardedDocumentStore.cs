@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using Raven.Client.Document;
 using Cedar.Sharding.ShardStrategy;
 
 namespace Cedar.Sharding

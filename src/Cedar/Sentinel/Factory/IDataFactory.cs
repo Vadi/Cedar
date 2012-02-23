@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cedar.DataManager
+namespace Cedar
 {
     public class DataFactory
     {
-        public IDataReader GetdataReader(string dataFetchMode)
+        public IDataReader GetdataReader(FetchType dataFetchMode)
         {
             IDataReader dataReader = null;
-            var dataFetchType = (FetchType)Enum.Parse(typeof(FetchType), dataFetchMode);
+            //var dataFetchType = (FetchType)Enum.Parse(typeof(FetchType), dataFetchMode);
+            var dataFetchType =  dataFetchMode;
 
             if (dataFetchType == FetchType.Sql)
             {
