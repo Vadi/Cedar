@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -63,12 +64,13 @@ namespace Cedar
 
             using (var connection = GetConnection())
             {
-                string query = "Select application_id,application_name, schema from AppSchema" +
+                string query = "Select application_id,application_name,[schema] from AppSchema" +
                                      " WHERE application_name = @app_name";
 
                 var parameters = new DynamicParameters();
 
-                parameters.Add("@app_name", applicationName );
+                parameters.Add("@app_name", applicationName,DbType.String,ParameterDirection.Input ,200);
+               
 
                 var appSchema = connection.Query<AppSchema>(query, parameters).FirstOrDefault();
 

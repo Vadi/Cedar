@@ -21,13 +21,19 @@ namespace Cedar
         {
             throw new NotImplementedException();
         }
-        public void SetupSchema(long shardId, long uuid)
+        public AppSchema GetAppSchema(long shardId)
         {
             throw new NotImplementedException();
         }
 
 
         public IList<ShardWile> GetShardStrategyById(long shardId)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void UpdateShardWile(long shardId)
         {
             throw new NotImplementedException();
         }

@@ -44,17 +44,32 @@ namespace Cedar
         {
             var reader = new Cedar.SqlDataReader();
             IdWorker worker=new IdWorker(_uuid);
-            //worker.DecomposeKey()
-            var shard = reader.GetShardById(_uuid);
+            var shrdId = worker.DecomposeKey(_uuid);
+            var shard = reader.GetShardById(shrdId);
+            if(shard==null)
+            {
+                throw new Exception("Invalid UUID");
+            }
             _connectionString = shard.connection_string;
         }
        
-        internal void SetupSchema(App app, AppSchema appSchema)
+        internal void SetupSchema(AppSchema appSchema)
         {
             _commandType = System.Data.CommandType.Text;
             _transaction = _sqlConnection.BeginTransaction();
-            SqlMapper.Execute(_sqlConnection, appSchema.schema, app.AppId, _transaction, _commandTimeout, _commandType);
+            string query = GetSchemaQuery(appSchema.schema);
+            _sqlConnection.Execute(query , null , _transaction, _commandTimeout, _commandType);
+            _transaction.Commit();
+            _transaction.Dispose();
 
+        }
+        private string GetSchemaQuery(string schema)
+        {
+            string newQuery = String.Empty;
+            var table = new Table();
+            table.UUID = _uuid.ToString();
+            newQuery = schema.FormatWith(table);
+            return newQuery;
         }
         /// <summary>
         /// Execute the query 
@@ -143,7 +158,7 @@ namespace Cedar
                }
                else
                {
-                   throw new Exception("Connection string can not be null, you may not specified the provider name");
+                   throw new Exception("Connection string can not be null, you may not specified the provider");
                }
 
             }
@@ -191,7 +206,7 @@ namespace Cedar
             return null;
         }
 
-
+      
     }
 
     public enum CommandType
@@ -199,5 +214,8 @@ namespace Cedar
         Query,
         StoredProcedure
     }
-
+    public class Table
+    {
+        public string UUID { get; set; }
+    }
 }

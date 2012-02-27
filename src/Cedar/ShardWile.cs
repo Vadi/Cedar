@@ -7,8 +7,8 @@ namespace Cedar
 {
     public class ShardWile
     {
-        public int Id { get; set; }
-        public int ShardId { get; set; }
+        public long Id { get; set; }
+        public long ShardId { get; set; }
         public int TotalCount { get; set; }
         public int MaxCount { get; set; }
     }

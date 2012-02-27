@@ -28,26 +28,23 @@ namespace Cedar
 
             return shardList.ToList();
         }
-        public void SetupSchema(long shardId, long uuid)
+        public AppSchema GetAppSchema(long shardId)
         {
-            var app = new App();
+          
             var shardRepository = new ShardRepository();
             var shard=  shardRepository.GetShardById(shardId);
-            var connectionString = shard.connection_string ;
-            var appSchema = shardRepository.GetAppSchema(shard.application_name);
-            app.AppId = uuid;
-            app.ApplicationName = shard.application_name;
-            app.Shards.Add(shard);
+            return  shardRepository.GetAppSchema(shard.application_name);
 
-            var cedarSession = new CedarSession(shardId);
-            cedarSession.EnableTrasaction = true;
-            cedarSession.SetupSchema(app,appSchema );
-            cedarSession.Close();
         }
         public IList<ShardWile> GetShardStrategyById(long shardId)
         {
             var shardStrategy = new ShardStrategyRepository();
             return shardStrategy.GetShardStrategyById(shardId);
+        }
+        public void UpdateShardWile(long shardId)
+        {
+            var shardStrategy = new ShardStrategyRepository();
+            shardStrategy.UpdateShardStrategy(shardId);
         }
 
     }

@@ -40,11 +40,15 @@ namespace Cedar
             IShardStrategy<App> shardStrategy = new ShardStrategy<App>();
             var shardSelection=shardStrategy.ShardSelectionStrategy;
             var shardId=shardSelection.SelectShardIdForExistingObject(_app);
-            IdWorker worker = new IdWorker(shardId);
-            var UniqueId = worker.GetUniqueId();
-            dataReader.SetupSchema(shardId, UniqueId);
-           
-            return UniqueId;
+            var worker = new IdWorker(shardId);
+            var uniqueId = worker.GetUniqueId();
+            var appSchema=dataReader.GetAppSchema(shardId);
+            var cedarSession = new CedarSession(uniqueId);
+            cedarSession.EnableTrasaction = true;
+            cedarSession.SetupSchema(appSchema);
+            cedarSession.Close();
+            dataReader.UpdateShardWile(shardId);
+            return uniqueId;
 
         }
 
