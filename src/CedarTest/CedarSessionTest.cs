@@ -23,20 +23,64 @@ namespace CedarTest
         public void Whether_Cedardb_Execute_Query()
         {
             var uuid = 174103530611572736;
-            var cedarSession = new CedarSession(uuid);
+            using (var cedarSession = new CedarSession(uuid))
+            {
 
-            Assert.AreNotEqual(null, "Cedar session is not null, cedar connection opened");
+                Assert.AreNotEqual(null, "Cedar session is not null, cedar connection opened");
 
-            var ctr = cedarSession.Insert("insert into employee_"+uuid +" (first_name,last_name,address) values (@FirstName,@LastName,@Address)", new[]
+                var ctr =
+                    cedarSession.Insert(
+                        "insert into employee_" + uuid +
+                        " (first_name,last_name,address) values (@FirstName,@LastName,@Address)", new[]
+                                                                                                      {
+                                                                                                          new
                                                                                                               {
-                                                                                                                  new { FirstName="Tarun",LastName="Kumar",Address="C-25 Noida"},
-                                                                                                                  new { FirstName="Parkash",LastName="Bhatt",Address="C-25 Noida"},
-                                                                                                                  new { FirstName="Hemant",LastName="Kumar",Address="C-25 Noida"},
-                                                                                                                  new { FirstName="Gurpreet",LastName="Kaur",Address="C-25 Noida"},
-                                                                                                              }, Cedar.CommandType.Query);
-            Assert.AreEqual(4,ctr,"4 rows inserted");
+                                                                                                                  FirstName
+                                                                                                              = "Tarun",
+                                                                                                                  LastName
+                                                                                                              = "Kumar",
+                                                                                                                  Address
+                                                                                                              =
+                                                                                                              "C-25 Noida"
+                                                                                                              },
+                                                                                                          new
+                                                                                                              {
+                                                                                                                  FirstName
+                                                                                                              =
+                                                                                                              "Parkash",
+                                                                                                                  LastName
+                                                                                                              = "Bhatt",
+                                                                                                                  Address
+                                                                                                              =
+                                                                                                              "C-25 Noida"
+                                                                                                              },
+                                                                                                          new
+                                                                                                              {
+                                                                                                                  FirstName
+                                                                                                              = "Hemant",
+                                                                                                                  LastName
+                                                                                                              = "Kumar",
+                                                                                                                  Address
+                                                                                                              =
+                                                                                                              "C-25 Noida"
+                                                                                                              },
+                                                                                                          new
+                                                                                                              {
+                                                                                                                  FirstName
+                                                                                                              =
+                                                                                                              "Gurpreet",
+                                                                                                                  LastName
+                                                                                                              = "Kaur",
+                                                                                                                  Address
+                                                                                                              =
+                                                                                                              "C-25 Noida"
+                                                                                                              },
+                                                                                                      },
+                        Cedar.CommandType.Query);
+                Assert.AreEqual(4, ctr, "4 rows inserted");
 
-            cedarSession.Close();
+                cedarSession.Close();
+            }
         }
         [TestMethod]
         public void Whether_Ceder_Select_Query_Work()
