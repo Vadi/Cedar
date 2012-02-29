@@ -15,6 +15,9 @@ namespace Cedar
         {            
            
           //  string connectionString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf";
+
+
+            
             string connectionString = Properties.Settings.Default.CedarDataConnectionString ;
            
             var connection = new OleDbConnection(connectionString);
