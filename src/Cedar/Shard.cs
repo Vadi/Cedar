@@ -18,5 +18,6 @@ namespace Cedar
         internal  long shard_id { get; set; }
         internal string application_name { get; set; }
         internal string connection_string { get; set; }
+        internal string db_type { get; set; }
     }
 }

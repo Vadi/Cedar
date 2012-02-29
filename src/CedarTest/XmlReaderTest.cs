@@ -13,7 +13,7 @@ namespace CedarTest
         public void GetShardById()
         {
             IDataReader dataReader = new DataFactory().GetdataReader(FetchType.Xml);
-            Shard shard = dataReader.GetShardById(0);
+            Shard shard = dataReader.GetShardById(1000);
             Assert.IsTrue(shard != null );           
         }
 
@@ -38,7 +38,7 @@ namespace CedarTest
         public void GetShardStrategyById()
         {
             IDataReader dataReader = new DataFactory().GetdataReader(FetchType.Xml);
-            IList<ShardWile> shardWileList = dataReader.GetShardStrategyById(0);
+            IList<ShardWile> shardWileList = dataReader.GetShardStrategyById(1000);
             Assert.IsTrue(shardWileList != null);
         }
         

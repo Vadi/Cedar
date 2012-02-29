@@ -10,6 +10,7 @@ namespace Cedar.Sharding.ShardStrategy
         IShardResolutionStrategy ShardResolutionStrategy { get; }
         IShardAccessStrategy ShardAccessStrategy { get; }
     }
+
     public enum Strategy
     {
         Sequential,

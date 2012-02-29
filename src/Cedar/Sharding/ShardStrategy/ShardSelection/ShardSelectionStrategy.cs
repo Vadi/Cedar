@@ -13,18 +13,32 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
         public long SelectShardIdForExistingObject(T obj)
         {
             var app = obj as App;
-            if (app != null)
+            long shardId = 0;
+            if (app != null && app.Shards.Count >0)
             {
-                var shard = app.Shards[0];
-                return GetSequentialStrategy(shard.shard_id);
+                foreach (var shard in app.Shards)
+                {
+                   shardId = GetSequentialStrategy(shard.shard_id);
+                   if (shardId > 0) break;
+                }
             }
-            return 0;
+            return shardId;
         }
         private long GetSequentialStrategy(long shardId)
         {
-            var shardPileList = new SqlDataReader().GetShardStrategyById(shardId);
-            return (shardPileList.Where(shardWile => shardWile.MaxCount <= shardWile.TotalCount).Select(
-                shardWile => shardWile.ShardId)).FirstOrDefault();
+            var shardWileList = new SqlDataReader().GetShardStrategyById(shardId);
+            //return (shardPileList.Where(shardWile => shardWile.TotalCount <= shardWile.MaxCount).Select(
+            //    shardWile => shardWile.ShardId)).FirstOrDefault();
+            long vacantId = 0;
+            foreach (var shardWile in shardWileList)
+            {
+                if(shardWile.TotalCount<=shardWile.MaxCount)
+                {
+                    vacantId = shardWile.ShardId;
+                    break;
+                }
+            }
+            return vacantId;
         }
     }
 }

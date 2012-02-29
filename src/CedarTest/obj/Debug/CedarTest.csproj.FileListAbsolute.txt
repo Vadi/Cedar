@@ -1,8 +1,0 @@
-D:\Projects\Cedar\src\CedarTest\obj\Debug\ResolveAssemblyReference.cache
-D:\Projects\Cedar\src\CedarTest\obj\Debug\CedarTest.dll
-D:\Projects\Cedar\src\CedarTest\bin\Debug\CedarTest.dll
-D:\Projects\Cedar\src\CedarTest\bin\Debug\CedarTest.pdb
-D:\Projects\Cedar\src\CedarTest\bin\Debug\Cedar.dll
-D:\Projects\Cedar\src\CedarTest\bin\Debug\Cedar.pdb
-D:\Projects\Cedar\src\CedarTest\obj\Debug\CedarTest.pdb
-D:\Projects\Cedar\src\CedarTest\bin\Debug\Data\CedarData.sdf

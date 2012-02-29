@@ -28,14 +28,8 @@ namespace CedarTest
             Assert.IsTrue(CedarAppStore.Instance.CreatedContexts.Count == 1);
             Assert.IsTrue(CedarAppStore.Instance.GetContextOf("APP1") != null);
             Assert.IsInstanceOfType(CedarAppStore.Instance.GetContextOf("APP1"), typeof(AppContext));
-
         }
-
-
-
-
-
-        }
+ }
 
 
     public class IdWorker
