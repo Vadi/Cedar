@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="79e074a9-9a7a-4a48-855f-15dfc45be3fc" name="prakashb@HCI-47 2012-02-29 13:43:59" runUser="HCITEC\prakashb" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="463e47c9-79e0-42e1-8b2a-ed3811a36fd5">
+    <Deployment userDeploymentRoot="D:\Projects\Cedar\src\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="prakashb_HCI-47 2012-02-29 13_43_59">
+      <DeploymentItem filename="D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-02-29T13:43:59.7175584+05:30" queuing="2012-02-29T13:44:00.3346818+05:30" start="2012-02-29T13:44:00.6187386+05:30" finish="2012-02-29T13:44:01.3088766+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ShardStrategyTest" storage="d:\projects\cedar\src\testresults\prakashb_hci-47 2012-02-29 13_43_48\out\cedartest.dll" id="1406077d-f3b1-a10b-c23d-87ba0e348a18">
+      <Execution id="2477b631-9714-457c-9566-82fd7e0d6435" />
+      <TestMethod codeBase="D:/Projects/Cedar/src/CedarTest/bin/Debug/CedarTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CedarTest.AppContextTest, CedarTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShardStrategyTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1406077d-f3b1-a10b-c23d-87ba0e348a18" executionId="2477b631-9714-457c-9566-82fd7e0d6435" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2477b631-9714-457c-9566-82fd7e0d6435" testId="1406077d-f3b1-a10b-c23d-87ba0e348a18" testName="ShardStrategyTest" computerName="HCI-47" duration="00:00:00.0152353" startTime="2012-02-29T13:44:00.7307610+05:30" endTime="2012-02-29T13:44:01.2208590+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2477b631-9714-457c-9566-82fd7e0d6435">
+    </UnitTestResult>
+  </Results>
+</TestRun>

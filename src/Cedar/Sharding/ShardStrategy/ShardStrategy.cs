@@ -4,13 +4,19 @@ using Cedar.Sharding.ShardStrategy.ShardSelection;
 
 namespace Cedar.Sharding.ShardStrategy
 {
-    public class ShardStrategy<T>:IShardStrategy<T>
+    /// <summary>
+    /// 
+    /// </summary>
+    public class ShardStrategy : IShardStrategy
     {
-
-        public IShardSelectionStrategy<T> ShardSelectionStrategy
+        /// <summary>
+        /// 
+        /// </summary>
+        public IShardSelectionStrategy ShardSelectionStrategy
         {
-            get { return new ShardSelectionStrategy<T>(); }
+            get { return new ShardSelectionStrategy(); }
         }
+
 
         public IShardResolutionStrategy ShardResolutionStrategy
         {

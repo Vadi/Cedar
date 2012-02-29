@@ -2,17 +2,30 @@
 
 namespace Cedar.Sharding.ShardStrategy.ShardSelection
 {
-    public class ShardSelectionStrategy<T> : IShardSelectionStrategy<T>
+    /// <summary>
+    /// 
+    /// </summary>
+    public class ShardSelectionStrategy : IShardSelectionStrategy
     {
-
-        public long SelectShardIdForNewObject(T obj)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public long SelectShardIdForNewObject(object obj)
         {
             throw new System.NotImplementedException();
         }
 
-        public long SelectShardIdForExistingObject(T obj)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public long SelectShardIdForExistingObject(object obj)
         {
-            var app = obj as App;
+            var appCntxt = obj as AppContext;
+            var app = appCntxt.App;
             long shardId = 0;
             if (app != null && app.Shards.Count >0)
             {
@@ -24,21 +37,17 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
             }
             return shardId;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shardId"></param>
+        /// <returns></returns>
         private long GetSequentialStrategy(long shardId)
         {
             var shardWileList = new SqlDataReader().GetShardStrategyById(shardId);
             //return (shardPileList.Where(shardWile => shardWile.TotalCount <= shardWile.MaxCount).Select(
             //    shardWile => shardWile.ShardId)).FirstOrDefault();
-            long vacantId = 0;
-            foreach (var shardWile in shardWileList)
-            {
-                if(shardWile.TotalCount<=shardWile.MaxCount)
-                {
-                    vacantId = shardWile.ShardId;
-                    break;
-                }
-            }
-            return vacantId;
+            return (from shardWile in shardWileList where shardWile.TotalCount <= shardWile.MaxCount select shardWile.ShardId).FirstOrDefault();
         }
     }
 }
