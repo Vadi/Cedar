@@ -63,6 +63,15 @@ namespace CedarTest
             Assert.AreEqual(5,shardWile[0].TotalCount,"Total count of Shardwile updated to 5");
            
         }
+        [TestMethod]
+        public void Test_SetupSchemaOnMySql()
+        {
+            var ctx = CedarAppStore.Instance.GetContextOf("IGD");
+            var uuid = ctx.SetupSchema();
+
+            Assert.AreEqual(uuid > 0, true, "Unique id is greater than zero");
+
+        }
     }
     
 }

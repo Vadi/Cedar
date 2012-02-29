@@ -10,7 +10,7 @@ namespace Cedar
         public List<Shard> GetAllShardByAppname(string appName)
         {
             var shardRepository = new ShardRepository();
-            return shardRepository.GetAllShard().ToList();
+            return shardRepository.GetAllShard(appName).ToList();
         }
 
         public Shard GetShardById(long shardId)

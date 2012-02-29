@@ -7,3 +7,4 @@ D:\Projects\Cedar\src\CedarTest\bin\Debug\Cedar.xml
 D:\Projects\Cedar\src\CedarTest\obj\Debug\ResolveAssemblyReference.cache
 D:\Projects\Cedar\src\CedarTest\obj\Debug\CedarTest.dll
 D:\Projects\Cedar\src\CedarTest\obj\Debug\CedarTest.pdb
+D:\Projects\Cedar\src\CedarTest\bin\Debug\MySql.Data.dll
