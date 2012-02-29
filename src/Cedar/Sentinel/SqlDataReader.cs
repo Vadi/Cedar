@@ -23,18 +23,21 @@ namespace Cedar
         public List<Shard> GetAllShard()
         {
             var shardRepository = new ShardRepository();
-
             IEnumerable<Shard> shardList = shardRepository.GetAllShard();
 
             return shardList.ToList();
         }
+
         public void SetupSchema(long shardId, long uuid)
         {
             var app = new App();
             var shardRepository = new ShardRepository();
-            var shard=  shardRepository.GetShardById(shardId);
+            var shard =  shardRepository.GetShardById(shardId);
+
             var connectionString = shard.connection_string ;
+
             var appSchema = shardRepository.GetAppSchema(shard.application_name);
+
             app.AppId = uuid;
             app.ApplicationName = shard.application_name;
             app.Shards.Add(shard);
@@ -44,6 +47,7 @@ namespace Cedar
             cedarSession.SetupSchema(app,appSchema );
             cedarSession.Close();
         }
+
         public IList<ShardWile> GetShardStrategyById(long shardId)
         {
             var shardStrategy = new ShardStrategyRepository();
