@@ -1,0 +1,73 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:WithUtilitySupport.cs" caret="497" fromTop="22" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppSchema.cs" caret="0" fromTop="0" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1544" fromTop="58" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="2047" fromTop="23" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="2413" fromTop="26" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="352" fromTop="13" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="567" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="472" fromTop="13" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="192" fromTop="7" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:IShardSelectionStrategy.cs" caret="79" fromTop="2" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContextFactory.cs" caret="489" fromTop="6" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="1490" fromTop="22" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="2340" fromTop="15" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1007" fromTop="21" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1028" fromTop="29" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1133" fromTop="20" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="986" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="523" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="445" fromTop="12" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="274" fromTop="8" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:IShardSelectionStrategy.cs" caret="215" fromTop="5" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="502" fromTop="17" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1100" fromTop="36" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1531" fromTop="35" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="105" fromTop="5" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="799" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="415" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="2387" fromTop="48" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="1487" fromTop="9" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="220" fromTop="7" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="331" fromTop="12" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="502" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="2439" fromTop="32" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="IdWorker`0" priority="31" />
+      <Item value="var" priority="31" />
+      <Item value="new" priority="63" />
+      <Item value="prop" priority="31" />
+      <Item value="private" priority="31" />
+      <Item value="IShardStrategy`0" priority="31" />
+      <Item value="null" priority="63" />
+      <Item value="_shardStrategy" priority="96" />
+      <Item value="return" priority="31" />
+      <Item value="if" priority="31" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

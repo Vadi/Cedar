@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Apps>
+  <App name="CxC">
+  <schema>xyz</schema>
+  <shards>
+    <shard>
+      <ShardId>1</ShardId>
+      <ConnectionString>abcd</ConnectionString>      
+    </shard>
+    <shard>
+      <ShardId>2</ShardId>
+      <ConnectionString>xyz</ConnectionString>
+    </shard>
+    <shard>
+      <ShardId>3</ShardId>
+      <ConnectionString>pqr</ConnectionString>
+      <TotalCount></TotalCount>
+      <MaxCount></MaxCount>      
+    </shard>
+  </shards>
+   
+  
+  </App>
+
+  <App name="IGD">
+    <schema>xyz</schema>
+    <shards>
+      <shard>
+        <ShardId>4</ShardId>
+        <ConnectionString>abcd</ConnectionString>
+      </shard>
+      <shard>
+        <ShardId>5</ShardId>
+        <ConnectionString>xyz</ConnectionString>
+      </shard>
+      <shard>
+        <ShardId>6</ShardId>
+        <ConnectionString>pqr</ConnectionString>
+        <TotalCount></TotalCount>
+        <MaxCount></MaxCount>
+      </shard>
+    </shards>
+
+
+  </App>
+</Apps>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="983b518b-1ef2-4d05-a985-a5e75ed8bbf1" name="prakashb@HCI-47 2012-02-29 15:03:18" runUser="HCITEC\prakashb" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="f2b1d5e2-b99a-4d96-acba-b79cd9f28657">
+    <Deployment userDeploymentRoot="D:\Projects\Cedar\src\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="prakashb_HCI-47 2012-02-29 15_03_18">
+      <DeploymentItem filename="D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-02-29T15:03:18.1014005+05:30" queuing="2012-02-29T15:03:18.8634767+05:30" start="2012-02-29T15:03:19.2045108+05:30" finish="2012-02-29T15:06:25.9651850+05:30" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="HCI-47" outcome="Error" timestamp="2012-02-29T15:06:25.9641849+05:30">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="SelectShardIdForExistingObjectTest" storage="d:\projects\cedar\src\cedartest\bin\debug\cedartest.dll" id="33646a8c-8b4f-ea43-eb7a-fa6f1652cadf">
+      <Execution id="9890ab4e-5e0c-42fb-9693-0d539c68daac" />
+      <TestMethod codeBase="D:/Projects/Cedar/src/CedarTest/bin/Debug/CedarTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CedarTest.ShardSelectionStrategyTest, CedarTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SelectShardIdForExistingObjectTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="33646a8c-8b4f-ea43-eb7a-fa6f1652cadf" executionId="9890ab4e-5e0c-42fb-9693-0d539c68daac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9890ab4e-5e0c-42fb-9693-0d539c68daac" testId="33646a8c-8b4f-ea43-eb7a-fa6f1652cadf" testName="SelectShardIdForExistingObjectTest" computerName="HCI-47" duration="00:03:06.6376619" startTime="2012-02-29T15:03:19.3275231+05:30" endTime="2012-02-29T15:06:25.9651850+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9890ab4e-5e0c-42fb-9693-0d539c68daac">
+    </UnitTestResult>
+  </Results>
+</TestRun>

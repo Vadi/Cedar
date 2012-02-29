@@ -30,10 +30,10 @@ namespace Cedar
         }
         public AppSchema GetAppSchema(long shardId)
         {
-          
+
             var shardRepository = new ShardRepository();
-            var shard=  shardRepository.GetShardById(shardId);
-            return  shardRepository.GetAppSchema(shard.application_name);
+            var shard = shardRepository.GetShardById(shardId);
+            return shardRepository.GetAppSchema(shard.application_name);
 
         }
         public IList<ShardWile> GetShardStrategyById(long shardId)
