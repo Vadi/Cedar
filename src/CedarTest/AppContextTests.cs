@@ -13,11 +13,26 @@ namespace CedarTest
             var ctx = CedarAppStore.Instance.GetContextOf("APP1");
             var session0 = ctx.GetSession(123456789);
 
+            
+
             Assert.IsTrue(session0 != null, "Session should be null");
         
             // var session1 = ctx.GetSession(MeaningfulKey());
-
         }
+
+    [TestMethod]
+    public void Test()
+    {
+        var dataFactory = new DataFactory();
+        IDataReader  dataReader = dataFactory.GetdataReader(FetchType.Xml);
+        var shards = dataReader.GetAllShard();
+
+        int k = 0;
+
+        //var shards =  k.GetAllShard();
+    }
+
+        
 
         [TestMethod]
         public void Test_SetupSchema()
