@@ -18,6 +18,7 @@ namespace Cedar
         private IDbConnection _sqlConnection = null;
         private long _uuid;
         String _connectionString = String.Empty;
+        String _dbType = String.Empty;
         public bool disposed { get; set; }
         private int _commandTimeout = 30;
         private System.Data.CommandType? _commandType = null;
@@ -51,6 +52,7 @@ namespace Cedar
                 throw new Exception("Invalid UUID");
             }
             _connectionString = shard.connection_string;
+            _dbType = shard.db_type;
         }
        
         internal void SetupSchema(AppSchema appSchema)
@@ -178,10 +180,19 @@ namespace Cedar
             {
                 providerName = builder["provider"].ToString();
             }
-
             if (String.IsNullOrEmpty(providerName))
             {
-                providerName = "System.Data.SqlClient";
+                switch (_dbType)
+                {
+                    case "MySql"  :
+                        providerName = "MySql.Data.MySqlClient";
+                        break;
+                    default :
+                        providerName = "System.Data.SqlClient";
+                        break;
+                }
+               
+                
             }
             
 
@@ -197,7 +208,10 @@ namespace Cedar
                     var factory = DbProviderFactories.GetFactory(providerName);
                     return factory.CreateConnection();
                 }
-
+                else if(_dbType!=null && _dbType.ToLower() =="mysql")
+                {
+                    return new MySql.Data.MySqlClient.MySqlConnection(connectionString);
+                }
             
 
             }

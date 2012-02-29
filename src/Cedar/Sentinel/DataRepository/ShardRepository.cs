@@ -35,18 +35,31 @@ namespace Cedar
         {                        
              using (var connection = GetConnection())
              {
-                 IEnumerable<Shard> shardList = connection.Query<Shard>("Select shard_id, connection_string from shard");
+                 IEnumerable<Shard> shardList = connection.Query<Shard>("Select shard_id, connection_string,db_type from shard");
 
                  return shardList;
              }                    
-        } 
+        }
+        public IEnumerable<Shard> GetAllShard(string applicationName)
+        {
+            using (var connection = GetConnection())
+            {
+                string query = "Select shard_id, connection_string,db_type from shard where application_name=@appname";
 
+              
+                var parameters = new DynamicParameters();
+
+                parameters.Add("@appname", applicationName);
+                IEnumerable<Shard> shardList = connection.Query<Shard>(query, parameters);
+                return shardList;
+            }
+        } 
         public Shard GetShardById( long shardId)
         {
            
             using (var connection = GetConnection())
             {
-                string query = "Select shard_id,application_name, connection_string from shard" +
+                string query = "Select shard_id,application_name, connection_string,db_type from shard" +
                                      " WHERE shard_id = @shard_id";
 
                 var parameters = new DynamicParameters();
