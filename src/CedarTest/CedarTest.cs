@@ -29,15 +29,15 @@ namespace CedarTest
             Assert.IsTrue(CedarAppStore.Instance.GetContextOf("APP1") != null);
             Assert.IsInstanceOfType(CedarAppStore.Instance.GetContextOf("APP1"), typeof(AppContext));
 
-           
+
         }
 
-      
-    
+
+
 
     }
 
-  
+
 
 
     public class IdWorker
@@ -46,16 +46,16 @@ namespace CedarTest
         public int WorkerId { get; set; }
         public long TwePoch { get; set; }
         public int Sequence { get; set; }
-        public  int WorkerIdBits { get; set; }
+        public int WorkerIdBits { get; set; }
         public int DataCenterIdBits { get; set; }
-        public int MaxWorkerId {get; set; }
+        public int MaxWorkerId { get; set; }
 
 
-     
+
 
         public void Validate()
         {
-            if((WorkerId  > MaxWorkerId) || WorkerId < 0 )
+            if ((WorkerId > MaxWorkerId) || WorkerId < 0)
                 throw new Exception("");
         }
 

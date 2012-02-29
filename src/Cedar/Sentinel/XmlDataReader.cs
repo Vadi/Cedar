@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace Cedar
 {
-      class XmlDataReader : IDataReader
+    class XmlDataReader : IDataReader
     {
         public List<Shard> GetAllShardByAppname(string appName)
         {
@@ -30,7 +30,7 @@ namespace Cedar
             return shardList;
 
         }
-        
+
         public Shard GetShardById(long shardId)
         {
             XDocument xdoc = XDocument.Load(@"D:/CedarXml.xml");
@@ -66,12 +66,12 @@ namespace Cedar
             return shardlist;
         }
 
-          public AppSchema GetAppSchema(long shardId)
-          {
-              throw new NotImplementedException();
-          }
+        public AppSchema GetAppSchema(long shardId)
+        {
+            throw new NotImplementedException();
+        }
 
-          public void SetupSchema(long shardId, long uuid)
+        public void SetupSchema(long shardId, long uuid)
         {
             var app = new App();
             var shard = GetShardById(shardId);
@@ -109,12 +109,12 @@ namespace Cedar
             return shardwile;
         }
 
-          public void UpdateShardWile(long shardId)
-          {
-              throw new NotImplementedException();
-          }
+        public void UpdateShardWile(long shardId)
+        {
+            throw new NotImplementedException();
+        }
 
-          private AppSchema GetAppSchema(string applicationName)
+        private AppSchema GetAppSchema(string applicationName)
         {
             XDocument xdoc = XDocument.Load(@"D:/CedarXml.xml");
 

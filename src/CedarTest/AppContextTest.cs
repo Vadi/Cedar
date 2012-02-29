@@ -84,7 +84,7 @@ namespace CedarTest
         public void GetSessionTest()
         {
             string appName = string.Empty; // TODO: Initialize to an appropriate value
-            AppContext target = new AppContext(appName); // TODO: Initialize to an appropriate value
+            AppContext target = CedarAppStore.Instance.GetContextOf(appName); // TODO: Initialize to an appropriate value
             long uuid = 0; // TODO: Initialize to an appropriate value
             ICedarSession expected = null; // TODO: Initialize to an appropriate value
             ICedarSession actual;

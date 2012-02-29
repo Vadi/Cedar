@@ -15,15 +15,15 @@ namespace Cedar
     {
         private App _app;
         private IShardStrategy _shardStrategy = null;
-      
+
         // 1. I need to have all shards that are configured for this app
-        // 2. I need to know how to decode the uuid and understand a shard id out of it 
+        // 2. I need to know how to decode the uuid and understand a shard id out of it
         // 3. I need to know a shard resolution strategy
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="appName"></param>
-        public AppContext(string appName) 
+        public AppContext(string appName)
         {
             _app = new App();
             _app.ApplicationName = appName;
@@ -44,12 +44,12 @@ namespace Cedar
 
 
             var dataReader = new DataFactory().GetdataReader(FetchType.Sql);
-            
+
             var shardId = ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(_app);
             var worker = new IdWorker(shardId);
             var uniqueId = worker.GetUniqueId();
-            var appSchema=dataReader.GetAppSchema(shardId);
-            var cedarSession = new CedarSession(uniqueId) {EnableTrasaction = true};
+            var appSchema = dataReader.GetAppSchema(shardId);
+            var cedarSession = new CedarSession(uniqueId) { EnableTrasaction = true };
             cedarSession.SetupSchema(appSchema);
             cedarSession.Close();
             dataReader.UpdateShardWile(shardId);
@@ -58,24 +58,25 @@ namespace Cedar
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
-        public App App {
+        public App App
+        {
 
             get { return _app; }
 
         }
-       
+
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="uuid"></param>
         /// <returns></returns>
         public ICedarSession GetSession(long uuid)
         {
             return new CedarSession(uuid);
-            
+
         }
 
         /// <summary>
@@ -84,7 +85,7 @@ namespace Cedar
         public IShardStrategy ShardStrategy
         {
             get { return _shardStrategy ?? (_shardStrategy = new ShardStrategy()); }
-            set { _shardStrategy = value; } 
+            set { _shardStrategy = value; }
         }
 
     }

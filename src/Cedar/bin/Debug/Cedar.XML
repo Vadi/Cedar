@@ -4,6 +4,69 @@
         <name>Cedar</name>
     </assembly>
     <members>
+        <member name="T:Cedar.AppContext">
+            <summary>
+            This class provides session object to deal with your sharded databases
+            </summary>
+        </member>
+        <member name="M:Cedar.AppContext.#ctor(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="appName"></param>
+        </member>
+        <member name="M:Cedar.AppContext.SetupSchema">
+            <summary>
+            this method will set up schema for new user, will return unique id to application
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cedar.AppContext.GetSession(System.Int64)">
+             <summary>
+            
+             </summary>
+             <param name="uuid"></param>
+             <returns></returns>
+        </member>
+        <member name="P:Cedar.AppContext.App">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Cedar.AppContext.ShardStrategy">
+            <summary>
+            get and set the shard strategy, if not set default startegy will be set.
+            </summary>
+        </member>
+        <member name="M:Cedar.Utility.DecomposeKey(System.Int64)">
+            <summary>
+            returns Shardid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cedar.CedarSession.Close">
+            <summary>
+            Dispose the object
+            </summary>
+        </member>
+        <member name="M:Cedar.CedarSession.Insert(System.String,System.Object,System.Nullable{Cedar.CommandType})">
+            <summary>
+            Execute the query 
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <param name="commandType"></param>
+            <returns>>Number of rows affected</returns>
+        </member>
+        <member name="T:Cedar.CedarAppStore">
+            <summary>
+            Initiates Cedar Application
+            </summary>
+            <remarks>
+            There should be only one instance for this class across the application lifecycle. This class follows singleton pattern
+            to provide single instance approach
+            </remarks>
+        </member>
         <member name="T:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy">
             <summary>
             
@@ -30,102 +93,41 @@
             <param name="shardId"></param>
             <returns></returns>
         </member>
-        <member name="T:Cedar.CedarAppStore">
-            <summary>
-            Initiates Cedar Application
-            </summary>
-            <remarks>
-            There should be only one instance for this class across the application lifecycle. This class follows singleton pattern
-            to provide single instance approach
-            </remarks>
-        </member>
         <member name="T:Cedar.Sharding.ShardStrategy.ShardStrategy">
             <summary>
             
             </summary>
         </member>
         <member name="T:Cedar.Sharding.ShardStrategy.IShardStrategy">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="P:Cedar.Sharding.ShardStrategy.IShardStrategy.ShardSelectionStrategy">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="P:Cedar.Sharding.ShardStrategy.IShardStrategy.ShardResolutionStrategy">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="P:Cedar.Sharding.ShardStrategy.IShardStrategy.ShardAccessStrategy">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="P:Cedar.Sharding.ShardStrategy.ShardStrategy.ShardSelectionStrategy">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Cedar.IdWorker.#ctor(System.Int64,System.Func{System.Int64})">
+        <member name="M:Cedar.ICedar.SetupSchema">
             <summary>
-            
+            set up the scehma first time, it returns the key to the app
             </summary>
-            <param name="shardId"></param>
-            <param name="timeMaker"></param>
-        </member>
-        <member name="M:Cedar.IdWorker.SetBeginSequence(System.Int64)">
-            <summary>
-            
-            </summary>
-            <param name="s"></param>
-        </member>
-        <member name="M:Cedar.IdWorker.GetUniqueId">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Cedar.IdWorker.DecomposeKey(System.Int64)">
-            <summary>
-            
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cedar.IdWorker.CreateDecomposeMask">
-            <summary>
-            creates a masks for extracting 10 bit of shard.
-            </summary>
-        </member>
-        <member name="M:Cedar.IdWorker.TillNextMillis(System.Int64)">
-            <summary>
-            
-            </summary>
-            <param name="l"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Cedar.IdWorker.ShardId">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Cedar.IdWorker.CurrentTimestampInMs">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Cedar.IdWorker.TimeMakerWithLocalTime">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Cedar.Utility.DecomposeKey(System.Int64)">
-            <summary>
-            returns Shardid
-            </summary>
+            <param name="appName"></param>
             <returns></returns>
         </member>
         <member name="T:Dapper.SqlMapper">
@@ -541,73 +543,71 @@
             </summary>
         </member>
         <member name="T:Cedar.Sharding.ShardStrategy.Strategy">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="F:Cedar.Sharding.ShardStrategy.Strategy.Sequential">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="F:Cedar.Sharding.ShardStrategy.Strategy.Regional">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Cedar.IdWorker.#ctor(System.Int64,System.Func{System.Int64})">
             <summary>
             
             </summary>
+            <param name="shardId"></param>
+            <param name="timeMaker"></param>
         </member>
-        <member name="M:Cedar.ICedar.SetupSchema">
-            <summary>
-            set up the scehma first time, it returns the key to the app
-            </summary>
-            <param name="appName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cedar.CedarSession.Close">
-            <summary>
-            Dispose the object
-            </summary>
-        </member>
-        <member name="M:Cedar.CedarSession.Insert(System.String,System.Object,System.Nullable{Cedar.CommandType})">
-            <summary>
-            Execute the query 
-            </summary>
-            <param name="sql"></param>
-            <param name="param"></param>
-            <param name="commandType"></param>
-            <returns>>Number of rows affected</returns>
-        </member>
-        <member name="T:Cedar.AppContext">
-            <summary>
-            This class provides session object to deal with your sharded databases
-            </summary>
-        </member>
-        <member name="M:Cedar.AppContext.#ctor(System.String)">
+        <member name="M:Cedar.IdWorker.SetBeginSequence(System.Int64)">
             <summary>
             
             </summary>
-            <param name="appName"></param>
+            <param name="s"></param>
         </member>
-        <member name="M:Cedar.AppContext.SetupSchema">
+        <member name="M:Cedar.IdWorker.GetUniqueId">
             <summary>
-            this method will set up schema for new user, will return unique id to application
+            
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Cedar.AppContext.GetSession(System.Int64)">
+        <member name="M:Cedar.IdWorker.DecomposeKey(System.Int64)">
             <summary>
             
             </summary>
-            <param name="uuid"></param>
+            <param name="key"></param>
             <returns></returns>
         </member>
-        <member name="P:Cedar.AppContext.App">
+        <member name="M:Cedar.IdWorker.CreateDecomposeMask">
+            <summary>
+            creates a masks for extracting 10 bit of shard.
+            </summary>
+        </member>
+        <member name="M:Cedar.IdWorker.TillNextMillis(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="l"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Cedar.IdWorker.ShardId">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Cedar.AppContext.ShardStrategy">
+        <member name="P:Cedar.IdWorker.CurrentTimestampInMs">
             <summary>
-            get and set the shard strategy, if not set default startegy will be set.
+            
+            </summary>
+        </member>
+        <member name="T:Cedar.IdWorker.TimeMakerWithLocalTime">
+            <summary>
+            
             </summary>
         </member>
     </members>
