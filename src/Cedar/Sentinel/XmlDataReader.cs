@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Xml.Linq;
 using System.Xml.Linq;
 
 namespace Cedar
 {
     class XmlDataReader : IDataReader
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Cedar
-{
-      class XmlDataReader : IDataReader
->>>>>>> d4b85edc452fe7942e7d1bb5214a700fc9064bd4
     {
         public List<Shard> GetAllShardByAppname(string appName)
         {
@@ -42,7 +30,7 @@ namespace Cedar
             return shardList;
 
         }
-        
+
         public Shard GetShardById(long shardId)
         {
             XDocument xdoc = XDocument.Load(@"D:/CedarXml.xml");
@@ -78,6 +66,11 @@ namespace Cedar
             return shardlist;
         }
 
+        public AppSchema GetAppSchema(long shardId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void SetupSchema(long shardId, long uuid)
         {
             var app = new App();
@@ -93,7 +86,7 @@ namespace Cedar
 
             var cedarSession = new CedarSession(shardId);
             cedarSession.EnableTrasaction = true;
-            cedarSession.SetupSchema(app, appSchema);
+            cedarSession.SetupSchema(appSchema);
             cedarSession.Close();
 
         }
@@ -114,6 +107,11 @@ namespace Cedar
 
 
             return shardwile;
+        }
+
+        public void UpdateShardWile(long shardId)
+        {
+            throw new NotImplementedException();
         }
 
         private AppSchema GetAppSchema(string applicationName)

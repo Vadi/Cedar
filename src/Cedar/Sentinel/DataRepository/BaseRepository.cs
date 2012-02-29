@@ -12,27 +12,18 @@ namespace Cedar
     public class BaseRepository
     {
 
-       
+
         public IDbConnection GetConnection()
-        {            
-           
-<<<<<<< HEAD
-          //  string connectionString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf";
+        {
 
+            // string connectionString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=Data\CedarData.sdf";
+            string connectionString = Properties.Settings.Default.CedarDataConnectionString;
+            //string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=myDB;User ID=sa;password=123;Provider=SQLOLEDB";
+            // string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=myDB;User ID=sa;password=123";
 
-            
-            string connectionString = Properties.Settings.Default.CedarDataConnectionString ;
-           
-=======
-           // string connectionString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=Data\CedarData.sdf";
-             string connectionString = Properties.Settings.Default.CedarDataConnectionString ;
-          //string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=myDB;User ID=sa;password=123;Provider=SQLOLEDB";
-           // string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=myDB;User ID=sa;password=123";
-
->>>>>>> d4b85edc452fe7942e7d1bb5214a700fc9064bd4
             var connection = new OleDbConnection(connectionString);
             //var connection = new SqlConnection(connectionString);
-            
+
             if (connection.State != ConnectionState.Open)
             {
                 connection.Open();

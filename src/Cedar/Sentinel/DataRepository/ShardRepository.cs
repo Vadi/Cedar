@@ -9,40 +9,55 @@ using System.Data.OleDb;
 
 
 namespace Cedar
-{    
+{
+    /*public class ShardRepository : DataRepository<Shard>
+{
+
+public override void CreateMapping(Mapping<Shard> mapping)
+{
+mapping.Named("Shard");
+
+mapping.Identity(e => e.ShardId).Named("shard_id").DbType("bigint not null").PrimaryKey();
+mapping.Map(e => e.ConnectionString).Named("connection_string").DbType("varchar(4000) not null");
+}
+
+public List<Shard> GetAllShard()
+{
+return Get(t => t.ShardId > 0).ToList();
+}
+
+}*/
+
     public class ShardRepository : BaseRepository
     {
 
         public IEnumerable<Shard> GetAllShard()
-        {                        
-             using (var connection = GetConnection())
-             {
-<<<<<<< HEAD
-                 IEnumerable<Shard> shardList = connection.Query<Shard>("Select shard_id, application_name, connection_string from shard");
-=======
-                 IEnumerable<Shard> shardList = connection.Query<Shard>("Select shard_id, connection_string,db_type from shard");
->>>>>>> d4b85edc452fe7942e7d1bb5214a700fc9064bd4
+        {
+            using (var connection = GetConnection())
+            {
+                IEnumerable<Shard> shardList = connection.Query<Shard>("Select shard_id, connection_string,db_type from shard");
 
-                 return shardList;
-             }                    
+                return shardList;
+            }
         }
+
         public IEnumerable<Shard> GetAllShard(string applicationName)
         {
             using (var connection = GetConnection())
             {
                 string query = "Select shard_id, connection_string,db_type from shard where application_name=@appname";
 
-              
+
                 var parameters = new DynamicParameters();
 
                 parameters.Add("@appname", applicationName);
                 IEnumerable<Shard> shardList = connection.Query<Shard>(query, parameters);
                 return shardList;
             }
-        } 
-        public Shard GetShardById( long shardId)
+        }
+        public Shard GetShardById(long shardId)
         {
-           
+
             using (var connection = GetConnection())
             {
                 string query = "Select shard_id,application_name, connection_string,db_type from shard" +
@@ -68,8 +83,8 @@ namespace Cedar
 
                 var parameters = new DynamicParameters();
 
-                parameters.Add("@app_name", applicationName,DbType.String,ParameterDirection.Input ,200);
-               
+                parameters.Add("@app_name", applicationName, DbType.String, ParameterDirection.Input, 200);
+
 
                 var appSchema = connection.Query<AppSchema>(query, parameters).FirstOrDefault();
 

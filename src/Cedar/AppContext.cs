@@ -38,19 +38,11 @@ namespace Cedar
             var shards = dataReader.GetAllShardByAppname(_app.ApplicationName);
             _app.Shards = shards;
             IShardStrategy<App> shardStrategy = new ShardStrategy<App>();
-<<<<<<< HEAD
             var shardSelection = shardStrategy.ShardSelectionStrategy;
             var shardId = shardSelection.SelectShardIdForExistingObject(_app);
             var worker = new IdWorker(shardId);
             var uniqueId = worker.GetUniqueId();
             var appSchema = dataReader.GetAppSchema(shardId);
-=======
-            var shardSelection=shardStrategy.ShardSelectionStrategy;
-            var shardId=shardSelection.SelectShardIdForExistingObject(_app);
-            var worker = new IdWorker(shardId);
-            var uniqueId = worker.GetUniqueId();
-            var appSchema=dataReader.GetAppSchema(shardId);
->>>>>>> d4b85edc452fe7942e7d1bb5214a700fc9064bd4
             var cedarSession = new CedarSession(uniqueId);
             cedarSession.EnableTrasaction = true;
             cedarSession.SetupSchema(appSchema);
