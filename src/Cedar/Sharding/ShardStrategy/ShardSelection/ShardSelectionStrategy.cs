@@ -24,8 +24,7 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
         /// <returns></returns>
         public long SelectShardIdForExistingObject(object obj)
         {
-            var appCntxt = obj as AppContext;
-            var app = appCntxt.App;
+            var app = obj as App;
             long shardId = 0;
             if (app != null && app.Shards.Count >0)
             {

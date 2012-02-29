@@ -72,9 +72,25 @@ namespace CedarTest
         public void Test_Whether_ShardStrategy_Is_Not_Null()
         {
             string appName = "CXC";
-            AppContext target = new AppContext(appName); 
+            AppContext target = CedarAppStore.Instance.GetContextOf("CXC");
             Assert.IsNotNull(target.ShardStrategy,"Is not null");
            
+        }
+
+        /// <summary>
+        ///A test for GetSession
+        ///</summary>
+        [TestMethod()]
+        public void GetSessionTest()
+        {
+            string appName = string.Empty; // TODO: Initialize to an appropriate value
+            AppContext target = new AppContext(appName); // TODO: Initialize to an appropriate value
+            long uuid = 0; // TODO: Initialize to an appropriate value
+            ICedarSession expected = null; // TODO: Initialize to an appropriate value
+            ICedarSession actual;
+            actual = target.GetSession(uuid);
+            Assert.AreEqual(expected, actual);
+            Assert.Inconclusive("Verify the correctness of this test method.");
         }
     }
 }
