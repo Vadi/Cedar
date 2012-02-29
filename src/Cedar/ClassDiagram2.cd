@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cedar.App" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>App.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.AppContext" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAQAAAABAAAAAAAA=</HashCode>
+      <FileName>AppContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.CedarAppStore" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAABAAAAAAAAAAAAAAAAAEQAAAAAAAIAA=</HashCode>
+      <FileName>AppContextFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.AppSchema" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAABAAAAAABAAAAAAA=</HashCode>
+      <FileName>AppSchema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.CedarSession" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAYBKEAAACACAIQAEIAAAAAAAAEAAAAIAABAQBCAAAA=</HashCode>
+      <FileName>CedarSession.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Cedar.Table" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CedarSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.IdWorker" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAJIAAAAwQAAAAAAAgAEAAoAgAAQAAAAQEAQA=</HashCode>
+      <FileName>IdWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.Key" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAgAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.BaseRepository" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAA=</HashCode>
+      <FileName>Sentinel\DataRepository\BaseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.ShardRepository" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Sentinel\DataRepository\ShardRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.ShardStrategyRepository" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAUACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sentinel\DataRepository\ShardStrategyRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.DataFactory" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sentinel\Factory\IDataFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.SqlDataReader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAABCAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Sentinel\SqlDataReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Cedar.XmlDataReader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAABCAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Sentinel\XmlDataReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Cedar.Shard" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAABAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Shard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.ShardWile" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShardWile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.Utility" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgQgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.Balancer.BalancerFactory" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Balancer\BalancerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.Balancer.LoadBalancer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Balancer\LoadBalancer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Cedar.Properties.Settings" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.Sharding.Shards" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\Shards.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.Sharding.ShardStrategy.ShardStrategy&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAABAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Cedar.Sharding.ShardStrategy.ShardAccess.SequentialShardAccessStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardAccess\SequentialShardAccessStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Cedar.Sharding.ShardStrategy.ShardResolution.AllShardsResolutionStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardResolution\AllShardsResolutionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Cedar.Sharding.ShardStrategy.ShardResolution.ShardResolutionStrategyData" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardResolution\ShardResolutionStrategyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardSelection\ShardSelectionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dapper.SqlMapper" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIIgCAmCQIBQAERDAGACMigAIEACgAiAIQFQCIoAAAA=</HashCode>
+      <FileName>SqlDapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dapper.DynamicParameters" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAAAAABAAAAIAAAAAAAAAACABAAAAACAQAA=</HashCode>
+      <FileName>SqlDapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dapper.DbString" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAABCAAAgAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SqlDapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="17" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Cedar.ICedar" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAA=</HashCode>
+      <FileName>ICedar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cedar.ICedarSession">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>ICedarSession.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cedar.IDbQueryBehaviour" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>IDbQueryBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cedar.IDataReader" Collapsed="true">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAABCAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Sentinel\IDataReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cedar.Balancer.IBalancer" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Balancer\IBalancer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cedar.Sharding.ShardStrategy.IShardStrategy&lt;T&gt;">
+    <Position X="14" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAABAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\IShardStrategy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ShardAccessStrategy" />
+      <Property Name="ShardSelectionStrategy" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Cedar.Sharding.ShardStrategy.ShardAccess.IShardAccessStrategy" Collapsed="true">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardAccess\IShardAccessStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cedar.Sharding.ShardStrategy.ShardResolution.IShardResolutionStrategy" Collapsed="true">
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardResolution\IShardResolutionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cedar.Sharding.ShardStrategy.ShardSelection.IShardSelectionStrategy&lt;T&gt;" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\ShardSelection\IShardSelectionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Cedar.CommandType" Collapsed="true">
+    <Position X="5.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>CedarSession.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Cedar.FetchType" Collapsed="true">
+    <Position X="7" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sentinel\Factory\IDataFactory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Cedar.Sharding.ShardStrategy.Strategy" Collapsed="true">
+    <Position X="8.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sharding\ShardStrategy\IShardStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

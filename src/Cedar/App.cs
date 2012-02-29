@@ -6,7 +6,7 @@ using System.Text;
 namespace Cedar
 {
 
-    internal class App
+    public class App
     {
         internal string ApplicationName { get; set; }
         internal long AppId { get; set; }

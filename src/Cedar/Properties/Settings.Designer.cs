@@ -26,7 +26,8 @@ namespace Cedar.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\\Data\\CedarD" +
+            "ata.sdf")]
         public string CedarDataConnectionString {
             get {
                 return ((string)(this["CedarDataConnectionString"]));
