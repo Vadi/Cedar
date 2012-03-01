@@ -1,41 +1,29 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:WithUtilitySupport.cs" caret="497" fromTop="22" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppSchema.cs" caret="0" fromTop="0" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1544" fromTop="58" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="2047" fromTop="23" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="2413" fromTop="26" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="352" fromTop="13" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="567" fromTop="20" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="472" fromTop="13" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="192" fromTop="7" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:IShardSelectionStrategy.cs" caret="79" fromTop="2" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContextFactory.cs" caret="489" fromTop="6" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="1490" fromTop="22" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="674" fromTop="6" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:WithUtilitySupport.cs" caret="93" fromTop="6" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTest.cs" caret="2800" fromTop="36" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="1288" fromTop="29" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1009" fromTop="22" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:ShardSelectionStrategyTest.cs" caret="2619" fromTop="26" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="289" fromTop="10" />
     </RecentFiles>
     <RecentEdits>
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="2340" fromTop="15" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1007" fromTop="21" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1028" fromTop="29" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1133" fromTop="20" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="986" fromTop="19" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="523" fromTop="11" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="445" fromTop="12" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="274" fromTop="8" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:IShardSelectionStrategy.cs" caret="215" fromTop="5" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="502" fromTop="17" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1100" fromTop="36" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1531" fromTop="35" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="105" fromTop="5" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="799" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="415" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="2387" fromTop="48" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="1487" fromTop="9" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="220" fromTop="7" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="331" fromTop="12" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="502" fromTop="19" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="2439" fromTop="32" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:ShardSelectionStrategyTest.cs" caret="2617" fromTop="26" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2338" fromTop="39" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="882" fromTop="17" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="3102" fromTop="51" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="886" fromTop="26" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="1140" fromTop="35" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="1033" fromTop="30" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="381" fromTop="12" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2726" fromTop="20" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="1263" fromTop="39" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTest.cs" caret="2422" fromTop="17" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1009" fromTop="22" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2609" fromTop="20" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="3077" fromTop="25" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -59,15 +47,83 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="IdWorker`0" priority="31" />
-      <Item value="var" priority="31" />
-      <Item value="new" priority="63" />
-      <Item value="prop" priority="31" />
+      <Item value="var" priority="95" />
+      <Item value="new" priority="287" />
+      <Item value="prop" priority="191" />
       <Item value="private" priority="31" />
       <Item value="IShardStrategy`0" priority="31" />
       <Item value="null" priority="63" />
       <Item value="_shardStrategy" priority="96" />
-      <Item value="return" priority="31" />
-      <Item value="if" priority="31" />
+      <Item value="return" priority="159" />
+      <Item value="if" priority="127" />
+      <Item value="ShardStrategy" priority="28" />
+      <Item value="Assert`0" priority="31" />
+      <Item value="target" priority="63" />
+      <Item value="obj" priority="95" />
+      <Item value="public" priority="31" />
+      <Item value="App`0" priority="62" />
+      <Item value="_app" priority="95" />
+      <Item value="appCntxt" priority="31" />
+      <Item value="appName" priority="63" />
+      <Item value="CedarAppStore`0" priority="63" />
+      <Item value="using" priority="31" />
+      <Item value="for" priority="31" />
+      <Item value="while" priority="31" />
+      <Item value="int" priority="31" />
+      <Item value="i" priority="63" />
+      <Item value="Sequential" priority="16" />
+      <Item value="else" priority="31" />
+      <Item value="Regional" priority="16" />
+      <Item value="internal" priority="31" />
+      <Item value="ShardStartgyData" priority="28" />
+      <Item value="StrategyType" priority="26" />
+      <Item value="RegionalStartegy" priority="57" />
+      <Item value="strtgy" priority="31" />
+      <Item value="dto" priority="31" />
+      <Item value="RegionalSelectionStartegy" priority="28" />
+      <Item value="FetchMode`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="IsNotNull`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.AppContext">
+      <Item value="ShardStrategy" priority="80" />
+      <Item value="App" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.App">
+      <Item value="Shards" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Cedar.CedarAppStore">
+      <Item value="Instance" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.CedarAppStore">
+      <Item value="GetContextOf`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.ShardStartgyData">
+      <Item value="StrategyType" priority="80" />
+      <Item value="App" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Cedar.Sharding.ShardStrategy.Strategy">
+      <Item value="Sequential" priority="27" />
+      <Item value="Regional" priority="23" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CedarTest.RegionalStartegy">
+      <Item value="ShardSelectionStrategy" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.ShardStartegyData">
+      <Item value="Region" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.IdWorker">
+      <Item value="DecomposeKey`0" priority="27" />
     </ItemStatistics>
   </CompletionStatisticsManager>
+  <UnitTestSessions>
+    <Session>
+      <Name>Session #1</Name>
+      <Elements />
+    </Session>
+  </UnitTestSessions>
 </Configuration>

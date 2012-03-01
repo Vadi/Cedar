@@ -27,7 +27,7 @@ namespace Cedar
         {
             _app = new App();
             _app.ApplicationName = appName;
-            var dataReader = new DataFactory().GetdataReader(FetchType.Sql);
+            var dataReader = new DataFactory().GetdataReader(FetchMode.Sql);
             var shards = dataReader.GetAllShardByAppname(_app.ApplicationName);
             _app.Shards = shards;
         }
@@ -43,7 +43,7 @@ namespace Cedar
             // call cedar data method which would execute schema def statements in above shard id
 
 
-            var dataReader = new DataFactory().GetdataReader(FetchType.Sql);
+            var dataReader = new DataFactory().GetdataReader(FetchMode.Sql);
             dto.App = _app;
             var shardId = ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(dto);
 
