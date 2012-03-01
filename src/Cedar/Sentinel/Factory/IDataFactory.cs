@@ -7,24 +7,41 @@ namespace Cedar
 {
     public class DataFactory
     {
-        public IDataReader GetdataReader(FetchType dataFetchMode)
+        public IDataReader GetdataReader(FetchMode dataFetchMode)
         {
             IDataReader dataReader = null;
             //var dataFetchType = (FetchType)Enum.Parse(typeof(FetchType), dataFetchMode);
             var dataFetchType =  dataFetchMode;
 
-            if (dataFetchType == FetchType.Sql)
+            switch (dataFetchType)
             {
-                dataReader = new SqlDataReader();
-            }
-            else if (dataFetchType == FetchType.Xml)
-            {
-                dataReader = new XmlDataReader();
+                case FetchMode.Sql:
+                    dataReader = new SqlDataReader();
+                    break;
+                case FetchMode.Xml:
+                    dataReader = new XmlDataReader();
+                    break;
             }
 
             return dataReader;
         }
+        public IDataWriter GetDataWriter(FetchMode fetchMode)
+        {
+            IDataWriter dataWriter = null;
+            switch (fetchMode)
+            {
+                case FetchMode.Sql:
+                    dataWriter = new SqlDataWriter();
+                    break;
+                case FetchMode.Xml:
+                    dataWriter = new XmlDataWriter();
+                    break;
+            }
+
+            return dataWriter;
+
+        }
     }
 
-    public enum FetchType { Sql = 1, Xml };
+    public enum FetchMode { Sql = 1, Xml };
 }

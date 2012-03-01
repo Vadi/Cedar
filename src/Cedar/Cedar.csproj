@@ -82,11 +82,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Sentinel\XmlDataWriter.cs" />
+    <Compile Include="Sentinel\SqlDataWriter.cs" />
     <Compile Include="Sentinel\DataRepository\BaseRepository.cs" />
     <Compile Include="Sentinel\DataRepository\ShardRepository.cs" />
     <Compile Include="Sentinel\DataRepository\ShardStrategyRepository.cs" />
     <Compile Include="Sentinel\Factory\IDataFactory.cs" />
     <Compile Include="Sentinel\IDataReader.cs" />
+    <Compile Include="Sentinel\IDataWriter.cs" />
     <Compile Include="Sentinel\SqlDataReader.cs" />
     <Compile Include="Sentinel\XmlDataReader.cs" />
     <Compile Include="ICedarSession.cs" />
