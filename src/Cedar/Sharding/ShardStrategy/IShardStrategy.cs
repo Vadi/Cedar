@@ -21,6 +21,8 @@ namespace Cedar.Sharding.ShardStrategy
         ///
         /// </summary>
         IShardAccessStrategy ShardAccessStrategy { get; }
+
+
     }
     /// <summary>
     ///

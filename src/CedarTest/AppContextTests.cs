@@ -1,4 +1,5 @@
 using Cedar;
+using Cedar.Sharding.ShardStrategy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CedarTest
@@ -24,7 +25,7 @@ namespace CedarTest
         public void Test_SetupSchema()
         {
             var ctx = CedarAppStore.Instance.GetContextOf("CXC");
-            var uuid=ctx.SetupSchema();
+            var uuid = ctx.SetupSchema(new ShardStartegyData() { StrategyType = Strategy.Sequential });
 
             Assert.AreEqual(uuid>0,true,"Unique id is greater than zero");
 
@@ -67,10 +68,32 @@ namespace CedarTest
         public void Test_SetupSchemaOnMySql()
         {
             var ctx = CedarAppStore.Instance.GetContextOf("IGD");
-            var uuid = ctx.SetupSchema();
+            int i = 0;
+            while (i < 200)
+            {
+                var uuid = ctx.SetupSchema(new ShardStartegyData() { StrategyType = Strategy.Sequential });
+                Assert.AreEqual(uuid > 0, true, "Unique id is greater than zero");
+                i++;
+            }
+            
 
-            Assert.AreEqual(uuid > 0, true, "Unique id is greater than zero");
+           
 
+        }
+
+        [TestMethod]
+        public void Test_SetupSchemaForCustomStartegy()
+        {
+            var ctx = CedarAppStore.Instance.GetContextOf("IGD");
+            var strtgy = new RegionalStartegy();
+            ctx.ShardStrategy = new RegionalStartegy();
+            var uuid = ctx.SetupSchema(new ShardStartegyData() { StrategyType = Strategy.Regional,Region = "Prakash"});
+
+            var worker = new IdWorker(1004);
+            var uniqueId = worker.DecomposeKey(uuid);
+
+            Assert.AreEqual(1004 == uniqueId, true, "shard id is not as expected");
+         
         }
     }
     

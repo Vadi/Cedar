@@ -59,6 +59,7 @@
     <Compile Include="AppContextTest.cs" />
     <Compile Include="AppContextTests.cs" />
     <Compile Include="CedarSessionTest.cs" />
+    <Compile Include="RegionalStartegy.cs" />
     <Compile Include="XmlReaderTest.cs" />
     <Compile Include="SqlReaderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

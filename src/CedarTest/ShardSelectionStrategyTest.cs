@@ -1,4 +1,5 @@
 ﻿using Cedar;
+using Cedar.Sharding.ShardStrategy;
 using Cedar.Sharding.ShardStrategy.ShardSelection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -79,7 +80,7 @@ namespace CedarTest
             object obj = null; // TODO: Initialize to an appropriate value
             long expected = 0; // TODO: Initialize to an appropriate value
             long actual;
-            actual = target.SelectShardIdForExistingObject(context);
+            actual = target.SelectShardIdForExistingObject(new ShardStartegyData() { StrategyType = Strategy.Sequential });
             Assert.AreEqual(expected, actual);
             
         }

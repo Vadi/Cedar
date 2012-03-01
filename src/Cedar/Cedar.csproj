@@ -82,6 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ShardStartgyData.cs" />
     <Compile Include="Sentinel\DataRepository\BaseRepository.cs" />
     <Compile Include="Sentinel\DataRepository\ShardRepository.cs" />
     <Compile Include="Sentinel\DataRepository\ShardStrategyRepository.cs" />
