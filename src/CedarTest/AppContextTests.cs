@@ -67,9 +67,13 @@ namespace CedarTest
         public void Test_SetupSchemaOnMySql()
         {
             var ctx = CedarAppStore.Instance.GetContextOf("IGD");
-            var uuid = ctx.SetupSchema();
-
-            Assert.AreEqual(uuid > 0, true, "Unique id is greater than zero");
+            int ctr = 0;
+            while (ctr<0)
+            {
+                var uuid = ctx.SetupSchema();
+                Assert.AreEqual(uuid > 0, true, "Unique id is greater than zero");
+                ctr++;
+            }
 
         }
     }

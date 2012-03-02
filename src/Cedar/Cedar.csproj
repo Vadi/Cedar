@@ -82,6 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Sentinel\DataRepository\AppSchemaRepository.cs" />
     <Compile Include="Sentinel\XmlDataWriter.cs" />
     <Compile Include="Sentinel\SqlDataWriter.cs" />
     <Compile Include="Sentinel\DataRepository\BaseRepository.cs" />
