@@ -55,7 +55,7 @@ namespace Cedar
             var cedarSession = new CedarSession(uniqueId) { EnableTrasaction = true };
             cedarSession.SetupSchema(appSchema);
             cedarSession.Close();
-            dataReader.UpdateShardWile(shardId);
+           
             return uniqueId;
 
         }

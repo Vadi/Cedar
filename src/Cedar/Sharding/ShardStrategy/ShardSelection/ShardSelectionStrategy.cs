@@ -36,7 +36,11 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
                             foreach (var shard in app.Shards)
                             {
                                 shardId = GetSequentialStrategy(shard.shard_id);
-                                if (shardId > 0) break;
+                                if (shardId > 0)
+                                {
+                                    new DataFactory().GetdataReader(FetchMode.Sql).UpdateShardWile(shardId);
+                                    break;
+                                }
                             }
                         }
                     }
