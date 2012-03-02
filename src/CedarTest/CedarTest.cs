@@ -40,26 +40,5 @@ namespace CedarTest
 
 
 
-    public class IdWorker
-    {
-        public int dataCenterId { get; set; }
-        public int WorkerId { get; set; }
-        public long TwePoch { get; set; }
-        public int Sequence { get; set; }
-        public int WorkerIdBits { get; set; }
-        public int DataCenterIdBits { get; set; }
-        public int MaxWorkerId { get; set; }
-
-
-
-
-        public void Validate()
-        {
-            if ((WorkerId > MaxWorkerId) || WorkerId < 0)
-                throw new Exception("");
-        }
-
-    }
-
 
 }

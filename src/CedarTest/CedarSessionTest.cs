@@ -22,7 +22,7 @@ namespace CedarTest
         [TestMethod]
         public void Whether_Cedardb_Execute_Query()
         {
-            var uuid = 174103530611572736;
+            var uuid = 174931025376227328;
             using (var cedarSession = new CedarSession(uuid))
             {
 

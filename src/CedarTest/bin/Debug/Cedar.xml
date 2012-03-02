@@ -9,14 +9,14 @@
             
             </summary>
         </member>
-        <member name="M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.SelectShardIdForNewObject(System.Object)">
+        <member name="M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.SelectShardIdForNewObject(Cedar.ShardStartegyData)">
             <summary>
             
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.SelectShardIdForExistingObject(System.Object)">
+        <member name="M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.SelectShardIdForExistingObject(Cedar.ShardStartegyData)">
             <summary>
             
             </summary>
@@ -555,6 +555,26 @@
             
              </summary>
         </member>
+        <member name="T:Cedar.ShardStartegyData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Cedar.ShardStartegyData.StrategyType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Cedar.ShardStartegyData.Region">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Cedar.ShardStartegyData.App">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Cedar.ICedar.SetupSchema">
             <summary>
             set up the scehma first time, it returns the key to the app
@@ -587,7 +607,7 @@
              </summary>
              <param name="appName"></param>
         </member>
-        <member name="M:Cedar.AppContext.SetupSchema">
+        <member name="M:Cedar.AppContext.SetupSchema(Cedar.ShardStartegyData)">
             <summary>
             this method will set up schema for new user, will return unique id to application
             </summary>
