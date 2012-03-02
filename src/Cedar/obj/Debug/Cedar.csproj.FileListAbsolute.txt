@@ -6,12 +6,3 @@ D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.dll.config
 D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.XML
 D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.dll
 D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.pdb
-D:\Projects\Cedar\src\Cedar\bin\Debug\Data\CedarData.sdf
-D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.dll.config
-D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.dll
-D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.pdb
-D:\Projects\Cedar\src\Cedar\bin\Debug\MySql.Data.dll
-D:\Projects\Cedar\src\Cedar\obj\Debug\ResolveAssemblyReference.cache
-D:\Projects\Cedar\src\Cedar\obj\Debug\Cedar.dll
-D:\Projects\Cedar\src\Cedar\obj\Debug\Cedar.pdb
-D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.XML

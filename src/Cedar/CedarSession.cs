@@ -82,8 +82,10 @@ namespace Cedar
         /// <returns>>Number of rows affected</returns>
         public int Insert(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType != null)
+            if (commandType != null || (commandType.HasValue && commandType.Value ==CommandType.Query))
                 _commandType = System.Data.CommandType.Text;
+            else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
+                _commandType = System.Data.CommandType.StoredProcedure;
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
             return SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
@@ -91,8 +93,9 @@ namespace Cedar
 
         public void Update(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType != null)
+            if (commandType != null || (commandType.HasValue && commandType.Value == CommandType.Query))
                 _commandType = System.Data.CommandType.Text;
+            else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
             SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
@@ -100,8 +103,9 @@ namespace Cedar
 
         public void Delete(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType != null)
+            if (commandType != null || (commandType.HasValue && commandType.Value == CommandType.Query))
                 _commandType = System.Data.CommandType.Text;
+            else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
             SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
