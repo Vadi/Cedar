@@ -79,7 +79,7 @@ namespace CedarTest
             AppContext context = CedarAppStore.Instance.GetContextOf(appName);
             object obj = null; // TODO: Initialize to an appropriate value
             long expected = 0; // TODO: Initialize to an appropriate value
-            long actual;
+            long actual=0;
             actual = target.SelectShardIdForExistingObject(new ShardStartegyData() { StrategyType = Strategy.Sequential });
             Assert.AreEqual(expected, actual);
             

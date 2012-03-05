@@ -100,7 +100,6 @@
     <Compile Include="ICedar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shard.cs" />
-    <Compile Include="Sharding\Shards.cs" />
     <Compile Include="Sharding\ShardStrategy\ShardStartgyData.cs" />
     <Compile Include="Sharding\ShardStrategy\ShardStrategy.cs" />
     <Compile Include="Sharding\ShardStrategy\IShardStrategy.cs" />
@@ -121,7 +120,6 @@
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
-    <None Include="Config\App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
