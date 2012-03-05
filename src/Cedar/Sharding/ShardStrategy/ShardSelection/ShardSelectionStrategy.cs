@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Cedar.Sharding.ShardStrategy.ShardSelection
 {
@@ -33,9 +34,10 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
                 
                         if (app != null && app.Shards.Count > 0)
                         {
+                            var shardWileList = new SqlDataReader().GetShardStrategy();
                             foreach (var shard in app.Shards)
                             {
-                                shardId = GetSequentialStrategy(shard.shard_id);
+                                shardId = GetSequentialStrategy(shard.shard_id,shardWileList);
                                 if (shardId > 0) break;
                             }
                         }
@@ -51,12 +53,12 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
         /// </summary>
         /// <param name="shardId"></param>
         /// <returns></returns>
-        private long GetSequentialStrategy(long shardId)
+        private long GetSequentialStrategy(long shardId,IList<ShardWile> shardWileList)
         {
-            var shardWileList = new SqlDataReader().GetShardStrategyById(shardId);
+          //  var shardWileList = new SqlDataReader().GetShardStrategyById(shardId);
             //return (shardPileList.Where(shardWile => shardWile.TotalCount <= shardWile.MaxCount).Select(
             //    shardWile => shardWile.ShardId)).FirstOrDefault();
-            return (from shardWile in shardWileList where shardWile.TotalCount < shardWile.MaxCount select shardWile.ShardId).FirstOrDefault();
+            return (from shardWile in shardWileList where shardWile.ShardId.Equals(shardId) && shardWile.TotalCount < shardWile.MaxCount select shardWile.ShardId).FirstOrDefault();
         }
 
        

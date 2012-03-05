@@ -10,6 +10,23 @@ namespace Cedar
 {
     public class ShardStrategyRepository:BaseRepository 
     {
+        /// <summary>
+        /// Get all shard strategy
+        /// </summary>
+        /// <returns></returns>
+        public IList<ShardWile> GetShardStrategy()
+        {
+
+            using (var connection = GetConnection())
+            {
+                string query = "Select Id,ShardId,TotalCount, MaxCount from shardwile" ;
+
+            
+                var shardPileList = connection.Query<ShardWile>(query);
+
+                return shardPileList.ToList();
+            }
+        }
         public IList<ShardWile> GetShardStrategyById(long shardId)
         {
 

@@ -23,7 +23,7 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.GetSequentialStrategy(System.Int64)">
+        <member name="M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.GetSequentialStrategy(System.Int64,System.Collections.Generic.IList{Cedar.ShardWile})">
             <summary>
             
             </summary>
@@ -125,6 +125,12 @@
         <member name="M:Cedar.Utility.DecomposeKey(System.Int64)">
             <summary>
             returns Shardid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cedar.ShardStrategyRepository.GetShardStrategy">
+            <summary>
+            Get all shard strategy
             </summary>
             <returns></returns>
         </member>

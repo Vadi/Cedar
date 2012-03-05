@@ -41,6 +41,11 @@ namespace Cedar
             var shardStrategy = new ShardStrategyRepository();
             return shardStrategy.GetShardStrategyById(shardId);
         }
+        public IList<ShardWile> GetShardStrategy()
+        {
+            var shardStrategy = new ShardStrategyRepository();
+            return shardStrategy.GetShardStrategy();
+        }
         public void UpdateShardWile(long shardId)
         {
             var shardStrategy = new ShardStrategyRepository();
