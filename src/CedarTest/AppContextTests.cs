@@ -68,7 +68,6 @@ namespace CedarTest
         public void Test_SetupSchemaOnMySql()
         {
             var ctx = CedarAppStore.Instance.GetContextOf("IGD");
-
             int ctr = 0;
             while (ctr<0)
             {
@@ -89,7 +88,6 @@ namespace CedarTest
 
             var worker = new IdWorker(1004);
             var uniqueId = worker.DecomposeKey(uuid);
-
 
             Assert.AreEqual(1004 == uniqueId, true, "shard id is not as expected");
          
