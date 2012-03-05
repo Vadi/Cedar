@@ -1,7 +1,22 @@
 Building documentation...
-Memory before build: 1051600
-Building XML documentation...
+Memory before build: 1051640
+Initializing...
+Merging XML documentation...
 Cached doc : cedar.xml (0 sec.)
+TRACE: processing comment '[Cedar]T:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy':
+<summary></summary>
+TRACE: processing comment '[Cedar]M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.SelectShardIdForNewObject(Cedar.ShardStartegyData)':
+<summary></summary>
+<param name="obj"></param>
+<returns></returns>
+TRACE: processing comment '[Cedar]M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.SelectShardIdForExistingObject(Cedar.ShardStartegyData)':
+<summary></summary>
+<param name="obj"></param>
+<returns></returns>
+TRACE: processing comment '[Cedar]M:Cedar.Sharding.ShardStrategy.ShardSelection.ShardSelectionStrategy.GetSequentialStrategy(System.Int64)':
+<summary></summary>
+<param name="shardId"></param>
+<returns></returns>
 TRACE: processing comment '[Cedar]T:Cedar.CedarAppStore':
 <summary>
             Initiates Cedar Application
@@ -10,6 +25,18 @@ TRACE: processing comment '[Cedar]T:Cedar.CedarAppStore':
             There should be only one instance for this class across the application lifecycle. This class follows singleton pattern
             to provide single instance approach
             </remarks>
+TRACE: processing comment '[Cedar]T:Cedar.Sharding.ShardStrategy.ShardStrategy':
+<summary></summary>
+TRACE: processing comment '[Cedar]T:Cedar.Sharding.ShardStrategy.IShardStrategy':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.Sharding.ShardStrategy.IShardStrategy.ShardSelectionStrategy':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.Sharding.ShardStrategy.IShardStrategy.ShardResolutionStrategy':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.Sharding.ShardStrategy.IShardStrategy.ShardAccessStrategy':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.Sharding.ShardStrategy.ShardStrategy.ShardSelectionStrategy':
+<summary></summary>
 TRACE: processing comment '[Cedar]M:Cedar.IdWorker.#ctor(System.Int64,System.Func{System.Int64})':
 <summary></summary>
 <param name="shardId"></param>
@@ -387,6 +414,20 @@ TRACE: processing comment '[Cedar]P:Dapper.DbString.Value':
 <summary>
             The value of the string
             </summary>
+TRACE: processing comment '[Cedar]T:Cedar.Sharding.ShardStrategy.Strategy':
+<summary></summary>
+TRACE: processing comment '[Cedar]F:Cedar.Sharding.ShardStrategy.Strategy.Sequential':
+<summary></summary>
+TRACE: processing comment '[Cedar]F:Cedar.Sharding.ShardStrategy.Strategy.Regional':
+<summary></summary>
+TRACE: processing comment '[Cedar]T:Cedar.ShardStartegyData':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.ShardStartegyData.StrategyType':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.ShardStartegyData.Region':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.ShardStartegyData.App':
+<summary></summary>
 TRACE: processing comment '[Cedar]M:Cedar.ICedar.SetupSchema':
 <summary>
             set up the scehma first time, it returns the key to the app
@@ -409,36 +450,41 @@ TRACE: processing comment '[Cedar]T:Cedar.AppContext':
 <summary>
             This class provides session object to deal with your sharded databases
             </summary>
-TRACE: processing comment '[Cedar]M:Cedar.AppContext.SetupSchema':
+TRACE: processing comment '[Cedar]M:Cedar.AppContext.#ctor(System.String)':
+<summary></summary>
+<param name="appName"></param>
+TRACE: processing comment '[Cedar]M:Cedar.AppContext.SetupSchema(Cedar.ShardStartegyData)':
 <summary>
             this method will set up schema for new user, will return unique id to application
             </summary>
 <returns></returns>
-Memory before making xml: 3541256
+TRACE: processing comment '[Cedar]M:Cedar.AppContext.GetSession(System.Int64)':
+<summary></summary>
+<param name="uuid"></param>
+<returns></returns>
+TRACE: processing comment '[Cedar]P:Cedar.AppContext.App':
+<summary></summary>
+TRACE: processing comment '[Cedar]P:Cedar.AppContext.ShardStrategy':
+<summary>
+            get and set the shard strategy, if not set default startegy will be set.
+            </summary>
+Memory before making xml: 1584792
 MakeXML : 0 sec.
-Memory after making xml: 3565832
+Memory after making xml: 1609368
 An error occured while trying to build the documentation.
 
 
+
+Exception: NDoc3.Core.DocumenterException
+Could not load file or assembly 'd:\projects\cedar\src\cedar\bin\debug\cedar.dll' or one of its dependencies. This assembly is built by a runtime newer than the currently loaded runtime and cannot be loaded.
 
 Exception: System.BadImageFormatException
 Could not load file or assembly 'd:\projects\cedar\src\cedar\bin\debug\cedar.dll' or one of its dependencies. This assembly is built by a runtime newer than the currently loaded runtime and cannot be loaded.
 
 
 
-Exception: System.BadImageFormatException
-   at System.Reflection.AssemblyName.nGetFileInformation(String s)
-   at System.Reflection.AssemblyName.GetAssemblyName(String assemblyFile)
-   at NDoc3.Core.Reflection.AssemblyLoader.LoadAssembly(FileInfo assemblyFile)
-   at NDoc3.Core.Reflection.AssemblyLoader.GetAssemblyInfo(FileInfo assemblyFile)
-   at NDoc3.Core.Reflection.NDocXmlGenerator.BuildXrefs()
-   at NDoc3.Core.Reflection.NDocXmlGenerator.PreReflectionProcess()
-   at NDoc3.Core.Reflection.NDocXmlGenerator.BuildXml(XmlWriter writer)
-   at NDoc3.Core.Reflection.NDocXmlGenerator.MakeXmlFile(FileInfo xmlFile, Formatting formatting, Int32 indentation, Char indentChar)
-   at NDoc3.Core.Reflection.NDocXmlGenerator.MakeXmlFile(FileInfo xmlFile)
-   at NDoc3.Core.Reflection.ReflectionEngine.MakeXmlFile(NDocXmlGeneratorParameters args, FileInfo xmlFile)
-   at NDoc3.Core.Reflection.BaseReflectionDocumenter.MakeXmlFile(Project project, FileInfo outputFile)
-   at NDoc3.Documenter.Xml.XmlDocumenter.Build(Project project)
+Exception: NDoc3.Core.DocumenterException
+   at NDoc3.Documenter.Msdn.MsdnDocumenter.Build(Project project)
    at NDoc3.Gui.BuildWorker.ThreadProc()
 
 
