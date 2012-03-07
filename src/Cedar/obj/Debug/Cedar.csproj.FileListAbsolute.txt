@@ -14,3 +14,4 @@ D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.XML
 D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.dll
 D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.pdb
 D:\Projects\Cedar\src\Cedar\bin\Debug\MySql.Data.dll
+D:\Projects\Cedar\src\Cedar\bin\Debug\log4net.dll

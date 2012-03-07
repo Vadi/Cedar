@@ -11,10 +11,13 @@ using System.Data.OracleClient;
 using System.Data.Odbc;
 using System.Data.OleDb;
 using Dapper;
+using log4net;
+
 namespace Cedar
 {
     public class CedarSession : ICedarSession
     {
+        readonly ILog log = LogManager.GetLogger(typeof(CedarSession));
         private IDbConnection _sqlConnection = null;
         private long _uuid;
         String _connectionString = String.Empty;
@@ -157,13 +160,22 @@ namespace Cedar
                 _sqlConnection = GetConnection(_connectionString);
                if(_sqlConnection!=null )
                {
-
+                   log.Info(string.Format("connecting to server : {0}", _connectionString));
                    _sqlConnection.ConnectionString = _connectionString;
-
-                   _sqlConnection.Open();   
+                   try
+                   {
+                       _sqlConnection.Open();   
+                   }
+                   catch (Exception ex)
+                   {
+                       log.Error(string.Format("Failed to  connect server : {0}", _connectionString),ex);
+                       throw;
+                   }
+                   
                }
                else
                {
+                   
                    throw new Exception("Connection string can not be null, you may not specified the provider");
                }
 
