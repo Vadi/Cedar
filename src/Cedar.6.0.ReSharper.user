@@ -1,12 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="1908" fromTop="0" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="0" fromTop="0" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="0" fromTop="0" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:ShardSelectionStrategyTest.cs" caret="2416" fromTop="54" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:SqlReaderTest.cs" caret="0" fromTop="0" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:WithUtilitySupport.cs" caret="0" fromTop="0" />
       <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:XmlReaderTest.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardAccess/f:IShardAccessStrategy.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardAccess/f:SequentialShardAccessStrategy.cs" caret="0" fromTop="0" />
@@ -14,31 +8,47 @@
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardResolution/f:IShardResolutionStrategy.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardResolution/f:ShardResolutionStrategyData.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:IShardSelectionStrategy.cs" caret="100" fromTop="2" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1303" fromTop="31" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="0" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStartgyData.cs" caret="0" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="506" fromTop="17" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Shard.cs" caret="199" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Properties/f:AssemblyInfo.cs" caret="1052" fromTop="25" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Balancer/f:BalancerFactory.cs" caret="271" fromTop="15" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Balancer/f:IBalancer.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Balancer/f:LoadBalancer.cs" caret="0" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:AppSchemaRepository.cs" caret="0" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="0" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardRepository.cs" caret="806" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:AppSchemaRepository.cs" caret="1531" fromTop="41" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="796" fromTop="21" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardRepository.cs" caret="1791" fromTop="5" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:Factory/f:IDataFactory.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:IDataReader.cs" caret="0" fromTop="0" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:IDataWriter.cs" caret="293" fromTop="11" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Shard.cs" caret="199" fromTop="0" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Properties/f:AssemblyInfo.cs" caret="1052" fromTop="25" />
-      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="2491" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:XmlDataReader.cs" caret="1056" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStrategy.cs" caret="506" fromTop="17" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStartgyData.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:SqlDataWriter.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:XmlDataWriter.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:SqlDataReader.cs" caret="1354" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="406" fromTop="16" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2476" fromTop="16" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="2919" fromTop="40" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="2064" fromTop="28" />
     </RecentFiles>
     <RecentEdits>
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2165" fromTop="14" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2464" fromTop="37" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2969" fromTop="45" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2968" fromTop="37" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2968" fromTop="45" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.Config" caret="685" fromTop="18" />
-      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2464" fromTop="29" />
       <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:ShardSelectionStrategyTest.cs" caret="2416" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="745" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="299" fromTop="13" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="667" fromTop="24" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:SqlDataReader.cs" caret="1483" fromTop="34" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1754" fromTop="32" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2165" fromTop="23" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2968" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1713" fromTop="25" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="2049" fromTop="36" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="2435" fromTop="41" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1605" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1232" fromTop="20" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -98,7 +108,7 @@
       <Item value="commandTimeout" priority="31" />
       <Item value="commandType" priority="127" />
       <Item value="SqlMapper`0" priority="95" />
-      <Item value="public" priority="987" />
+      <Item value="public" priority="1019" />
       <Item value="int" priority="511" />
       <Item value="_commandTimeout" priority="63" />
       <Item value="value" priority="31" />
@@ -184,7 +194,7 @@
       <Item value="ShardSelectionStrategy" priority="29" />
       <Item value="shardSelection" priority="31" />
       <Item value="shards" priority="63" />
-      <Item value="shardId" priority="474" />
+      <Item value="shardId" priority="506" />
       <Item value="AppSettingsReader`0" priority="31" />
       <Item value="Properties" priority="63" />
       <Item value="Settings`0" priority="53" />
@@ -200,13 +210,13 @@
       <Item value="DataFactory" priority="28" />
       <Item value="ShardStrategyRepository" priority="57" />
       <Item value="shardPile" priority="31" />
-      <Item value="IList" priority="31" />
+      <Item value="IList" priority="63" />
       <Item value="session0" priority="58" />
       <Item value="IdWorker`0" priority="31" />
       <Item value="worker" priority="64" />
       <Item value="IdWorker" priority="28" />
       <Item value="foreach" priority="127" />
-      <Item value="shardWile" priority="277" />
+      <Item value="shardWile" priority="309" />
       <Item value="continue" priority="31" />
       <Item value="parameters" priority="122" />
       <Item value="dbType" priority="95" />
@@ -246,8 +256,9 @@
       <Item value="fetchMode" priority="32" />
       <Item value="dataWriter" priority="32" />
       <Item value="Shard`0" priority="31" />
-      <Item value="ShardWile`0" priority="31" />
+      <Item value="ShardWile`0" priority="94" />
       <Item value="applicationSchema" priority="26" />
+      <Item value="shardWileList" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.SqlClient.SqlConnection">
       <Item value="ConnectionString" priority="26" />
@@ -369,7 +380,7 @@
       <Item value="SelectShardIdForExistingObject`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Int64">
-      <Item value="Equals`0" priority="26" />
+      <Item value="Equals`0" priority="53" />
       <Item value="ToString`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Cedar.Properties.Settings">
@@ -411,7 +422,7 @@
     <ItemStatistics item="Qualified:Cedar.ShardWile">
       <Item value="MaxCount" priority="81" />
       <Item value="TotalCount" priority="108" />
-      <Item value="ShardId" priority="53" />
+      <Item value="ShardId" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="Parse`0" priority="26" />
