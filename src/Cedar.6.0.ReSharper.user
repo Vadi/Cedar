@@ -1,0 +1,212 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:WithUtilitySupport.cs" caret="93" fromTop="6" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarTest.cs" caret="1009" fromTop="22" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:ShardSelectionStrategyTest.cs" caret="2619" fromTop="26" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Properties/f:AssemblyInfo.cs" caret="848" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarXml.xml" caret="519" fromTop="22" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IDbQueryBehaviour.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Shard.cs" caret="430" fromTop="23" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:IntegratedTests.cs" caret="2410" fromTop="27" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="4829" fromTop="8" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.Config" caret="86" fromTop="3" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.cs" caret="303" fromTop="15" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2463" fromTop="22" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1569" fromTop="3" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:ShardWile.cs" caret="0" fromTop="0" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTest.cs" caret="1785" fromTop="10" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:SqlDapper.cs" caret="21231" fromTop="58" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:SqlDapper.cs" caret="589" fromTop="17" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:SqlDataReader.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardRepository.cs" caret="783" fromTop="11" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:ICedarSession.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="7520" fromTop="152" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="148" fromTop="6" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:RegionalStartegy.cs" caret="1180" fromTop="35" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="408" fromTop="14" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="1788" fromTop="25" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:IntegratedTests.cs" caret="2427" fromTop="18" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardRepository.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.Config" caret="1478" fromTop="38" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="1545" fromTop="14" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="1545" fromTop="18" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="1545" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="1545" fromTop="30" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.Config" caret="942" fromTop="20" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.Config" caret="1361" fromTop="32" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.Config" caret="156" fromTop="3" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="1545" fromTop="18" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Properties/f:AssemblyInfo.cs" caret="1459" fromTop="36" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="950" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="416" fromTop="13" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="6809" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="6390" fromTop="23" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="6731" fromTop="32" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="6465" fromTop="25" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:IntegratedTests.cs" caret="2079" fromTop="10" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:SqlDapper.cs" caret="600" fromTop="17" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="3043" fromTop="82" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="1162" fromTop="11" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="217" fromTop="6" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="1352" fromTop="32" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="2225" fromTop="10" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="862" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="IdWorker`0" priority="31" />
+      <Item value="var" priority="159" />
+      <Item value="new" priority="447" />
+      <Item value="prop" priority="191" />
+      <Item value="private" priority="31" />
+      <Item value="IShardStrategy`0" priority="31" />
+      <Item value="null" priority="63" />
+      <Item value="_shardStrategy" priority="96" />
+      <Item value="return" priority="191" />
+      <Item value="if" priority="127" />
+      <Item value="ShardStrategy" priority="28" />
+      <Item value="Assert`0" priority="31" />
+      <Item value="target" priority="63" />
+      <Item value="obj" priority="95" />
+      <Item value="public" priority="63" />
+      <Item value="App`0" priority="62" />
+      <Item value="_app" priority="95" />
+      <Item value="appCntxt" priority="31" />
+      <Item value="appName" priority="63" />
+      <Item value="CedarAppStore`0" priority="63" />
+      <Item value="using" priority="93" />
+      <Item value="for" priority="31" />
+      <Item value="while" priority="31" />
+      <Item value="int" priority="63" />
+      <Item value="i" priority="63" />
+      <Item value="Sequential" priority="16" />
+      <Item value="else" priority="31" />
+      <Item value="Regional" priority="16" />
+      <Item value="internal" priority="31" />
+      <Item value="ShardStartgyData" priority="28" />
+      <Item value="StrategyType" priority="26" />
+      <Item value="RegionalStartegy" priority="86" />
+      <Item value="strtgy" priority="31" />
+      <Item value="dto" priority="31" />
+      <Item value="RegionalSelectionStartegy" priority="28" />
+      <Item value="FetchMode`0" priority="26" />
+      <Item value="List" priority="95" />
+      <Item value="List&lt;long&gt;" priority="28" />
+      <Item value="uuid" priority="127" />
+      <Item value="ctx" priority="95" />
+      <Item value="foreach" priority="31" />
+      <Item value="res" priority="63" />
+      <Item value="typeof" priority="31" />
+      <Item value="BaseRepository`0" priority="31" />
+      <Item value="string" priority="63" />
+      <Item value="try" priority="63" />
+      <Item value="throw" priority="31" />
+      <Item value="Exception" priority="28" />
+      <Item value="log" priority="31" />
+      <Item value="log4net" priority="30" />
+      <Item value="Config" priority="26" />
+      <Item value="XmlConfigurator`0" priority="26" />
+      <Item value="XmlConfigurator" priority="22" />
+      <Item value="ConfigFile" priority="30" />
+      <Item value="ConfigFileExtension" priority="30" />
+      <Item value="Watch" priority="30" />
+      <Item value="IGDDTO`0" priority="31" />
+      <Item value="List&lt;IGDDTO&gt;" priority="28" />
+      <Item value="Cedar" priority="30" />
+      <Item value="ShardStartegyData" priority="28" />
+      <Item value="Region" priority="26" />
+      <Item value="static" priority="31" />
+      <Item value="dynamic" priority="28" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="IsNotNull`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.AppContext">
+      <Item value="ShardStrategy" priority="107" />
+      <Item value="App" priority="53" />
+      <Item value="GetSession`0" priority="26" />
+      <Item value="SetupSchema`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.App">
+      <Item value="Shards" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList`1" priority="53" />
+      <Item value="FirstOrDefault`1" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Cedar.CedarAppStore">
+      <Item value="Instance" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.CedarAppStore">
+      <Item value="GetContextOf`0" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.ShardStartgyData">
+      <Item value="StrategyType" priority="80" />
+      <Item value="App" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Cedar.Sharding.ShardStrategy.Strategy">
+      <Item value="Sequential" priority="27" />
+      <Item value="Regional" priority="23" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CedarTest.RegionalStartegy">
+      <Item value="ShardSelectionStrategy" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.ShardStartegyData">
+      <Item value="Region" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.IdWorker">
+      <Item value="DecomposeKey`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:log4net.ILog">
+      <Item value="Info`0" priority="54" />
+      <Item value="Error`0" priority="55" />
+      <Item value="Debug`0" priority="27" />
+      <Item value="IsInfoEnabled" priority="26" />
+      <Item value="ErrorFormat`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Select`2" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestSessions>
+    <Session>
+      <Name>Session #1</Name>
+      <Elements>
+        <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests" type="MsTestTestClassElement" TypeName="CedarTest.AppContextTests" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+        <UnitTestElement Provider="MSTest" Id="CedarTest.IntegratedTests" type="MsTestTestClassElement" TypeName="CedarTest.IntegratedTests" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+        <UnitTestElement Provider="MSTest" Id="CedarTest.IntegratedTests.IntegratedTest" ParentId="CedarTest.IntegratedTests" type="MsTestTestMethodElement" MethodName="IntegratedTest" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+        <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchemaForCustomStartegy" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchemaForCustomStartegy" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+        <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchemaOnMySql" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchemaOnMySql" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+      </Elements>
+    </Session>
+  </UnitTestSessions>
+</Configuration>

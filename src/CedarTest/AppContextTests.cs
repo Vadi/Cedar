@@ -24,7 +24,7 @@ namespace CedarTest
         [TestMethod]
         public void Test_SetupSchema()
         {
-            var ctx = CedarAppStore.Instance.GetContextOf("CXC");
+            var ctx = CedarAppStore.Instance.GetContextOf("IGDTEST");
             var uuid = ctx.SetupSchema(new ShardStartegyData() { StrategyType = Strategy.Sequential });
 
             Assert.AreEqual(uuid>0,true,"Unique id is greater than zero");

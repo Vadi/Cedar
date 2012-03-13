@@ -8,3 +8,4 @@ D:\Projects\Cedar\src\IGD.Client\bin\Debug\log4net.dll
 D:\Projects\Cedar\src\IGD.Client\bin\Debug\Cedar.pdb
 D:\Projects\Cedar\src\IGD.Client\obj\x86\Debug\IGD.Client.exe
 D:\Projects\Cedar\src\IGD.Client\obj\x86\Debug\IGD.Client.pdb
+D:\Projects\Cedar\src\IGD.Client\bin\Debug\Schema Dump\IGDTEST.SQL

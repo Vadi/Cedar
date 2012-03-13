@@ -1,11 +1,19 @@
-INFO  2012-03-05 17:56:51,135 48923ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,172 48960ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,182 48970ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,194 48982ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.142;Database=mytest; User=root;Password=unthinker;
-INFO  2012-03-05 17:56:51,292 49080ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,302 49090ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,368 49156ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,390 49178ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,407 49195ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-05 17:56:51,419 49207ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.142;Database=mytest; User=root;Password=unthinker;
-INFO  2012-03-05 17:56:51,493 49281ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 15:19:10,180   113ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 15:19:10,398   331ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 15:19:10,416   349ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 15:19:10,494   427ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 15:19:10,511   444ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 15:19:10,526   459ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 15:19:10,608   541ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.132;Database=igd_master; User=root;Password=unthinker;
+ERROR 2012-03-13 15:19:10,818   751ms CedarSession           SetupSchema        - Error in setup schema for : IGDTEST
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered during command execution. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@sqlquery' must be defined.
+   at MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlStream stream, String parmName)
+   at MySql.Data.MySqlClient.Statement.InternalBindParameters(String sql, MySqlParameterCollection parameters, MySqlStream stream)
+   at MySql.Data.MySqlClient.Statement.BindParameters()
+   at MySql.Data.MySqlClient.PreparableStatement.Execute()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, IDbTransaction transaction, String sql, Action`2 paramReader, Object obj, Nullable`1 commandTimeout, Nullable`1 commandType) in D:\Projects\Cedar\src\Cedar\SqlDapper.cs:line 1385
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in D:\Projects\Cedar\src\Cedar\SqlDapper.cs:line 512
+   at Cedar.CedarSession.SetupSchema(AppSchema appSchema) in D:\Projects\Cedar\src\Cedar\CedarSession.cs:line 70

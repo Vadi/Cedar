@@ -59,7 +59,9 @@
     <Compile Include="AppContextTest.cs" />
     <Compile Include="AppContextTests.cs" />
     <Compile Include="CedarSessionTest.cs" />
-    <Compile Include="IntegratedTests.cs" />
+    <Compile Include="IntegratedTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RegionalStartegy.cs" />
     <Compile Include="XmlReaderTest.cs" />
     <Compile Include="SqlReaderTest.cs" />

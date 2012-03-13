@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Cedar.Balancer;
@@ -60,14 +61,45 @@ namespace Cedar
        
         internal void SetupSchema(AppSchema appSchema)
         {
-            _commandType = System.Data.CommandType.Text;
-            _transaction = _sqlConnection.BeginTransaction();
-            string query = GetSchemaQuery(appSchema.schema);
-            _sqlConnection.Execute(query , null , _transaction, _commandTimeout, _commandType);
-            _transaction.Commit();
-            _transaction.Dispose();
+            try
+            {
+                var schema = GetSchemaFromFile(appSchema.schema);
+                _commandType = System.Data.CommandType.Text;
+                _transaction = _sqlConnection.BeginTransaction();
+                string query = GetSchemaQuery(schema);
+                _sqlConnection.Execute(query, null, _transaction, _commandTimeout, _commandType);
+                _transaction.Commit();
+                _transaction.Dispose();
+            }
+            catch (Exception exception)
+            {
+                log.Error(string.Format("Error in setup schema for : {0}", appSchema.application_name), exception);
+                throw ;
+            }
+            
 
         }
+
+        internal string GetSchemaFromFile(string fileName)
+        {
+            try
+            {
+
+
+                var executionApth = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Schema Dump",
+                                                           fileName);
+                var schema = System.IO.File.ReadAllText(executionApth);
+                return GetSchemaQuery(schema);
+            }
+            catch (Exception exception)
+            {
+                log.Error(string.Format("Error in setup schema for : {0}", fileName), exception);
+                throw;
+            }
+            
+
+        }
+
         private string GetSchemaQuery(string schema)
         {
             string newQuery = String.Empty;
