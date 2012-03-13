@@ -1,14 +1,14 @@
-INFO  2012-03-13 15:28:20,279   109ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:20,511   341ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:20,528   358ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:20,584   414ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:20,596   426ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:20,608   438ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:20,699   529ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.132;Database=igd_master; User=root;Password=unthinker;
-ERROR 2012-03-13 15:28:21,030   860ms CedarSession           SetupSchema        - Error in setup schema for : IGDTEST
-MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--- declare sqlquery varchar(3000);
-set pageindex=0;
-set pageindex=CurrentPage' at line 9
+INFO  2012-03-13 16:30:05,612   111ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:05,854   353ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:05,871   370ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:05,933   432ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:05,945   444ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:05,957   456ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:06,037   536ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.132;Database=igd_master; User=root;Password=unthinker;
+ERROR 2012-03-13 16:30:06,443   942ms CedarSession           SetupSchema        - Error in setup schema for : IGDTEST
+MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--if not exists(select 1 from pinellas_county where ter_id=ter_id)
+--begin
+	in' at line 9
    at MySql.Data.MySqlClient.MySqlStream.OpenPacket()
    at MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
    at MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()

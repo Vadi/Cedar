@@ -1,7 +1,7 @@
-INFO  2012-03-13 15:29:56,001   117ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:29:56,257   373ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:29:56,274   390ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:29:56,346   462ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:29:56,359   475ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:29:56,372   488ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:29:56,452   568ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.132;Database=igd_master; User=root;Password=unthinker;
+INFO  2012-03-13 16:30:56,011   115ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:56,256   360ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:56,274   378ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:56,355   459ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:56,366   470ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:56,380   484ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:30:56,459   563ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.132;Database=igd_master; User=root;Password=unthinker;
