@@ -59,6 +59,7 @@
     <Compile Include="AppContextTest.cs" />
     <Compile Include="AppContextTests.cs" />
     <Compile Include="CedarSessionTest.cs" />
+    <Compile Include="IntegratedTests.cs" />
     <Compile Include="RegionalStartegy.cs" />
     <Compile Include="XmlReaderTest.cs" />
     <Compile Include="SqlReaderTest.cs" />
@@ -72,6 +73,11 @@
       <Project>{AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D}</Project>
       <Name>Cedar</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -51,6 +51,9 @@
     <DocumentationFile>bin\Release\Cedar.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\libs\Log4Net\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=5.2.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\libs\mysql\MySql.Data.dll</HintPath>

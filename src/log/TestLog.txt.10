@@ -1,0 +1,11 @@
+INFO  2012-03-05 17:56:50,394 48182ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,417 48205ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.142;Database=mytest; User=root;Password=unthinker;
+INFO  2012-03-05 17:56:50,469 48257ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,479 48267ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,552 48340ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,570 48358ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,583 48371ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,595 48383ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.142;Database=mytest; User=root;Password=unthinker;
+INFO  2012-03-05 17:56:50,652 48440ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,674 48462ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-05 17:56:50,735 48523ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
