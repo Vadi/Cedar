@@ -8,6 +8,8 @@ using System.Text;
 using log4net;
 using IGD.Client.Dapper;
 using Cedar;
+
+
 namespace IGD.Client
 {
     class Program
@@ -18,10 +20,9 @@ namespace IGD.Client
             var ctx = CedarAppStore.Instance.GetContextOf("IGDTEST");
             ctx.ShardStrategy = new RegionalStartegy();
             var uuid= ctx.SetupSchema(new ShardStartegyData() {Region = "Pinellas"});
-
-            string connectionString = @"server=192.168.1.20;uid=praveen_aw;pwd=praveen@jan20;database=IGD_STAGE";
-            var connection = GetConnection(connectionString, "MySql");
-            connection.Query("insert into counties values(@uid,@region)", new {uid = uuid, region = "Pinellas"});
+            var cedarSession = ctx.GetSession(uuid);
+            cedarSession.Insert(@"insert into counties values(@uuid,@region)", new {uuid = uuid, region = "Pinellas"});
+           
         }
 
         public List<IGDDTO> FetchData()
