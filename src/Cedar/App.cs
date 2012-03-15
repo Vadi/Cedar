@@ -10,7 +10,7 @@ namespace Cedar
     {
         internal string ApplicationName { get; set; }
         internal long AppId { get; set; }
-        internal IList<Shard> Shards { get; set; }
+        internal  IList<Shard> Shards { get; set; }
     }
 
 }

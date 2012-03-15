@@ -34,15 +34,18 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
                 
                         if (app != null && app.Shards.Count > 0)
                         {
-                            var shardWileList = new SqlDataReader().GetShardStrategy();
+                           // var shardWileList = new SqlDataReader().GetShardStrategy();
                             foreach (var shard in app.Shards)
                             {
 
-                                shardId = GetSequentialStrategy(shard.shard_id,shardWileList);
-
+                               // shardId = GetSequentialStrategy(shard.shard_id,shardWileList);
+                                if (shard.total_count < shard.max_count)
+                                {
+                                    shardId = shard.shard_id;
+                                }
                                 if (shardId > 0)
                                 {
-                                    new DataFactory().GetdataReader(FetchMode.Sql).UpdateShardWile(shardId);
+                                    new DataFactory().GetdataReader(FetchMode.Sql).UpdateShard(shardId);
                                     break;
                                 }
 

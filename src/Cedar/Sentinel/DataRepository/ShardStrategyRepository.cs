@@ -50,34 +50,9 @@ namespace Cedar
             using (var connection = GetConnection())
             {
                 string query = "update ShardWile set TotalCount=(TotalCount)+1 WHERE ShardId = @SId";
-
                 var parameters = new DynamicParameters();
-
                 parameters.Add("ShardId", shardId);
-                //var transaction = connection.BeginTransaction();
-                connection.Execute(query, parameters);
-                //connection.Execute(query, new
-                //                              {
-                //                                  SId = shardId
-                //                              });
-               // transaction.Commit();
-               // transaction.Dispose();
-
-                //var command = GetCommand(connection);
-                //command.CommandText = query;
-                //command.CommandType = System.Data.CommandType.Text ;
-                //IDbDataParameter param1 = command.CreateParameter();
-                //param1.ParameterName = "@SId";
-                //param1.Value = shardId;
-                //command.Parameters.Add(param1);
-                //command.ExecuteNonQuery();
-
-               // command.CommandText = "select * from ShardWile where ShardId=" + shardId;
-               // var reader= command.ExecuteReader();
-               //while (reader.Read())
-               //{
-               //    var tot = reader["TotalCount"].ToString();
-               //}
+               connection.Execute(query, parameters);
               
 
             }

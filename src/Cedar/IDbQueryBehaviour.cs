@@ -13,6 +13,7 @@ namespace Cedar
         void Update(string sql, dynamic param = null, Cedar.CommandType? commandType = null);
         void Delete(string sql, dynamic param = null, Cedar.CommandType? commandType = null);
         IEnumerable<dynamic> Select(string sql, dynamic param = null, Cedar.CommandType? commandType = null);
+        IEnumerable<T> Select<T>(string sql, dynamic param = null, Cedar.CommandType? commandType = null);
         
 
     }

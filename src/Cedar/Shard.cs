@@ -19,5 +19,8 @@ namespace Cedar
         internal string application_name { get; set; }
         internal string connection_string { get; set; }
         internal string db_type { get; set; }
+        internal long total_count { get; set; }
+        internal long max_count { get; set; }
+
     }
 }

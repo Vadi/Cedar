@@ -125,5 +125,17 @@ namespace Cedar
 
             return appSchema;
         }
+
+
+        public IList<ShardWile> GetShardStrategy()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void UpdateShard(long shardId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
