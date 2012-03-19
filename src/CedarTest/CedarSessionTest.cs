@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Cedar;
+using Cedar.Sharding.ShardStrategy;
+using Dapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CedarTest
@@ -115,5 +117,36 @@ namespace CedarTest
             Assert.AreEqual(address,ctr, "Changed adress updated");
             cedarSession.Close();
         }
+        [TestMethod]
+        public void TestSave()
+        {
+            var cedarContext = Cedar.CedarAppStore.Instance.GetContextOf("IGD");
+            long uid = 0;
+           
+            if (cedarContext.IsSetupSchemaRequired)
+            {
+                cedarContext.SetupSchema(new ShardStartegyData() { StrategyType = Strategy.Sequential });
+
+            }
+            uid = cedarContext.CurrentShard;
+          
+
+            long? uId = 0;
+
+            var worker = new Cedar.IdWorker(uid);
+            uId = worker.GetUniqueId();
+
+
+            using (ICedarSession cedarSession = new Cedar.AppContext("IGD").GetSession(uId.Value))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("firstName", "TArun");
+                parameters.Add("lastName", "Kumar");
+                cedarSession.Insert("usp_addemployee", parameters, commandType: Cedar.CommandType.StoredProcedure);
+            }
+
+        }
+
+       
     }
 }
