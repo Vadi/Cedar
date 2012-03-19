@@ -12,7 +12,9 @@ namespace Cedar
         List<Shard> GetAllShard();
         AppSchema GetAppSchema(long shardId);
         IList<ShardWile> GetShardStrategyById(long shardId);
+        IList<ShardWile> GetShardStrategy();
         void UpdateShardWile(long shardId);
+        void UpdateShard(long shardId);
     }
 
 }

@@ -1,16 +1,13 @@
-INFO  2012-03-13 15:28:02,713   125ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:02,992   404ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:03,008   420ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:03,075   487ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:03,088   500ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:03,101   513ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
-INFO  2012-03-13 15:28:03,186   598ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.132;Database=igd_master; User=root;Password=unthinker;
-ERROR 2012-03-13 15:28:03,418   830ms CedarSession           SetupSchema        - Error in setup schema for : IGDTEST
-MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'igd_dummy' already exists
-   at MySql.Data.MySqlClient.MySqlStream.OpenPacket()
-   at MySql.Data.MySqlClient.NativeDriver.ReadResult(UInt64& affectedRows, Int64& lastInsertId)
-   at MySql.Data.MySqlClient.MySqlDataReader.GetResultSet()
-   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+INFO  2012-03-13 16:26:01,219   413ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:26:01,248   442ms BaseRepository         GetConnection      - connecting to server : Provider=Microsoft.SQLSERVER.CE.OLEDB.3.5;Data Source=|DataDirectory|\Data\CedarData.sdf
+INFO  2012-03-13 16:26:01,414   608ms CedarSession           GetOpenConnection  - connecting to server : Server=192.168.1.132;Database=igd_master; User=root;Password=unthinker;
+ERROR 2012-03-13 16:26:01,623   817ms CedarSession           SetupSchema        - Error in setup schema for : IGDTEST
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered during command execution. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@sqlquery' must be defined.
+   at MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlStream stream, String parmName)
+   at MySql.Data.MySqlClient.Statement.InternalBindParameters(String sql, MySqlParameterCollection parameters, MySqlStream stream)
+   at MySql.Data.MySqlClient.Statement.BindParameters()
+   at MySql.Data.MySqlClient.PreparableStatement.Execute()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
    at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
    at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
    at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, IDbTransaction transaction, String sql, Action`2 paramReader, Object obj, Nullable`1 commandTimeout, Nullable`1 commandType) in D:\Projects\Cedar\src\Cedar\SqlDapper.cs:line 1385

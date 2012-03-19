@@ -60,11 +60,7 @@ namespace IGD.Client
                         providerName = "System.Data.SqlClient";
                         break;
                 }
-
-
             }
-
-
             if (!String.IsNullOrEmpty(providerName))
             {
                 var providerExists = DbProviderFactories
@@ -81,11 +77,7 @@ namespace IGD.Client
                 {
                     return new MySql.Data.MySqlClient.MySqlConnection(connectionString);
                 }
-
-
             }
-
-
             return null;
         }
     }

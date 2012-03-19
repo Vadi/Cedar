@@ -45,7 +45,7 @@ return Get(t => t.ShardId > 0).ToList();
         {
             using (var connection = GetConnection())
             {
-                string query = "Select shard_id, connection_string,db_type from shard where application_name=@appname";
+                string query = "Select shard_id, connection_string,db_type,[total_count],[max_count] from shard where application_name=@appname";
 
 
                 var parameters = new DynamicParameters();
@@ -89,6 +89,17 @@ return Get(t => t.ShardId > 0).ToList();
                 var appSchema = connection.Query<AppSchema>(query, parameters).FirstOrDefault();
 
                 return appSchema;
+            }
+        }
+
+        internal void UpdateShard(long shardId)
+        {
+            using (var connection = GetConnection())
+            {
+                string query = "update Shard set total_count=(total_count)+1 WHERE shard_id = @SId";
+                var parameters = new DynamicParameters();
+                parameters.Add("ShardId", shardId);
+                connection.Execute(query, parameters);
             }
         }
     }

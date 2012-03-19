@@ -15,7 +15,33 @@ namespace Cedar
     {
         private App _app;
         private IShardStrategy _shardStrategy = null;
+        private long _currentShard=0;
+        /// <summary>
+        /// Get the current shard id
+        /// </summary>
+        public long CurrentShard
+        {
+            //get { return ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(new ShardStartegyData() { StrategyType = Strategy.Sequential }); ; }
+            get { return _currentShard; }
+        }
 
+        private bool _isSetupSchemaRequired= false ;
+        /// <summary>
+        /// Check if the new setup required 
+        /// </summary>
+        public bool IsSetupSchemaRequired { get { 
+            if(_currentShard <=0 )
+            {
+                return true ;
+            }
+            var shard = _app.Shards.Where(t => t.shard_id == _currentShard ).FirstOrDefault();
+            
+            if (shard != null)
+            {
+                _isSetupSchemaRequired = shard.total_count == 0 ;
+            }
+            return _isSetupSchemaRequired;
+        }  }
         // 1. I need to have all shards that are configured for this app
         // 2. I need to know how to decode the uuid and understand a shard id out of it
         // 3. I need to know a shard resolution strategy
@@ -29,6 +55,7 @@ namespace Cedar
             _app.ApplicationName = appName;
             var dataReader = new DataFactory().GetdataReader(FetchMode.Sql);
             var shards = dataReader.GetAllShardByAppname(_app.ApplicationName);
+           
             _app.Shards = shards;
         }
         
@@ -46,12 +73,12 @@ namespace Cedar
             var dataReader = new DataFactory().GetdataReader(FetchMode.Sql);
             dto.App = _app;
             var shardId = ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(dto);
-
+            _currentShard = shardId;
             var worker = new IdWorker(shardId);
             var uniqueId = worker.GetUniqueId();
-            
+           
             var appSchema = dataReader.GetAppSchema(shardId);
-
+           
             var cedarSession = new CedarSession(uniqueId) { EnableTrasaction = true };
             cedarSession.SetupSchema(appSchema);
             cedarSession.Close();

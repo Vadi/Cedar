@@ -146,7 +146,7 @@ namespace Cedar
             SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
         }
 
-        public IEnumerable<dynamic> Select(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
+        public IEnumerable<T> Select<T>(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
             if (commandType != null)
                 _commandType = System.Data.CommandType.Text;
@@ -154,7 +154,15 @@ namespace Cedar
                 _transaction = _sqlConnection.BeginTransaction();
             return SqlMapper.Query<dynamic>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, _commandType);
         }
-
+        public IEnumerable<dynamic> Select(string sql, dynamic param = null, CommandType? commandType = null)
+        {
+            if (commandType != null)
+                _commandType = System.Data.CommandType.Text;
+            if (EnableTrasaction)
+                _transaction = _sqlConnection.BeginTransaction();
+            return SqlMapper.Query<dynamic>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, _commandType);
+        }
+       
         public void Dispose()
         {
             Dispose(true);
@@ -268,7 +276,7 @@ namespace Cedar
             return null;
         }
 
-      
+       
     }
 
     public enum CommandType

@@ -30,11 +30,15 @@ namespace Cedar.Sharding.ShardStrategy
     public enum Strategy
     {
         /// <summary>
-        ///
+        /// Setup schema on demand in sequential order 
         /// </summary>
         Sequential,
         /// <summary>
-        ///
+        /// Setup schema automatically for new shard in sequntial order 
+        /// </summary>
+        SequentialAuto,
+        /// <summary>
+        ///Setup schema on demand on Regional basis
         /// </summary>
         Regional
     }
