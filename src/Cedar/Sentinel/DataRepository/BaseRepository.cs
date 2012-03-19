@@ -13,7 +13,7 @@ namespace Cedar
 {
     public class BaseRepository
     {
-        static readonly ILog log = LogManager.GetLogger(typeof(BaseRepository));
+        //static readonly ILog log = LogManager.GetLogger(typeof(BaseRepository));
 
         public IDbConnection GetConnection()
         {
@@ -23,7 +23,7 @@ namespace Cedar
             //string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=myDB;User ID=sa;password=123;Provider=SQLOLEDB";
             // string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=myDB;User ID=sa;password=123";
            
-           log.Info(string.Format("connecting to server : {0}", connectionString));
+           //log.Info(string.Format("connecting to server : {0}", connectionString));
             var connection = new OleDbConnection(connectionString);
             //var connection = new SqlConnection(connectionString);
 
@@ -36,7 +36,7 @@ namespace Cedar
                 catch (Exception)
                 {
 
-                    log.Error(string.Format("FAILED to  connect server : {0}", connectionString));
+                    //log.Error(string.Format("FAILED to  connect server : {0}", connectionString));
                     throw;
                 }
 

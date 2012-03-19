@@ -15,7 +15,6 @@ D:\Projects\Cedar\src\CedarTest\bin\Debug\CedarTest.dll.config
 D:\Projects\Cedar\src\CedarTest\bin\Debug\CedarTest.dll
 D:\Projects\Cedar\src\CedarTest\bin\Debug\CedarTest.pdb
 D:\Projects\Cedar\src\CedarTest\bin\Debug\Cedar.dll
-D:\Projects\Cedar\src\CedarTest\bin\Debug\MySql.Data.dll
 D:\Projects\Cedar\src\CedarTest\bin\Debug\log4net.dll
 D:\Projects\Cedar\src\CedarTest\bin\Debug\Cedar.pdb
 D:\Projects\Cedar\src\CedarTest\bin\Debug\Cedar.xml

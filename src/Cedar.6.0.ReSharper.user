@@ -1,6 +1,7 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
+<<<<<<< HEAD
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Properties/f:AssemblyInfo.cs" caret="848" fromTop="20" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarXml.xml" caret="519" fromTop="22" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IDbQueryBehaviour.cs" caret="0" fromTop="0" />
@@ -62,6 +63,70 @@
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="51409" fromTop="19" />
       <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="3095" fromTop="25" />
       <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="2089" fromTop="25" />
+=======
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IDbQueryBehaviour.cs" caret="194" fromTop="11" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:Program.cs" caret="673" fromTop="17" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:AppSchemaRepository.cs" caret="96" fromTop="4" />
+      <File id="DE0F241B-F041-4F4B-BC72-02CE887995B1/f:IGDDTO.cs" caret="3768" fromTop="14" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:WithUtilitySupport.cs" caret="0" fromTop="0" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:ShardSelectionStrategyTest.cs" caret="1806" fromTop="39" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:IntegratedTests.cs" caret="0" fromTop="0" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:IShardSelectionStrategy.cs" caret="184" fromTop="5" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:App.cs" caret="274" fromTop="12" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:ShardStartgyData.cs" caret="497" fromTop="25" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/f:IShardStrategy.cs" caret="973" fromTop="33" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:Factory/f:IDataFactory.cs" caret="170" fromTop="9" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:XmlDataReader.cs" caret="1025" fromTop="28" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:IDataReader.cs" caret="173" fromTop="9" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IdWorker.cs" caret="2204" fromTop="41" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Properties/f:AssemblyInfo.cs" caret="970" fromTop="22" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:BaseRepository.cs" caret="1386" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContextFactory.cs" caret="1590" fromTop="30" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/f:SqlDataReader.cs" caret="374" fromTop="13" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="4368" fromTop="22" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="4579" fromTop="16" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:SqlDapper.cs" caret="20896" fromTop="21" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardRepository.cs" caret="1578" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1624" fromTop="31" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:AppContextTests.cs" caret="1440" fromTop="4" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sentinel/d:DataRepository/f:ShardStrategyRepository.cs" caret="1755" fromTop="41" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:Shard.cs" caret="112" fromTop="7" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:RegionalStartegy.cs" caret="0" fromTop="0" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="9235" fromTop="24" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="23423" fromTop="16" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="4355" fromTop="23" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="5089" fromTop="24" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="5816" fromTop="31" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="6556" fromTop="29" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarSession.cs" caret="7311" fromTop="41" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Sharding/d:ShardStrategy/d:ShardSelection/f:ShardSelectionStrategy.cs" caret="1624" fromTop="22" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="3922" fromTop="35" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="5518" fromTop="19" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="5783" fromTop="32" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="5884" fromTop="36" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="6005" fromTop="41" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="14306" fromTop="26" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="21384" fromTop="26" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="49508" fromTop="26" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="50533" fromTop="26" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="1424" fromTop="35" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="1242" fromTop="32" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="1887" fromTop="40" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:AppContext.cs" caret="3566" fromTop="24" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="50723" fromTop="44" />
+      <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Schema Dump/f:IGDTEST.SQL" caret="50990" fromTop="51" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="9244" fromTop="37" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="9244" fromTop="29" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="9244" fromTop="23" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="8427" fromTop="12" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="8677" fromTop="19" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="8758" fromTop="23" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="9085" fromTop="31" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="9235" fromTop="30" />
+      <File id="C93DCCA1-0F06-410E-BAF6-861BBC4A9584/f:CedarSessionTest.cs" caret="9235" fromTop="24" />
+>>>>>>> origin/gk
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -85,6 +150,7 @@
   </SettingsComponent>
   <CompletionStatisticsManager>
     <ItemStatistics item="CSharpCodeCompletionContext">
+<<<<<<< HEAD
       <Item value="IdWorker`0" priority="31" />
       <Item value="var" priority="255" />
       <Item value="new" priority="447" />
@@ -159,9 +225,313 @@
       <Item value="Environment`0" priority="31" />
       <Item value="path" priority="63" />
       <Item value="tryf" priority="31" />
+=======
+      <Item value="return" priority="863" />
+      <Item value="internal" priority="318" />
+      <Item value="static" priority="31" />
+      <Item value="string" priority="893" />
+      <Item value="using" priority="340" />
+      <Item value="System" priority="500" />
+      <Item value="Data" priority="350" />
+      <Item value="Common" priority="80" />
+      <Item value="OleDb" priority="53" />
+      <Item value="Odbc" priority="80" />
+      <Item value="connection" priority="353" />
+      <Item value="new" priority="1119" />
+      <Item value="SqlConnection" priority="28" />
+      <Item value="connectionString" priority="255" />
+      <Item value="OleDbConnection`0" priority="31" />
+      <Item value="private" priority="671" />
+      <Item value="dynamic" priority="95" />
+      <Item value="null" priority="895" />
+      <Item value="Sql" priority="26" />
+      <Item value="SqlClient" priority="53" />
+      <Item value="SqlTypes" priority="26" />
+      <Item value="CedarSession`0" priority="159" />
+      <Item value="cedarSession" priority="145" />
+      <Item value="if" priority="863" />
+      <Item value="_sqlConnection" priority="383" />
+      <Item value="void" priority="639" />
+      <Item value="Type`0" priority="63" />
+      <Item value="T`0" priority="124" />
+      <Item value="throw" priority="126" />
+      <Item value="IEnumerable" priority="31" />
+      <Item value="sql" priority="63" />
+      <Item value="param" priority="31" />
+      <Item value="transaction" priority="95" />
+      <Item value="commandTimeout" priority="31" />
+      <Item value="commandType" priority="127" />
+      <Item value="SqlMapper`0" priority="95" />
+      <Item value="public" priority="1051" />
+      <Item value="int" priority="511" />
+      <Item value="_commandTimeout" priority="63" />
+      <Item value="value" priority="31" />
+      <Item value="true" priority="159" />
+      <Item value="Dispose`0" priority="63" />
+      <Item value="this" priority="31" />
+      <Item value="_transaction" priority="223" />
+      <Item value="var" priority="1119" />
+      <Item value="String`0" priority="352" />
+      <Item value="_connectionString" priority="127" />
+      <Item value="base" priority="31" />
+      <Item value="CedarSession" priority="146" />
+      <Item value="false" priority="127" />
+      <Item value="Cedar" priority="92" />
+      <Item value="DataManager" priority="25" />
+      <Item value="SqlDataReader" priority="54" />
+      <Item value="shard" priority="720" />
+      <Item value="_uuid" priority="159" />
+      <Item value="IDataReader`0" priority="90" />
+      <Item value="reader" priority="193" />
+      <Item value="TestMethod" priority="287" />
+      <Item value="ICedarSession`0" priority="92" />
+      <Item value="uuid" priority="191" />
+      <Item value="cederSession" priority="31" />
+      <Item value="CedarSessionTest" priority="28" />
+      <Item value="Assert`0" priority="319" />
+      <Item value="factory" priority="32" />
+      <Item value="SqlDataReader`0" priority="26" />
+      <Item value="shardList" priority="63" />
+      <Item value="IDbConnection`0" priority="63" />
+      <Item value="provider" priority="159" />
+      <Item value="builder" priority="382" />
+      <Item value="out" priority="31" />
+      <Item value="object" priority="31" />
+      <Item value="objProvider" priority="127" />
+      <Item value="GetProvider`0" priority="31" />
+      <Item value="switch" priority="95" />
+      <Item value="case" priority="127" />
+      <Item value="break" priority="255" />
+      <Item value="try" priority="159" />
+      <Item value="OracleClient" priority="27" />
+      <Item value="IDbTransaction`0" priority="31" />
+      <Item value="bool" priority="63" />
+      <Item value="EnableTrasaction" priority="63" />
+      <Item value="cederSesssion" priority="31" />
+      <Item value="cedderSession" priority="95" />
+      <Item value="NewsStyleUriParser`0" priority="31" />
+      <Item value="ctr" priority="127" />
+      <Item value="empList" priority="31" />
+      <Item value="DataMisalignedException`0" priority="26" />
+      <Item value="_commandType" priority="63" />
+      <Item value="CommandType`0" priority="271" />
+      <Item value="enum" priority="62" />
+      <Item value="ExecuteType`0" priority="31" />
+      <Item value="address" priority="63" />
+      <Item value="p" priority="63" />
+      <Item value="long" priority="511" />
+      <Item value="AppSchema`0" priority="255" />
+      <Item value="applicationName" priority="63" />
+      <Item value="shardRepository" priority="58" />
+      <Item value="App`0" priority="220" />
+      <Item value="app" priority="319" />
+      <Item value="appSchema" priority="157" />
+      <Item value="OleDbConnectionStringBuilder" priority="29" />
+      <Item value="default" priority="95" />
+      <Item value="DbConnection`0" priority="31" />
+      <Item value="providerName" priority="159" />
+      <Item value="else" priority="255" />
+      <Item value="SqlException`0" priority="26" />
+      <Item value="DbException`0" priority="53" />
+      <Item value="Exception" priority="57" />
+      <Item value="for" priority="63" />
+      <Item value="Key`0" priority="31" />
+      <Item value="in" priority="31" />
+      <Item value="k" priority="63" />
+      <Item value="key" priority="31" />
+      <Item value="FetchType`0" priority="63" />
+      <Item value="dataReader" priority="128" />
+      <Item value="_app" priority="95" />
+      <Item value="IShardStrategy`0" priority="63" />
+      <Item value="shardStrategy" priority="192" />
+      <Item value="class" priority="61" />
+      <Item value="ShardSelectionStrategy" priority="29" />
+      <Item value="shardSelection" priority="31" />
+      <Item value="shards" priority="63" />
+      <Item value="shardId" priority="602" />
+      <Item value="AppSettingsReader`0" priority="31" />
+      <Item value="Properties" priority="63" />
+      <Item value="Settings`0" priority="53" />
+      <Item value="ICedar`0" priority="31" />
+      <Item value="AppContext`0" priority="31" />
+      <Item value="AppContext" priority="28" />
+      <Item value="ce" priority="31" />
+      <Item value="ctx" priority="95" />
+      <Item value="CedarAppStore`0" priority="31" />
+      <Item value="obj" priority="31" />
+      <Item value="as" priority="31" />
+      <Item value="BaseRepository`0" priority="31" />
+      <Item value="DataFactory" priority="28" />
+      <Item value="ShardStrategyRepository" priority="57" />
+      <Item value="shardPile" priority="31" />
+      <Item value="IList" priority="63" />
+      <Item value="session0" priority="58" />
+      <Item value="IdWorker`0" priority="31" />
+      <Item value="worker" priority="64" />
+      <Item value="IdWorker" priority="28" />
+      <Item value="foreach" priority="127" />
+      <Item value="shardWile" priority="309" />
+      <Item value="continue" priority="31" />
+      <Item value="parameters" priority="122" />
+      <Item value="dbType" priority="95" />
+      <Item value="OleDbType`0" priority="31" />
+      <Item value="ParameterDirection`0" priority="31" />
+      <Item value="List&lt;Shard&gt;" priority="28" />
+      <Item value="catch" priority="63" />
+      <Item value="Exception`0" priority="31" />
+      <Item value="exception" priority="32" />
+      <Item value="strQuery" priority="31" />
+      <Item value="query" priority="319" />
+      <Item value="newQuery" priority="95" />
+      <Item value="Console`0" priority="31" />
+      <Item value="FormatWith`0" priority="31" />
+      <Item value="Table`0" priority="31" />
+      <Item value="Table" priority="28" />
+      <Item value="table" priority="159" />
+      <Item value="Utility`0" priority="31" />
+      <Item value="totalCount" priority="31" />
+      <Item value="maxCount" priority="63" />
+      <Item value="totaCount" priority="31" />
+      <Item value="AssertFailedException`0" priority="31" />
+      <Item value="ShardRepository" priority="28" />
+      <Item value="IDbCommand`0" priority="63" />
+      <Item value="command" priority="320" />
+      <Item value="GetCommand`0" priority="31" />
+      <Item value="IDbDataParameter`0" priority="31" />
+      <Item value="dataParameter" priority="32" />
+      <Item value="param1" priority="63" />
+      <Item value="r" priority="31" />
+      <Item value="while" priority="63" />
+      <Item value="vacantId" priority="63" />
+      <Item value="appName" priority="31" />
+      <Item value="_dbType" priority="94" />
+      <Item value="MySql" priority="31" />
+      <Item value="IDataWriter`0" priority="63" />
+      <Item value="fetchMode" priority="32" />
+      <Item value="dataWriter" priority="32" />
+      <Item value="Shard`0" priority="63" />
+      <Item value="ShardWile`0" priority="94" />
+      <Item value="applicationSchema" priority="26" />
+      <Item value="shardWileList" priority="31" />
+      <Item value="prop" priority="63" />
+      <Item value="currentShard" priority="31" />
+      <Item value="_isSetupSchemaRequired`0" priority="31" />
+      <Item value="_currentShard" priority="223" />
+      <Item value="ShardStartegyData" priority="28" />
+      <Item value="CurrentShard" priority="127" />
+      <Item value="_isSetupSchemaRequired" priority="95" />
+      <Item value="t" priority="31" />
+      <Item value="uniqueId" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlConnection">
+      <Item value="ConnectionString" priority="26" />
+      <Item value="Open`0" priority="26" />
+      <Item value="Close`0" priority="26" />
+      <Item value="Dispose`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Dapper.SqlMapper">
+      <Item value="Query`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.CedarSession">
+      <Item value="Dispose`0" priority="26" />
+      <Item value="Close`0" priority="26" />
+      <Item value="Select`0" priority="81" />
+      <Item value="Insert`0" priority="27" />
+      <Item value="SetupSchema`0" priority="22" />
+      <Item value="EnableTrasaction" priority="22" />
+      <Item value="Update`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="161" />
+      <Item value="IsNullOrEmpty`0" priority="54" />
+      <Item value="Equals`0" priority="26" />
+      <Item value="Format`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.DataManager.SqlDataReader">
+      <Item value="GetShardById`0" priority="53" />
+      <Item value="GetAllShard`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.Shard">
+      <Item value="ConnectionString" priority="26" />
+      <Item value="connection_string" priority="104" />
+      <Item value="application_name" priority="22" />
+      <Item value="shard_id" priority="184" />
+      <Item value="db_type" priority="26" />
+      <Item value="total_count" priority="54" />
+      <Item value="max_count" priority="26" />
+>>>>>>> origin/gk
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
       <Item value="IsNotNull`0" priority="26" />
+<<<<<<< HEAD
+=======
+      <Item value="AreEqual`1" priority="215" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Count" priority="26" />
+      <Item value="Select`2" priority="26" />
+      <Item value="Where`1" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="IndexOf`0" priority="26" />
+      <Item value="ToLower`0" priority="80" />
+      <Item value="FormatWith`0" priority="26" />
+      <Item value="Contains`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlConnectionStringBuilder">
+      <Item value="Keys" priority="53" />
+      <Item value="ContainsKey`0" priority="26" />
+      <Item value="TryGetValue`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Common.DbConnectionStringBuilder">
+      <Item value="Values" priority="26" />
+      <Item value="ConnectionString" priority="26" />
+      <Item value="ContainsKey`0" priority="26" />
+      <Item value="Keys" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.IDbConnection">
+      <Item value="BeginTransaction`0" priority="26" />
+      <Item value="ConnectionString" priority="26" />
+      <Item value="Execute`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList`1" priority="107" />
+      <Item value="Count`1" priority="26" />
+      <Item value="SingleOrDefault`1" priority="26" />
+      <Item value="Select`2" priority="53" />
+      <Item value="FirstOrDefault`1" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.CommandType">
+      <Item value="Text" priority="109" />
+      <Item value="StoredProcedure" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Cedar.ExecuteType">
+      <Item value="Query" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.App">
+      <Item value="AppId" priority="76" />
+      <Item value="ApplicationName" priority="49" />
+      <Item value="Shards" priority="157" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.DataManager.ShardRepository">
+      <Item value="GetAppSchema`0" priority="22" />
+      <Item value="GetAllShard`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Add`0" priority="22" />
+      <Item value="Count" priority="53" />
+      <Item value="FirstOrDefault`1" priority="26" />
+      <Item value="Where`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.AppSchema">
+      <Item value="schema" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ICollection">
+      <Item value="GetEnumerator`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="53" />
+>>>>>>> origin/gk
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cedar.AppContext">
       <Item value="ShardStrategy" priority="107" />
@@ -190,17 +560,60 @@
       <Item value="Sequential" priority="27" />
       <Item value="Regional" priority="23" />
     </ItemStatistics>
+<<<<<<< HEAD
     <ItemStatistics item="Qualified:CedarTest.RegionalStartegy">
       <Item value="ShardSelectionStrategy" priority="26" />
+=======
+    <ItemStatistics item="Qualified:Cedar.IDataReader">
+      <Item value="GetShardStrategyById`0" priority="76" />
+>>>>>>> origin/gk
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cedar.ShardStartegyData">
       <Item value="Region" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cedar.IdWorker">
+<<<<<<< HEAD
       <Item value="DecomposeKey`0" priority="27" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="Add`0" priority="26" />
+=======
+      <Item value="DecomposeKey`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.ShardWile">
+      <Item value="MaxCount" priority="81" />
+      <Item value="TotalCount" priority="135" />
+      <Item value="ShardId" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.OleDb.OleDbType">
+      <Item value="VarChar" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.DbType">
+      <Item value="String" priority="26" />
+      <Item value="Int64" priority="26" />
+      <Item value="Int32" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.ParameterDirection">
+      <Item value="Input" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.IDbTransaction">
+      <Item value="Commit`0" priority="26" />
+      <Item value="Dispose`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Cedar.Table">
+      <Item value="ToString`0" priority="26" />
+      <Item value="UUID" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.OleDb.OleDbConnection">
+      <Item value="Execute`0" priority="26" />
+      <Item value="BeginTransaction`0" priority="26" />
+>>>>>>> origin/gk
     </ItemStatistics>
     <ItemStatistics item="Qualified:log4net.ILog">
       <Item value="Info`0" priority="54" />
@@ -238,11 +651,17 @@
       <Name>Session #1</Name>
       <Elements>
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests" type="MsTestTestClassElement" TypeName="CedarTest.AppContextTests" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+<<<<<<< HEAD
         <UnitTestElement Provider="MSTest" Id="CedarTest.IntegratedTests" type="MsTestTestClassElement" TypeName="CedarTest.IntegratedTests" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.IntegratedTests.IntegratedTest" ParentId="CedarTest.IntegratedTests" type="MsTestTestMethodElement" MethodName="IntegratedTest" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchema" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchema" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchemaForCustomStartegy" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchemaForCustomStartegy" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchemaOnMySql" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchemaOnMySql" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+=======
+        <UnitTestElement Provider="MSTest" Id="CedarTest.CedarSessionTest" type="MsTestTestClassElement" TypeName="CedarTest.CedarSessionTest" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+        <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchema" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchema" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+        <UnitTestElement Provider="MSTest" Id="CedarTest.CedarSessionTest.TestSave" ParentId="CedarTest.CedarSessionTest" type="MsTestTestMethodElement" MethodName="TestSave" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
+>>>>>>> origin/gk
       </Elements>
     </Session>
   </UnitTestSessions>

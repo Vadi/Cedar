@@ -22,19 +22,31 @@ namespace Cedar
         public long CurrentShard
         {
             //get { return ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(new ShardStartegyData() { StrategyType = Strategy.Sequential }); ; }
-            get { return _currentShard; }
+            get
+            {
+                //if(_currentShard ==0)
+                //{
+                //    _currentShard=  ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(new ShardStartegyData() { StrategyType = Strategy.Sequential,App=_app });
+                //    var worker = new IdWorker(_currentShard);
+                //    var uniqueId = worker.GetUniqueId();
+                //    _currentShard = uniqueId;
+                //}
+
+                _currentShard = ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(new ShardStartegyData() { StrategyType = Strategy.Sequential, App = _app });
+
+                return _currentShard;
+            }
         }
 
         private bool _isSetupSchemaRequired= false ;
         /// <summary>
         /// Check if the new setup required 
         /// </summary>
-        public bool IsSetupSchemaRequired { get { 
-            if(_currentShard <=0 )
-            {
-                return true ;
-            }
-            var shard = _app.Shards.Where(t => t.shard_id == _currentShard ).FirstOrDefault();
+        public bool IsSetupSchemaRequired { get {
+            //var worker = new IdWorker(CurrentShard);
+            //var shardId = worker.DecomposeKey(CurrentShard);
+
+            var shard = _app.Shards.Where(t => t.shard_id == _currentShard).FirstOrDefault();
             
             if (shard != null)
             {
@@ -69,20 +81,19 @@ namespace Cedar
             // Strategy will return me shardid.
             // call cedar data method which would execute schema def statements in above shard id
 
-
             var dataReader = new DataFactory().GetdataReader(FetchMode.Sql);
             dto.App = _app;
             var shardId = ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(dto);
-            _currentShard = shardId;
+          
             var worker = new IdWorker(shardId);
             var uniqueId = worker.GetUniqueId();
-           
+            //_currentShard = uniqueId;
             var appSchema = dataReader.GetAppSchema(shardId);
            
             var cedarSession = new CedarSession(uniqueId) { EnableTrasaction = true };
             cedarSession.SetupSchema(appSchema);
             cedarSession.Close();
-           
+            new DataFactory().GetdataReader(FetchMode.Sql).UpdateShard(shardId);
             return uniqueId;
 
         }

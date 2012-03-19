@@ -45,7 +45,6 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
                                 }
                                 if (shardId > 0)
                                 {
-                                    new DataFactory().GetdataReader(FetchMode.Sql).UpdateShard(shardId);
                                     break;
                                 }
 

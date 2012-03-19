@@ -18,7 +18,7 @@ namespace Cedar
 {
     public class CedarSession : ICedarSession
     {
-        readonly ILog log = LogManager.GetLogger(typeof(CedarSession));
+       // readonly ILog log = LogManager.GetLogger(typeof(CedarSession));
         private IDbConnection _sqlConnection = null;
         private long _uuid;
         String _connectionString = String.Empty;
@@ -73,7 +73,7 @@ namespace Cedar
             }
             catch (Exception exception)
             {
-                log.Error(string.Format("Error in setup schema for : {0}", appSchema.application_name), exception);
+                //log.Error(string.Format("Error in setup schema for : {0}", appSchema.application_name), exception);
                 throw ;
             }
             
@@ -93,7 +93,7 @@ namespace Cedar
             }
             catch (Exception exception)
             {
-                log.Error(string.Format("Error in setup schema for : {0}", fileName), exception);
+                //log.Error(string.Format("Error in setup schema for : {0}", fileName), exception);
                 throw;
             }
             
@@ -117,10 +117,13 @@ namespace Cedar
         /// <returns>>Number of rows affected</returns>
         public int Insert(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType != null || (commandType.HasValue && commandType.Value ==CommandType.Query))
+            if (commandType != null && (commandType.Value ==CommandType.Query))
                 _commandType = System.Data.CommandType.Text;
             else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
                 _commandType = System.Data.CommandType.StoredProcedure;
+            else
+                _commandType = System.Data.CommandType.Text;
+           
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
             return SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
@@ -128,9 +131,12 @@ namespace Cedar
 
         public void Update(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType != null || (commandType.HasValue && commandType.Value == CommandType.Query))
+            if (commandType != null && (commandType.Value == CommandType.Query))
                 _commandType = System.Data.CommandType.Text;
             else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
+                _commandType = System.Data.CommandType.StoredProcedure;
+            else
+                _commandType = System.Data.CommandType.Text;
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
             SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
@@ -138,9 +144,12 @@ namespace Cedar
 
         public void Delete(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType != null || (commandType.HasValue && commandType.Value == CommandType.Query))
+            if (commandType != null && (commandType.Value == CommandType.Query))
                 _commandType = System.Data.CommandType.Text;
             else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
+                _commandType = System.Data.CommandType.StoredProcedure;
+            else
+                _commandType = System.Data.CommandType.Text;
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
             SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
@@ -148,7 +157,11 @@ namespace Cedar
 
         public IEnumerable<T> Select<T>(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
-            if (commandType != null)
+            if (commandType != null && (commandType.Value == CommandType.Query))
+                _commandType = System.Data.CommandType.Text;
+            else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
+                _commandType = System.Data.CommandType.StoredProcedure;
+            else
                 _commandType = System.Data.CommandType.Text;
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
@@ -156,7 +169,11 @@ namespace Cedar
         }
         public IEnumerable<dynamic> Select(string sql, dynamic param = null, CommandType? commandType = null)
         {
-            if (commandType != null)
+            if (commandType != null && (commandType.Value == CommandType.Query))
+                _commandType = System.Data.CommandType.Text;
+            else if (commandType.HasValue && (commandType.Value == CommandType.StoredProcedure))
+                _commandType = System.Data.CommandType.StoredProcedure;
+            else
                 _commandType = System.Data.CommandType.Text;
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
@@ -200,7 +217,7 @@ namespace Cedar
                 _sqlConnection = GetConnection(_connectionString);
                if(_sqlConnection!=null )
                {
-                   log.Info(string.Format("connecting to server : {0}", _connectionString));
+                   //log.Info(string.Format("connecting to server : {0}", _connectionString));
                    _sqlConnection.ConnectionString = _connectionString;
                    try
                    {
@@ -208,7 +225,7 @@ namespace Cedar
                    }
                    catch (Exception ex)
                    {
-                       log.Error(string.Format("Failed to  connect server : {0}", _connectionString),ex);
+                       //log.Error(string.Format("Failed to  connect server : {0}", _connectionString),ex);
                        throw;
                    }
                    
