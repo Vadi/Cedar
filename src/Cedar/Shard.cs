@@ -6,21 +6,15 @@ using System.Text;
 namespace Cedar
 {
 
-#if DEBUG
-    public
-#endif
 
-#if !DEBUG
-        internal
-#endif
-        class Shard
+    public class Shard
     {
-        internal  long shard_id { get; set; }
-        internal string application_name { get; set; }
-        internal string connection_string { get; set; }
-        internal string db_type { get; set; }
-        internal long total_count { get; set; }
-        internal long max_count { get; set; }
+        public  long shard_id { get; set; }
+        public string application_name { get; set; }
+        public string connection_string { get; set; }
+        public string db_type { get; set; }
+        public long total_count { get; set; }
+        public long max_count { get; set; }
 
     }
 }
