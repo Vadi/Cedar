@@ -165,7 +165,7 @@ namespace Cedar
                 _commandType = System.Data.CommandType.Text;
             if (EnableTrasaction)
                 _transaction = _sqlConnection.BeginTransaction();
-            return SqlMapper.Query<dynamic>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, _commandType);
+            return SqlMapper.Query<T>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, _commandType);
         }
         public IEnumerable<dynamic> Select(string sql, dynamic param = null, CommandType? commandType = null)
         {

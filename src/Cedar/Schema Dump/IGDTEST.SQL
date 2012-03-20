@@ -1866,10 +1866,8 @@ CREATE PROCEDURE usp_GetIGDbyPaging
 	,IN PageSize int
   )
 BEGIN
-declare pageindex int;
-set pageindex=0;
-set pageindex=CurrentPageNo  * PageSize;
 
-SELECT * FROM IGD 	LIMIT pageindex,PageSize;
+
+SELECT * FROM IGD 	LIMIT CurrentPageNo,PageSize;
 
 END ;

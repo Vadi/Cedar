@@ -16,4 +16,3 @@ D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.pdb
 D:\Projects\Cedar\src\Cedar\obj\Debug\ResolveAssemblyReference.cache
 D:\Projects\Cedar\src\Cedar\obj\Debug\Cedar.dll
 D:\Projects\Cedar\src\Cedar\obj\Debug\Cedar.pdb
-D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.XML

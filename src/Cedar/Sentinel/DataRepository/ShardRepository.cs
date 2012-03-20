@@ -45,7 +45,7 @@ return Get(t => t.ShardId > 0).ToList();
         {
             using (var connection = GetConnection())
             {
-                string query = "Select shard_id, connection_string,db_type,[total_count],[max_count],is_schema_exists from shard where application_name=@appname";
+                string query = "Select shard_id,application_name, connection_string,db_type,[total_count],[max_count],is_schema_exists from shard where application_name=@appname";
 
 
                 var parameters = new DynamicParameters();
