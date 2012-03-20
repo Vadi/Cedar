@@ -108,6 +108,8 @@ namespace Cedar
 
         }
 
+        public IList<Shard> Shards { get { return _app.Shards; } }
+
 
         /// <summary>
         ///
