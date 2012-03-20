@@ -1,4 +1,4 @@
-﻿CREATE TABLE IGD_Dummy(
+CREATE TABLE IGD_Dummy(
 	ParcelID varchar(26) NOT NULL,
 	PropertyLocationStreet1 varchar(40) NULL,
 	PropertyLocationStreet2 varchar(40) NULL,
@@ -274,10 +274,10 @@ CREATE PROCEDURE usp_UpdateIGD(
 	IN Geometry Varchar(8000) 
 )
 BEGIN
-	
+
    	UPDATE IGD
 	   SET 
-			
+
 			IGD.PropertyLocationStreet1  = COALESCE(PropertyLocationStreet1,IGD.PropertyLocationStreet1)
 			,IGD.PropertyLocationStreet2  = COALESCE(PropertyLocationStreet2,IGD.PropertyLocationStreet2)
 			,IGD.PropertyCity  = COALESCE(PropertyCity,IGD.PropertyCity)
@@ -360,7 +360,7 @@ BEGIN
 			,IGD.WindpoolTerritoryName  = COALESCE(WindpoolTerritoryName,IGD.WindpoolTerritoryName)
 			,IGD.Geometry  = COALESCE(Geometry,IGD.Geometry)
 	 WHERE ParcelID= ParcelID;
-	    
+
 END ;
 
 CREATE PROCEDURE usp_InsertIGD
@@ -1223,6 +1223,609 @@ BEGIN
 
     END if;
 END ;
+=======
+
+CREATE PROCEDURE usp_SaveIGD( IN Id bigint,
+                IN ParcelID varchar(26) ,
+                IN PropertyLocationStreet1 varchar(40) ,
+                IN PropertyLocationStreet2 varchar(40) ,
+                IN PropertyCity varchar(40) ,
+                IN Latitude decimal(10, 5) ,
+                IN Longitude decimal(10, 5) ,
+                IN County decimal(2, 0) ,
+                IN PropertyZip decimal(5, 0) ,
+                IN OwnerName varchar(30) ,
+                IN OwnerMailAdrress1 varchar(40) ,
+                IN OwnerMailAdrress2 varchar(40) ,
+                IN OwnerCity varchar(40) ,
+                IN OwnerState varchar(30) ,
+                IN OwnerZip decimal(5, 0) ,
+                IN CitizensTerritory varchar(50) ,
+                IN ConstructionType varchar(50) ,
+                IN NumberOfStories decimal(2, 0) ,
+                IN Families char(10) ,
+                IN YearBuilt decimal(4, 0) ,
+                IN YearofRoof date ,
+                IN YearofRoofVerified bit ,
+                IN RoofMaterial varchar(50) ,
+                IN LivingArea decimal(12, 0) ,
+                IN Occupancy char(10) ,
+                IN MonthsUnoccupied char(10) ,
+                IN PPC char(10) ,
+                IN BCEG char(10) ,
+                IN TypeOfResidence varchar(50) ,
+                IN FloorOfResidence decimal(4, 0) ,
+                IN FloridaWindpool char(10) ,
+                IN DistancetoCoast char(10) ,
+                IN DistancetoSinkhole char(10) ,
+                IN DistancetoHydrant char(10) ,
+                IN DistancetoFireDepartment char(10) ,
+                IN FireDistrict char(10) ,
+                IN RespondingFireDepartment char(10) ,
+                IN CentralStationAlarm char(10) ,
+                IN AutomaticSprinklers char(10) ,
+                IN Claims char(10) ,
+                IN LocationWindSpeed char(10) ,
+                IN DesignWindSpeed char(10) ,
+                IN InternalPressureDesign char(10) ,
+                IN WindborneDebrisRegion char(10) ,
+                IN Terrain char(10) ,
+                IN RoofDeckAttachment char(10) ,
+                IN RoofCover char(10) ,
+                IN RooftoWallconnection char(10) ,
+                IN SecondaryWaterResistance char(10) ,
+                IN OpeningProtection char(10) ,
+                IN RoofShape varchar(50) ,
+                IN DesignExposure char(10) ,
+                IN ValueofHome decimal(12, 0) ,
+                IN UnattachedStructure char(10) ,
+                IN NoPriorInsurance char(10) ,
+                IN Condemned char(10) ,
+                IN FarmsNRanches char(10) ,
+                IN BusinessExposure char(10) ,
+                IN FraternityorSorority char(10) ,
+                IN Vacant char(10) ,
+                IN FloodZone char(10) ,
+                IN ConstructedOverWater char(10) ,
+                IN BuiltonLandfills char(10) ,
+                IN HomeDayCare char(10) ,
+                IN Pool bit ,
+                IN ParcelSize decimal(12, 0) ,
+                IN ImprovementQuality varchar(50) ,
+                IN ImprovementQualityDate varchar(4) ,
+                IN NumberOfBuildings decimal(4, 0) ,
+                IN NumberOfUnits decimal(4, 0) ,
+                IN Crime char(10) ,
+                IN PoliceID decimal(3, 0) ,
+                IN FireID decimal(3, 0) ,
+                IN CountyName varchar(40) ,
+                IN PropertyState varchar(2) ,
+                IN CentroidLatitude decimal(10, 5) ,
+                IN CentroidLongitude decimal(10, 5) ,
+                IN PlaTerritory int ,
+                IN PlaTerritoryName varchar(100) ,
+                IN WindpoolTerritory int ,
+                IN WindpoolTerritoryName varchar(100)
+
+)
+BEGIN
+    Declare rowcount int;
+    Declare rowCountDummy int;
+
+
+    SELECT count(*) into rowcount FROM IGD WHERE ParcelID = ParcelID;
+
+    SELECT count(*) into rowCountDummy FROM IGD_Dummy WHERE ParcelID = ParcelID;
+
+
+
+    IF rowcount>0 then
+       UPDATE IGD
+                                   SET
+                                                ParcelID = COALESCE(ParcelID,ParcelID)
+                                                ,PropertyLocationStreet1 = COALESCE(PropertyLocationStreet1,PropertyLocationStreet1)
+                                                ,PropertyLocationStreet2 = COALESCE(PropertyLocationStreet2,PropertyLocationStreet2)
+                                                ,PropertyCity = COALESCE(PropertyCity,PropertyCity)
+                                                ,Latitude = COALESCE(Latitude,Latitude)
+                                                ,Longitude = COALESCE(Longitude,Longitude)
+                                                ,County = COALESCE(County,County)
+                                                ,PropertyZip = COALESCE(PropertyZip,PropertyZip)
+                                                ,OwnerName = COALESCE(OwnerName,OwnerName)
+                                                ,OwnerMailAdrress1 = COALESCE(OwnerMailAdrress1,OwnerMailAdrress1)
+                                                ,OwnerMailAdrress2 = COALESCE(OwnerMailAdrress2,OwnerMailAdrress2)
+                                                ,OwnerCity = COALESCE(OwnerCity,OwnerCity)
+                                                ,OwnerState = COALESCE(OwnerState,OwnerState)
+                                                ,OwnerZip = COALESCE(OwnerZip,OwnerZip)
+                                                ,CitizensTerritory = COALESCE(CitizensTerritory,CitizensTerritory)
+                                                ,ConstructionType = COALESCE(ConstructionType,ConstructionType)
+                                                ,NumberOfStories = COALESCE(NumberOfStories,NumberOfStories)
+                                                ,Families = COALESCE(Families,Families)
+                                                ,YearBuilt = COALESCE(YearBuilt,YearBuilt)
+                                                ,YearofRoof = COALESCE(YearofRoof,YearofRoof)
+                                                ,YearofRoofVerified = COALESCE(YearofRoofVerified,YearofRoofVerified)
+                                                ,RoofMaterial = COALESCE(RoofMaterial,RoofMaterial)
+                                                ,LivingArea = COALESCE(LivingArea,LivingArea)
+                                                ,Occupancy = COALESCE(Occupancy,Occupancy)
+                                                ,MonthsUnoccupied = COALESCE(MonthsUnoccupied,MonthsUnoccupied)
+                                                ,PPC = COALESCE(PPC,PPC)
+                                                ,BCEG = COALESCE(BCEG,BCEG)
+                                                ,TypeOfResidence = COALESCE(TypeOfResidence,TypeOfResidence)
+                                                ,FloorOfResidence = COALESCE(FloorOfResidence,FloorOfResidence)
+                                                ,FloridaWindpool = COALESCE(FloridaWindpool,FloridaWindpool)
+                                                ,DistancetoCoast = COALESCE(DistancetoCoast,DistancetoCoast)
+                                                ,DistancetoSinkhole = COALESCE(DistancetoSinkhole,DistancetoSinkhole)
+                                                ,DistancetoHydrant = COALESCE(DistancetoHydrant,DistancetoHydrant)
+                                                ,DistancetoFireDepartment = COALESCE(DistancetoFireDepartment,DistancetoFireDepartment)
+                                                ,FireDistrict = COALESCE(FireDistrict,FireDistrict)
+                                                ,RespondingFireDepartment = COALESCE(RespondingFireDepartment,RespondingFireDepartment)
+                                                ,CentralStationAlarm = COALESCE(CentralStationAlarm,CentralStationAlarm)
+                                                ,AutomaticSprinklers = COALESCE(AutomaticSprinklers,AutomaticSprinklers)
+                                                ,Claims = COALESCE(Claims,Claims)
+                                                ,LocationWindSpeed = COALESCE(LocationWindSpeed,LocationWindSpeed)
+                                                ,DesignWindSpeed = COALESCE(DesignWindSpeed,DesignWindSpeed)
+                                                ,InternalPressureDesign = COALESCE(InternalPressureDesign,InternalPressureDesign)
+                                                ,WindborneDebrisRegion = COALESCE(WindborneDebrisRegion,WindborneDebrisRegion)
+                                                ,Terrain = COALESCE(Terrain,Terrain)
+                                                ,RoofDeckAttachment = COALESCE(RoofDeckAttachment,RoofDeckAttachment)
+                                                ,RoofCover = COALESCE(RoofCover,RoofCover)
+                                                ,RooftoWallconnection = COALESCE(RooftoWallconnection,RooftoWallconnection)
+                                                ,SecondaryWaterResistance = COALESCE(SecondaryWaterResistance,SecondaryWaterResistance)
+                                                ,OpeningProtection = COALESCE(OpeningProtection,OpeningProtection)
+                                                ,RoofShape = COALESCE(RoofShape,RoofShape)
+                                                ,DesignExposure = COALESCE(DesignExposure,DesignExposure)
+                                                ,ValueofHome = COALESCE(ValueofHome,ValueofHome)
+                                                ,UnattachedStructure = COALESCE(UnattachedStructure,UnattachedStructure)
+                                                ,NoPriorInsurance = COALESCE(NoPriorInsurance,NoPriorInsurance)
+                                                ,Condemned = COALESCE(Condemned,Condemned)
+                                                ,FarmsNRanches = COALESCE(FarmsNRanches,FarmsNRanches)
+                                                ,BusinessExposure = COALESCE(BusinessExposure,BusinessExposure)
+                                                ,FraternityorSorority = COALESCE(FraternityorSorority,FraternityorSorority)
+                                                ,Vacant = COALESCE(Vacant,Vacant)
+                                                ,FloodZone = COALESCE(FloodZone,FloodZone)
+                                                ,ConstructedOverWater = COALESCE(ConstructedOverWater,ConstructedOverWater)
+                                                ,BuiltonLandfills = COALESCE(BuiltonLandfills,BuiltonLandfills)
+                                                ,HomeDayCare = COALESCE(HomeDayCare,HomeDayCare)
+                                                ,Pool = COALESCE(Pool,Pool)
+                                                ,ParcelSize = COALESCE(ParcelSize,ParcelSize)
+                                                ,ImprovementQuality = COALESCE(ImprovementQuality,ImprovementQuality)
+                                                ,ImprovementQualityDate = COALESCE(ImprovementQualityDate,ImprovementQualityDate)
+                                                ,NumberOfBuildings = COALESCE(NumberOfBuildings,NumberOfBuildings)
+                                                ,NumberOfUnits = COALESCE(NumberOfUnits,NumberOfUnits)
+                                                ,Crime = COALESCE(Crime,Crime)
+                                                ,PoliceID = COALESCE(PoliceID,PoliceID)
+                                                ,FireID = COALESCE(FireID,FireID)
+                                                ,CountyName = COALESCE(CountyName,CountyName)
+                                                ,PropertyState = COALESCE(PropertyState,PropertyState)
+                                                ,CentroidLatitude = COALESCE(CentroidLatitude,CentroidLatitude)
+                                                ,CentroidLongitude = COALESCE(CentroidLongitude,CentroidLongitude)
+                                                ,PlaTerritory = COALESCE(PlaTerritory,PlaTerritory)
+                                                ,PlaTerritoryName = COALESCE(PlaTerritoryName,PlaTerritoryName)
+                                                ,WindpoolTerritory = COALESCE(WindpoolTerritory,WindpoolTerritory)
+                                                ,WindpoolTerritoryName = COALESCE(WindpoolTerritoryName,WindpoolTerritoryName)
+                                    WHERE ParcelID = ParcelID;
+
+    ELSEIF rowCountDummy>0 then
+
+           UPDATE IGD_Dummy
+           SET
+
+                  ParcelID = COALESCE(ParcelID,ParcelID)
+                  ,PropertyLocationStreet1 = COALESCE(PropertyLocationStreet1,PropertyLocationStreet1)
+                  ,PropertyLocationStreet2 = COALESCE(PropertyLocationStreet2,PropertyLocationStreet2)
+                  ,PropertyCity = COALESCE(PropertyCity,PropertyCity)
+                  ,Latitude = COALESCE(Latitude,Latitude)
+                  ,Longitude = COALESCE(Longitude,Longitude)
+                  ,County = COALESCE(County,County)
+                  ,PropertyZip = COALESCE(PropertyZip,PropertyZip)
+                  ,OwnerName = COALESCE(OwnerName,OwnerName)
+                  ,OwnerMailAdrress1 = COALESCE(OwnerMailAdrress1,OwnerMailAdrress1)
+                  ,OwnerMailAdrress2 = COALESCE(OwnerMailAdrress2,OwnerMailAdrress2)
+                  ,OwnerCity = COALESCE(OwnerCity,OwnerCity)
+                  ,OwnerState = COALESCE(OwnerState,OwnerState)
+                  ,OwnerZip = COALESCE(OwnerZip,OwnerZip)
+                  ,CitizensTerritory = COALESCE(CitizensTerritory,CitizensTerritory)
+                  ,ConstructionType = COALESCE(ConstructionType,ConstructionType)
+                  ,NumberOfStories = COALESCE(NumberOfStories,NumberOfStories)
+                  ,Families = COALESCE(Families,Families)
+                  ,YearBuilt = COALESCE(YearBuilt,YearBuilt)
+                  ,YearofRoof = COALESCE(YearofRoof,YearofRoof)
+                  ,YearofRoofVerified = COALESCE(YearofRoofVerified,YearofRoofVerified)
+                  ,RoofMaterial = COALESCE(RoofMaterial,RoofMaterial)
+                  ,LivingArea = COALESCE(LivingArea,LivingArea)
+                  ,Occupancy = COALESCE(Occupancy,Occupancy)
+                  ,MonthsUnoccupied = COALESCE(MonthsUnoccupied,MonthsUnoccupied)
+                  ,PPC = COALESCE(PPC,PPC)
+                  ,BCEG = COALESCE(BCEG,BCEG)
+                  ,TypeOfResidence = COALESCE(TypeOfResidence,TypeOfResidence)
+                  ,FloorOfResidence = COALESCE(FloorOfResidence,FloorOfResidence)
+                  ,FloridaWindpool = COALESCE(FloridaWindpool,FloridaWindpool)
+                  ,DistancetoCoast = COALESCE(DistancetoCoast,DistancetoCoast)
+                  ,DistancetoSinkhole = COALESCE(DistancetoSinkhole,DistancetoSinkhole)
+                  ,DistancetoHydrant = COALESCE(DistancetoHydrant,DistancetoHydrant)
+                  ,DistancetoFireDepartment = COALESCE(DistancetoFireDepartment,DistancetoFireDepartment)
+                  ,FireDistrict = COALESCE(FireDistrict,FireDistrict)
+                  ,RespondingFireDepartment = COALESCE(RespondingFireDepartment,RespondingFireDepartment)
+                  ,CentralStationAlarm = COALESCE(CentralStationAlarm,CentralStationAlarm)
+                  ,AutomaticSprinklers = COALESCE(AutomaticSprinklers,AutomaticSprinklers)
+                  ,Claims = COALESCE(Claims,Claims)
+                  ,LocationWindSpeed = COALESCE(LocationWindSpeed,LocationWindSpeed)
+                  ,DesignWindSpeed = COALESCE(DesignWindSpeed,DesignWindSpeed)
+                  ,InternalPressureDesign = COALESCE(InternalPressureDesign,InternalPressureDesign)
+                  ,WindborneDebrisRegion = COALESCE(WindborneDebrisRegion,WindborneDebrisRegion)
+                  ,Terrain = COALESCE(Terrain,Terrain)
+                  ,RoofDeckAttachment = COALESCE(RoofDeckAttachment,RoofDeckAttachment)
+                  ,RoofCover = COALESCE(RoofCover,RoofCover)
+                  ,RooftoWallconnection = COALESCE(RooftoWallconnection,RooftoWallconnection)
+                  ,SecondaryWaterResistance = COALESCE(SecondaryWaterResistance,SecondaryWaterResistance)
+                  ,OpeningProtection = COALESCE(OpeningProtection,OpeningProtection)
+                  ,RoofShape = COALESCE(RoofShape,RoofShape)
+                  ,DesignExposure = COALESCE(DesignExposure,DesignExposure)
+                  ,ValueofHome = COALESCE(ValueofHome,ValueofHome)
+                  ,UnattachedStructure = COALESCE(UnattachedStructure,UnattachedStructure)
+                  ,NoPriorInsurance = COALESCE(NoPriorInsurance,NoPriorInsurance)
+                  ,Condemned = COALESCE(Condemned,Condemned)
+                  ,FarmsNRanches = COALESCE(FarmsNRanches,FarmsNRanches)
+                  ,BusinessExposure = COALESCE(BusinessExposure,BusinessExposure)
+                  ,FraternityorSorority = COALESCE(FraternityorSorority,FraternityorSorority)
+                  ,Vacant = COALESCE(Vacant,Vacant)
+                  ,FloodZone = COALESCE(FloodZone,FloodZone)
+                  ,ConstructedOverWater = COALESCE(ConstructedOverWater,ConstructedOverWater)
+                  ,BuiltonLandfills = COALESCE(BuiltonLandfills,BuiltonLandfills)
+                  ,HomeDayCare = COALESCE(HomeDayCare,HomeDayCare)
+                  ,Pool = COALESCE(Pool,Pool)
+                  ,ParcelSize = COALESCE(ParcelSize,ParcelSize)
+                  ,ImprovementQuality = COALESCE(ImprovementQuality,ImprovementQuality)
+                  ,ImprovementQualityDate = COALESCE(ImprovementQualityDate,ImprovementQualityDate)
+                  ,NumberOfBuildings = COALESCE(NumberOfBuildings,NumberOfBuildings)
+                  ,NumberOfUnits = COALESCE(NumberOfUnits,NumberOfUnits)
+                  ,Crime = COALESCE(Crime,Crime)
+                  ,PoliceID = COALESCE(PoliceID,PoliceID)
+                  ,FireID = COALESCE(FireID,FireID)
+                  ,CountyName = COALESCE(CountyName,CountyName)
+                  ,PropertyState = COALESCE(PropertyState,PropertyState)
+                  ,CentroidLatitude = COALESCE(CentroidLatitude,CentroidLatitude)
+                  ,CentroidLongitude = COALESCE(CentroidLongitude,CentroidLongitude)
+                  ,PlaTerritory = COALESCE(PlaTerritory,PlaTerritory)
+                  ,PlaTerritoryName = COALESCE(PlaTerritoryName,PlaTerritoryName)
+                  ,WindpoolTerritory = COALESCE(WindpoolTerritory,WindpoolTerritory)
+                  ,WindpoolTerritoryName = COALESCE(WindpoolTerritoryName,WindpoolTerritoryName)
+
+                  WHERE ParcelID = ParcelID;
+
+    ELSEIF rowcount = 0 then
+          INSERT INTO IGD(
+            Id,ParcelID
+           ,PropertyLocationStreet1
+           ,PropertyLocationStreet2
+           ,PropertyCity
+           ,Latitude
+           ,Longitude
+           ,County
+           ,PropertyZip
+           ,OwnerName
+           ,OwnerMailAdrress1
+           ,OwnerMailAdrress2
+           ,OwnerCity
+           ,OwnerState
+           ,OwnerZip
+           ,CitizensTerritory
+           ,ConstructionType
+           ,NumberOfStories
+           ,Families
+           ,YearBuilt
+           ,YearofRoof
+           ,YearofRoofVerified
+           ,RoofMaterial
+           ,LivingArea
+           ,Occupancy
+           ,MonthsUnoccupied
+           ,PPC
+           ,BCEG
+           ,TypeOfResidence
+           ,FloorOfResidence
+           ,FloridaWindpool
+           ,DistancetoCoast
+           ,DistancetoSinkhole
+           ,DistancetoHydrant
+           ,DistancetoFireDepartment
+           ,FireDistrict
+           ,RespondingFireDepartment
+           ,CentralStationAlarm
+           ,AutomaticSprinklers
+           ,Claims
+           ,LocationWindSpeed
+           ,DesignWindSpeed
+           ,InternalPressureDesign
+           ,WindborneDebrisRegion
+           ,Terrain
+           ,RoofDeckAttachment
+           ,RoofCover
+           ,RooftoWallconnection
+           ,SecondaryWaterResistance
+           ,OpeningProtection
+           ,RoofShape
+           ,DesignExposure
+           ,ValueofHome
+           ,UnattachedStructure
+           ,NoPriorInsurance
+           ,Condemned
+           ,FarmsNRanches
+           ,BusinessExposure
+           ,FraternityorSorority
+           ,Vacant
+           ,FloodZone
+           ,ConstructedOverWater
+           ,BuiltonLandfills
+           ,HomeDayCare
+           ,Pool
+           ,ParcelSize
+           ,ImprovementQuality
+           ,ImprovementQualityDate
+           ,NumberOfBuildings
+           ,NumberOfUnits
+           ,Crime
+           ,PoliceID
+           ,FireID
+           ,CountyName
+           ,PropertyState
+           ,CentroidLatitude
+           ,CentroidLongitude
+           ,PlaTerritory
+           ,PlaTerritoryName
+           ,WindpoolTerritory
+           ,WindpoolTerritoryName)
+            VALUES(Id,ParcelID
+           ,PropertyLocationStreet1
+           ,PropertyLocationStreet2
+           ,PropertyCity
+           ,Latitude
+           ,Longitude
+           ,County
+           ,PropertyZip
+           ,OwnerName
+           ,OwnerMailAdrress1
+           ,OwnerMailAdrress2
+           ,OwnerCity
+           ,OwnerState
+           ,OwnerZip
+           ,CitizensTerritory
+           ,ConstructionType
+           ,NumberOfStories
+           ,Families
+           ,YearBuilt
+           ,YearofRoof
+           ,YearofRoofVerified
+           ,RoofMaterial
+           ,LivingArea
+           ,Occupancy
+           ,MonthsUnoccupied
+           ,PPC
+           ,BCEG
+           ,TypeOfResidence
+           ,FloorOfResidence
+           ,FloridaWindpool
+           ,DistancetoCoast
+           ,DistancetoSinkhole
+           ,DistancetoHydrant
+           ,DistancetoFireDepartment
+           ,FireDistrict
+           ,RespondingFireDepartment
+           ,CentralStationAlarm
+           ,AutomaticSprinklers
+           ,Claims
+           ,LocationWindSpeed
+           ,DesignWindSpeed
+           ,InternalPressureDesign
+           ,WindborneDebrisRegion
+           ,Terrain
+           ,RoofDeckAttachment
+           ,RoofCover
+           ,RooftoWallconnection
+           ,SecondaryWaterResistance
+           ,OpeningProtection
+           ,RoofShape
+           ,DesignExposure
+           ,ValueofHome
+           ,UnattachedStructure
+           ,NoPriorInsurance
+           ,Condemned
+           ,FarmsNRanches
+           ,BusinessExposure
+           ,FraternityorSorority
+           ,Vacant
+           ,FloodZone
+           ,ConstructedOverWater
+           ,BuiltonLandfills
+           ,HomeDayCare
+           ,Pool
+           ,ParcelSize
+           ,ImprovementQuality
+           ,ImprovementQualityDate
+           ,NumberOfBuildings
+           ,NumberOfUnits
+           ,Crime
+           ,PoliceID
+           ,FireID
+           ,CountyName
+           ,PropertyState
+           ,CentroidLatitude
+           ,CentroidLongitude
+           ,PlaTerritory
+           ,PlaTerritoryName
+           ,WindpoolTerritory
+           ,WindpoolTerritoryName);
+
+
+    ELSEIF rowCountDummy=0 then
+
+           INSERT INTO IGD_Dummy
+           (ParcelID
+           ,PropertyLocationStreet1
+           ,PropertyLocationStreet2
+           ,PropertyCity
+           ,Latitude
+           ,Longitude
+           ,County
+           ,PropertyZip
+           ,OwnerName
+           ,OwnerMailAdrress1
+           ,OwnerMailAdrress2
+           ,OwnerCity
+           ,OwnerState
+           ,OwnerZip
+           ,CitizensTerritory
+           ,ConstructionType
+           ,NumberOfStories
+           ,Families
+           ,YearBuilt
+           ,YearofRoof
+           ,YearofRoofVerified
+           ,RoofMaterial
+           ,LivingArea
+           ,Occupancy
+           ,MonthsUnoccupied
+           ,PPC
+           ,BCEG
+           ,TypeOfResidence
+           ,FloorOfResidence
+           ,FloridaWindpool
+           ,DistancetoCoast
+           ,DistancetoSinkhole
+           ,DistancetoHydrant
+           ,DistancetoFireDepartment
+           ,FireDistrict
+           ,RespondingFireDepartment
+           ,CentralStationAlarm
+           ,AutomaticSprinklers
+           ,Claims
+           ,LocationWindSpeed
+           ,DesignWindSpeed
+           ,InternalPressureDesign
+           ,WindborneDebrisRegion
+           ,Terrain
+           ,RoofDeckAttachment
+           ,RoofCover
+           ,RooftoWallconnection
+           ,SecondaryWaterResistance
+           ,OpeningProtection
+           ,RoofShape
+           ,DesignExposure
+           ,ValueofHome
+           ,UnattachedStructure
+           ,NoPriorInsurance
+           ,Condemned
+           ,FarmsNRanches
+           ,BusinessExposure
+           ,FraternityorSorority
+           ,Vacant
+           ,FloodZone
+           ,ConstructedOverWater
+           ,BuiltonLandfills
+           ,HomeDayCare
+           ,Pool
+           ,ParcelSize
+          ,ImprovementQuality
+           ,ImprovementQualityDate
+           ,NumberOfBuildings
+           ,NumberOfUnits
+           ,Crime
+           ,PoliceID
+           ,FireID
+           ,Id
+           ,CountyName
+           ,PropertyState
+           ,CentroidLatitude
+           ,CentroidLongitude
+           ,PlaTerritory
+           ,PlaTerritoryName
+           ,WindpoolTerritory
+           ,WindpoolTerritoryName)
+     VALUES
+           (ParcelID
+           ,PropertyLocationStreet1
+           ,PropertyLocationStreet2
+           ,PropertyCity
+           ,Latitude
+           ,Longitude
+           ,County
+           ,PropertyZip
+           ,OwnerName
+           ,OwnerMailAdrress1
+           ,OwnerMailAdrress2
+           ,OwnerCity
+           ,OwnerState
+           ,OwnerZip
+           ,CitizensTerritory
+           ,ConstructionType
+           ,NumberOfStories
+           ,Families
+           ,YearBuilt
+           ,YearofRoof
+           ,YearofRoofVerified
+           ,RoofMaterial
+           ,LivingArea
+           ,Occupancy
+           ,MonthsUnoccupied
+           ,PPC
+           ,BCEG
+           ,TypeOfResidence
+           ,FloorOfResidence
+           ,FloridaWindpool
+           ,DistancetoCoast
+           ,DistancetoSinkhole
+           ,DistancetoHydrant
+           ,DistancetoFireDepartment
+           ,FireDistrict
+           ,RespondingFireDepartment
+           ,CentralStationAlarm
+           ,AutomaticSprinklers
+           ,Claims
+           ,LocationWindSpeed
+           ,DesignWindSpeed
+           ,InternalPressureDesign
+           ,WindborneDebrisRegion
+           ,Terrain
+           ,RoofDeckAttachment
+           ,RoofCover
+           ,RooftoWallconnection
+           ,SecondaryWaterResistance
+           ,OpeningProtection
+           ,RoofShape
+           ,DesignExposure
+           ,ValueofHome
+           ,UnattachedStructure
+           ,NoPriorInsurance
+           ,Condemned
+           ,FarmsNRanches
+           ,BusinessExposure
+           ,FraternityorSorority
+           ,Vacant
+           ,FloodZone
+           ,ConstructedOverWater
+           ,BuiltonLandfills
+           ,HomeDayCare
+           ,Pool
+           ,ParcelSize
+           ,ImprovementQuality
+           ,ImprovementQualityDate
+           ,NumberOfBuildings
+           ,NumberOfUnits
+           ,Crime
+           ,PoliceID
+           ,FireID
+           ,Id
+           ,CountyName
+           ,PropertyState
+           ,CentroidLatitude
+           ,CentroidLongitude
+           ,PlaTerritory
+           ,PlaTerritoryName
+           ,WindpoolTerritory
+           ,WindpoolTerritoryName);
+
+    END if;
+
+END ;
 
 CREATE PROCEDURE usp_GetIGDbyKeyAndPaging(
 	IN KeyVal varchar(50)
@@ -1270,4 +1873,3 @@ set pageindex=CurrentPageNo  * PageSize;
 SELECT * FROM IGD 	LIMIT pageindex,PageSize;
 
 END ;
-
