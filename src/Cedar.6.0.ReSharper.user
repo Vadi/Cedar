@@ -1,7 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-<<<<<<< HEAD
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/d:Properties/f:AssemblyInfo.cs" caret="848" fromTop="20" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:CedarXml.xml" caret="519" fromTop="22" />
       <File id="AC6D3CF1-12B3-48A0-8B4B-EA1347424E0D/f:IDbQueryBehaviour.cs" caret="0" fromTop="0" />
@@ -150,7 +149,6 @@
   </SettingsComponent>
   <CompletionStatisticsManager>
     <ItemStatistics item="CSharpCodeCompletionContext">
-<<<<<<< HEAD
       <Item value="IdWorker`0" priority="31" />
       <Item value="var" priority="255" />
       <Item value="new" priority="447" />
@@ -459,12 +457,10 @@
       <Item value="db_type" priority="26" />
       <Item value="total_count" priority="54" />
       <Item value="max_count" priority="26" />
->>>>>>> origin/gk
+
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
       <Item value="IsNotNull`0" priority="26" />
-<<<<<<< HEAD
-=======
       <Item value="AreEqual`1" priority="215" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
@@ -560,24 +556,23 @@
       <Item value="Sequential" priority="27" />
       <Item value="Regional" priority="23" />
     </ItemStatistics>
-<<<<<<< HEAD
     <ItemStatistics item="Qualified:CedarTest.RegionalStartegy">
       <Item value="ShardSelectionStrategy" priority="26" />
-=======
+
     <ItemStatistics item="Qualified:Cedar.IDataReader">
       <Item value="GetShardStrategyById`0" priority="76" />
->>>>>>> origin/gk
+
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cedar.ShardStartegyData">
       <Item value="Region" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cedar.IdWorker">
-<<<<<<< HEAD
+
       <Item value="DecomposeKey`0" priority="27" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="Add`0" priority="26" />
-=======
+
       <Item value="DecomposeKey`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Cedar.ShardWile">
@@ -651,17 +646,17 @@
       <Name>Session #1</Name>
       <Elements>
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests" type="MsTestTestClassElement" TypeName="CedarTest.AppContextTests" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
-<<<<<<< HEAD
+
         <UnitTestElement Provider="MSTest" Id="CedarTest.IntegratedTests" type="MsTestTestClassElement" TypeName="CedarTest.IntegratedTests" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.IntegratedTests.IntegratedTest" ParentId="CedarTest.IntegratedTests" type="MsTestTestMethodElement" MethodName="IntegratedTest" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchema" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchema" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchemaForCustomStartegy" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchemaForCustomStartegy" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchemaOnMySql" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchemaOnMySql" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
-=======
+
         <UnitTestElement Provider="MSTest" Id="CedarTest.CedarSessionTest" type="MsTestTestClassElement" TypeName="CedarTest.CedarSessionTest" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.AppContextTests.Test_SetupSchema" ParentId="CedarTest.AppContextTests" type="MsTestTestMethodElement" MethodName="Test_SetupSchema" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
         <UnitTestElement Provider="MSTest" Id="CedarTest.CedarSessionTest.TestSave" ParentId="CedarTest.CedarSessionTest" type="MsTestTestMethodElement" MethodName="TestSave" Project="C93DCCA1-0F06-410E-BAF6-861BBC4A9584" />
->>>>>>> origin/gk
+
       </Elements>
     </Session>
   </UnitTestSessions>
