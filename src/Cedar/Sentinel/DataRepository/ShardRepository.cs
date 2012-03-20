@@ -35,7 +35,7 @@ return Get(t => t.ShardId > 0).ToList();
         {
             using (var connection = GetConnection())
             {
-                IEnumerable<Shard> shardList = connection.Query<Shard>("Select shard_id, connection_string,db_type from shard");
+                IEnumerable<Shard> shardList = connection.Query<Shard>("Select shard_id, connection_string,db_type,is_schema_exists from shard");
 
                 return shardList;
             }
@@ -45,7 +45,7 @@ return Get(t => t.ShardId > 0).ToList();
         {
             using (var connection = GetConnection())
             {
-                string query = "Select shard_id, connection_string,db_type,[total_count],[max_count] from shard where application_name=@appname";
+                string query = "Select shard_id, connection_string,db_type,[total_count],[max_count],is_schema_exists from shard where application_name=@appname";
 
 
                 var parameters = new DynamicParameters();
@@ -60,7 +60,7 @@ return Get(t => t.ShardId > 0).ToList();
 
             using (var connection = GetConnection())
             {
-                string query = "Select shard_id,application_name, connection_string,db_type from shard" +
+                string query = "Select shard_id,application_name, connection_string,db_type,is_schema_exists from shard" +
                                      " WHERE shard_id = @shard_id";
 
                 var parameters = new DynamicParameters();
@@ -96,9 +96,20 @@ return Get(t => t.ShardId > 0).ToList();
         {
             using (var connection = GetConnection())
             {
+                string query = "update Shard set is_schema_exists=1 WHERE shard_id = @SId";
+                var parameters = new DynamicParameters();
+                parameters.Add("@SId", shardId);
+                connection.Execute(query, parameters);
+            }
+        }
+
+        internal void UpdateShardCount(long shardId)
+        {
+            using (var connection = GetConnection())
+            {
                 string query = "update Shard set total_count=(total_count)+1 WHERE shard_id = @SId";
                 var parameters = new DynamicParameters();
-                parameters.Add("ShardId", shardId);
+                parameters.Add("@SId", shardId);
                 connection.Execute(query, parameters);
             }
         }

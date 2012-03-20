@@ -137,5 +137,11 @@ namespace Cedar
         {
             throw new NotImplementedException();
         }
+
+
+        public void UpdateShardCount(long shardId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

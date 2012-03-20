@@ -16,3 +16,4 @@ D:\Cedar\Cedar\src\Cedar\bin\Debug\Cedar.pdb
 D:\Projects\Cedar\src\Cedar\bin\Debug\log4net.dll
 D:\Projects\Cedar\src\Cedar\bin\Debug\Schema Dump\IGDTEST.SQL
 D:\Projects\Cedar\src\Cedar\bin\Debug\MySql.Data.dll
+D:\Projects\Cedar\src\Cedar\bin\Debug\Cedar.XML

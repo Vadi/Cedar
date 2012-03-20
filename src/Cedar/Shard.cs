@@ -21,6 +21,7 @@ namespace Cedar
         internal string db_type { get; set; }
         internal long total_count { get; set; }
         internal long max_count { get; set; }
+        internal bool?  is_schema_exists { get; set; }
 
     }
 }

@@ -31,14 +31,14 @@ namespace Cedar
                 //    var uniqueId = worker.GetUniqueId();
                 //    _currentShard = uniqueId;
                 //}
-
+                
                 _currentShard = ShardStrategy.ShardSelectionStrategy.SelectShardIdForExistingObject(new ShardStartegyData() { StrategyType = Strategy.Sequential, App = _app });
 
                 return _currentShard;
             }
         }
 
-        private bool _isSetupSchemaRequired= false ;
+      
         /// <summary>
         /// Check if the new setup required 
         /// </summary>
@@ -46,13 +46,15 @@ namespace Cedar
             //var worker = new IdWorker(CurrentShard);
             //var shardId = worker.DecomposeKey(CurrentShard);
 
-            var shard = _app.Shards.Where(t => t.shard_id == _currentShard).FirstOrDefault();
-            
-            if (shard != null)
-            {
-                _isSetupSchemaRequired = shard.total_count == 0 ;
-            }
-            return _isSetupSchemaRequired;
+            var shard = _app.Shards.Where(t => t.shard_id == CurrentShard).FirstOrDefault();
+           // var shard = new DataFactory().GetdataReader(FetchMode.Sql).GetShardById(CurrentShard);
+
+            if (shard != null && shard.is_schema_exists != null)
+           {
+                return shard.is_schema_exists.Value != true;
+           }
+            return true;
+
         }  }
         // 1. I need to have all shards that are configured for this app
         // 2. I need to know how to decode the uuid and understand a shard id out of it
@@ -94,10 +96,18 @@ namespace Cedar
             cedarSession.SetupSchema(appSchema);
             cedarSession.Close();
             new DataFactory().GetdataReader(FetchMode.Sql).UpdateShard(shardId);
+            _app.Shards = new DataFactory().GetdataReader(FetchMode.Sql).GetAllShardByAppname(_app.ApplicationName);
             return uniqueId;
 
         }
+        public void UpdateShard(long uuid)
+        {
+            var worker = new IdWorker(uuid);
+            var uniqueId = worker.DecomposeKey(uuid);
+            new DataFactory().GetdataReader(FetchMode.Sql).UpdateShardCount(uniqueId);
+            _app.Shards = new DataFactory().GetdataReader(FetchMode.Sql).GetAllShardByAppname(_app.ApplicationName);
 
+        }
         /// <summary>
         ///
         /// </summary>

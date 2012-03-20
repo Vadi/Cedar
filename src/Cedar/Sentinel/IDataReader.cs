@@ -15,6 +15,7 @@ namespace Cedar
         IList<ShardWile> GetShardStrategy();
         void UpdateShardWile(long shardId);
         void UpdateShard(long shardId);
+        void UpdateShardCount(long shardId);
     }
 
 }

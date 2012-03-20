@@ -56,5 +56,12 @@ namespace Cedar
             var shardStrategy = new ShardRepository();
             shardStrategy.UpdateShard(shardId);
         }
+
+
+        public void UpdateShardCount(long shardId)
+        {
+            var shardStrategy = new ShardRepository();
+            shardStrategy.UpdateShardCount(shardId);
+        }
     }
 }
