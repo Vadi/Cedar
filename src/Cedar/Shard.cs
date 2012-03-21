@@ -6,7 +6,9 @@ using System.Text;
 namespace Cedar
 {
 
-
+    /// <summary>
+    /// Keeps the details of a shard
+    /// </summary>
     public class Shard
     {
 

@@ -5,10 +5,22 @@ using System.Text;
 
 namespace Cedar
 {
+    /// <summary>
+    /// Keeps the schema information for an application
+    /// </summary>
     public class AppSchema
     {
+        /// <summary>
+        /// Application Id
+        /// </summary>
         public int application_id { get; set; }
+        /// <summary>
+        /// Application name
+        /// </summary>
         public string application_name { get; set; }
+        /// <summary>
+        /// Schema file name
+        /// </summary>
         public string schema { get; set; }
     }
 }

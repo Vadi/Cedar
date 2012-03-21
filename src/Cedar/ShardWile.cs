@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Cedar
 {
+    /// <summary>
+    /// Keeps for details of ShardWile table
+    /// </summary>
     public class ShardWile
     {
         public long Id { get; set; }

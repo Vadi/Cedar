@@ -19,7 +19,7 @@ namespace Cedar.Sharding.ShardStrategy.ShardSelection
         }
 
         /// <summary>
-        /// 
+        /// Returns the available shard
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>

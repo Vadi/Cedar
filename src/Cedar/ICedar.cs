@@ -13,7 +13,11 @@ namespace Cedar
         /// <param name="appName"></param>
         /// <returns></returns>
         long SetupSchema();
-
+        /// <summary>
+        /// Get the session to perform the database operation
+        /// </summary>
+        /// <param name="uuid"></param>
+        /// <returns></returns>
         ICedarSession GetSession(long uuid);
 
 

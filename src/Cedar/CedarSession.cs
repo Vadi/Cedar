@@ -16,6 +16,9 @@ using log4net;
 
 namespace Cedar
 {
+    /// <summary>
+    /// This class creates session to execute select, insert,update and delete query.
+    /// </summary>
     public class CedarSession : ICedarSession
     {
        // readonly ILog log = LogManager.GetLogger(typeof(CedarSession));
@@ -45,6 +48,9 @@ namespace Cedar
         {
             Dispose();
         }
+        /// <summary>
+        /// Set the connection string to specific shard on the basis of Unique Id
+        /// </summary>
         private void SetConnectionString()
         {
             var reader = new Cedar.SqlDataReader();
@@ -58,7 +64,11 @@ namespace Cedar
             _connectionString = shard.connection_string;
             _dbType = shard.db_type;
         }
-       
+       /// <summary>
+       ///Read the schema from file in Schema dump folder 
+       /// and Setup the schema (table, view , stored procedure etc) on different shards 
+       /// </summary>
+       /// <param name="appSchema"></param>
         internal void SetupSchema(AppSchema appSchema)
         {
             try
@@ -79,13 +89,15 @@ namespace Cedar
             
 
         }
-
+        /// <summary>
+        /// Get the schema from file in Schema dump folder
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         internal string GetSchemaFromFile(string fileName)
         {
             try
             {
-
-
                 var executionApth = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Schema Dump",
                                                            fileName);
                 var schema = System.IO.File.ReadAllText(executionApth);
@@ -99,7 +111,11 @@ namespace Cedar
             
 
         }
-
+        /// <summary>
+        /// Get the schema file name for an application
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <returns></returns>
         private string GetSchemaQuery(string schema)
         {
             string newQuery = String.Empty;
@@ -109,11 +125,11 @@ namespace Cedar
             return newQuery;
         }
         /// <summary>
-        /// Execute the query 
+        /// Execute the insert query 
         /// </summary>
-        /// <param name="sql"></param>
-        /// <param name="param"></param>
-        /// <param name="commandType"></param>
+        /// <param name="sql">sql query or procedure name</param>
+        /// <param name="param">parameters dictionary</param>
+        /// <param name="commandType">command type (text or stored procedure)</param>
         /// <returns>>Number of rows affected</returns>
         public int Insert(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
@@ -128,7 +144,13 @@ namespace Cedar
                 _transaction = _sqlConnection.BeginTransaction();
             return SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
         }
-
+        /// <summary>
+        /// Execute the Update query 
+        /// </summary>
+        /// <param name="sql">sql query or procedure name</param>
+        /// <param name="param">parameters dictionary</param>
+        /// <param name="commandType">command type (text or stored procedure)</param>
+        /// <returns>>Number of rows affected</returns>
         public void Update(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
             if (commandType != null && (commandType.Value == CommandType.Query))
@@ -141,7 +163,13 @@ namespace Cedar
                 _transaction = _sqlConnection.BeginTransaction();
             SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
         }
-
+        /// <summary>
+        /// Execute the Delete query 
+        /// </summary>
+        /// <param name="sql">sql query or procedure name</param>
+        /// <param name="param">parameters dictionary</param>
+        /// <param name="commandType">command type (text or stored procedure)</param>
+        /// <returns>>Number of rows affected</returns>
         public void Delete(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
             if (commandType != null && (commandType.Value == CommandType.Query))
@@ -154,7 +182,13 @@ namespace Cedar
                 _transaction = _sqlConnection.BeginTransaction();
             SqlMapper.Execute(_sqlConnection, sql, param, _transaction, _commandTimeout, _commandType);
         }
-
+        /// <summary>
+        /// Get the generic type result set  
+        /// </summary>
+        /// <param name="sql">sql query or procedure name</param>
+        /// <param name="param">parameters dictionary</param>
+        /// <param name="commandType">command type (text or stored procedure)</param>
+        /// <returns>>Number of rows affected</returns>
         public IEnumerable<T> Select<T>(string sql, dynamic param = null, Cedar.CommandType? commandType = null)
         {
             if (commandType != null && (commandType.Value == CommandType.Query))
@@ -167,6 +201,13 @@ namespace Cedar
                 _transaction = _sqlConnection.BeginTransaction();
             return SqlMapper.Query<T>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, _commandType);
         }
+        /// <summary>
+        /// Get the object type result set
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="param"></param>
+        /// <param name="commandType"></param>
+        /// <returns></returns>
         public IEnumerable<dynamic> Select(string sql, dynamic param = null, CommandType? commandType = null)
         {
             if (commandType != null && (commandType.Value == CommandType.Query))
@@ -179,13 +220,18 @@ namespace Cedar
                 _transaction = _sqlConnection.BeginTransaction();
             return SqlMapper.Query<dynamic>(_sqlConnection, sql, param, _transaction, true, _commandTimeout, _commandType);
         }
-       
+       /// <summary>
+       /// Dispose the instance of this class
+       /// </summary>
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
+        /// <summary>
+        ///Dispose the instance of this class
+        /// </summary>
+        /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
         {
             if (!disposed)
@@ -205,11 +251,16 @@ namespace Cedar
                 disposed = true;
             }
         }
+        /// <summary>
+        /// Destructor of the class
+        /// </summary>
         ~CedarSession()
         {
             Dispose(false);
         }
-
+        /// <summary>
+        /// Get the opened connection for given connection string
+        /// </summary>
         private void GetOpenConnection()
         {
             if (_sqlConnection == null && !String.IsNullOrEmpty(_connectionString))
@@ -239,6 +290,11 @@ namespace Cedar
             }
 
         }
+        /// <summary>
+        /// Get the connection object for given provider given along with connection string
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <returns></returns>
         private DbConnection GetConnection(string connectionString)
         {
             string providerName=String.Empty ;
@@ -295,7 +351,11 @@ namespace Cedar
 
        
     }
-
+    /// <summary>
+    /// Command type 
+    /// Query : ANSI sql query
+    /// StoredProcedure: name of stored procedure
+    /// </summary>
     public enum CommandType
     {
         Query,

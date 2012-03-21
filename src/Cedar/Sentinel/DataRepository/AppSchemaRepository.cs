@@ -8,6 +8,11 @@ namespace Cedar.Sentinel.DataRepository
 {
     public class AppSchemaRepository : BaseRepository
     {
+        /// <summary>
+        /// Add the application schema
+        /// </summary>
+        /// <param name="applicationName"></param>
+        /// <param name="applicationSchema"></param>
         public void AddSchema(string applicationName,string applicationSchema)
         {
             using (var connection = GetConnection())
@@ -21,6 +26,11 @@ namespace Cedar.Sentinel.DataRepository
                 connection.Execute(query, parameters);
             }
         }
+        /// <summary>
+        /// Updates the application schema
+        /// </summary>
+        /// <param name="applicationName"></param>
+        /// <param name="applicationSchema"></param>
         public void UpdateAppSchema(string applicationName, string applicationSchema)
         {
             using (var connection = GetConnection())
@@ -34,6 +44,10 @@ namespace Cedar.Sentinel.DataRepository
                 connection.Execute(query, parameters);
             }
         }
+        /// <summary>
+        /// Delete the application schema
+        /// </summary>
+        /// <param name="applicationName"></param>
         public void DeleteApplication(string applicationName)
         {
             using (var connection = GetConnection())

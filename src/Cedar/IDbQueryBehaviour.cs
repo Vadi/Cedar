@@ -6,7 +6,9 @@ using System.Data ;
 
 namespace Cedar
 {
-
+    /// <summary>
+    /// Query behavior type
+    /// </summary>
     public interface IDbQueryBehaviour
     {
         int Insert(string sql, dynamic param = null, Cedar.CommandType? commandType = null);

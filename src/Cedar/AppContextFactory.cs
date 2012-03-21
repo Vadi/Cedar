@@ -15,7 +15,9 @@ namespace Cedar
     public class CedarAppStore
     {
         private readonly Dictionary<string, AppContext> _createdContexts = null;
-
+        /// <summary>
+        /// Returns the context of given application
+        /// </summary>
         public Dictionary<string, AppContext> CreatedContexts
         {
             get { return _createdContexts; }
@@ -27,7 +29,9 @@ namespace Cedar
         {
             this._createdContexts = new Dictionary<string, AppContext>();
         }
-
+        /// <summary>
+        /// Static instance of CedarAppStore
+        /// </summary>
         public static CedarAppStore Instance
         {
             
@@ -39,7 +43,11 @@ namespace Cedar
                 return _instance;
             }
         }
-
+        /// <summary>
+        /// Creates a context for a given application
+        /// </summary>
+        /// <param name="appName"></param>
+        /// <returns></returns>
         public AppContext GetContextOf(string appName)
         {
             // First figure out an app name from this dictionary using this uuid

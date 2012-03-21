@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Cedar
 {
+    /// <summary>
+    ///
+    /// </summary>
     internal class Key
     {
         internal byte[] TimeStamp { get; set; }

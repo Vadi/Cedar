@@ -100,6 +100,10 @@ namespace Cedar
             return uniqueId;
 
         }
+        /// <summary>
+        /// Update the total count for a shard
+        /// </summary>
+        /// <param name="uuid"></param>
         public void UpdateShard(long uuid)
         {
             var worker = new IdWorker(uuid);
@@ -109,7 +113,7 @@ namespace Cedar
 
         }
         /// <summary>
-        ///
+        /// Returns the instance of an application
         /// </summary>
         public App App
         {
@@ -122,7 +126,7 @@ namespace Cedar
 
 
         /// <summary>
-        ///
+        ///Create new session for database operation
         /// </summary>
         /// <param name="uuid"></param>
         /// <returns></returns>

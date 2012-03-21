@@ -27,6 +27,11 @@ namespace Cedar
                 return shardPileList.ToList();
             }
         }
+        /// <summary>
+        /// Get the shrad strategy for a given shard
+        /// </summary>
+        /// <param name="shardId"></param>
+        /// <returns></returns>
         public IList<ShardWile> GetShardStrategyById(long shardId)
         {
 
@@ -44,6 +49,10 @@ namespace Cedar
                 return shardPileList.ToList();
             }
         }
+        /// <summary>
+        /// Updates the total counts of a shard
+        /// </summary>
+        /// <param name="shardId"></param>
         public void UpdateShardStrategy(long shardId)
         {
 
@@ -57,6 +66,12 @@ namespace Cedar
 
             }
         }
+        /// <summary>
+        /// Add new strategy
+        /// </summary>
+        /// <param name="shardId"></param>
+        /// <param name="totalCount"></param>
+        /// <param name="maxCount"></param>
         public void AddShardStrategy(long shardId,int totalCount,int maxCount)
         {
             try

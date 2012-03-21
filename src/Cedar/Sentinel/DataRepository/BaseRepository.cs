@@ -14,7 +14,10 @@ namespace Cedar
     public class BaseRepository
     {
         //static readonly ILog log = LogManager.GetLogger(typeof(BaseRepository));
-
+        /// <summary>
+        /// Get opened connection for Cedar database
+        /// </summary>
+        /// <returns></returns>
         public IDbConnection GetConnection()
         {
 
@@ -44,6 +47,11 @@ namespace Cedar
 
             return connection;
         }
+        /// <summary>
+        /// Get the oledb command object
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <returns></returns>
         public IDbCommand GetCommand(IDbConnection connection)
         {
             IDbCommand command = new OleDbCommand();

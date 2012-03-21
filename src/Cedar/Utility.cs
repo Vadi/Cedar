@@ -10,6 +10,7 @@ namespace Cedar
 {
     internal static class Utility
     {
+
         internal static Key GenerateKey(long shardId)
         {
             return new Key();

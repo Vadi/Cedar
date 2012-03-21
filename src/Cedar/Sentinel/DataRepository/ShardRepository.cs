@@ -10,27 +10,15 @@ using System.Data.OleDb;
 
 namespace Cedar
 {
-    /*public class ShardRepository : DataRepository<Shard>
-{
-
-public override void CreateMapping(Mapping<Shard> mapping)
-{
-mapping.Named("Shard");
-
-mapping.Identity(e => e.ShardId).Named("shard_id").DbType("bigint not null").PrimaryKey();
-mapping.Map(e => e.ConnectionString).Named("connection_string").DbType("varchar(4000) not null");
-}
-
-public List<Shard> GetAllShard()
-{
-return Get(t => t.ShardId > 0).ToList();
-}
-
-}*/
-
+   /// <summary>
+   ///Shard Repository 
+   /// </summary>
     public class ShardRepository : BaseRepository
     {
-
+        /// <summary>
+        /// Get all shards stored in the Cedar database
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Shard> GetAllShard()
         {
             using (var connection = GetConnection())
@@ -40,7 +28,11 @@ return Get(t => t.ShardId > 0).ToList();
                 return shardList;
             }
         }
-
+        /// <summary>
+        /// Get all shards for a given application  stored in the Cedar database
+        /// </summary>
+        /// <param name="applicationName"></param>
+        /// <returns></returns>
         public IEnumerable<Shard> GetAllShard(string applicationName)
         {
             using (var connection = GetConnection())
@@ -55,6 +47,11 @@ return Get(t => t.ShardId > 0).ToList();
                 return shardList;
             }
         }
+        /// <summary>
+        /// Get shards information for given shard id
+        /// </summary>
+        /// <param name="shardId"></param>
+        /// <returns></returns>
         public Shard GetShardById(long shardId)
         {
 
@@ -72,7 +69,11 @@ return Get(t => t.ShardId > 0).ToList();
                 return shard;
             }
         }
-
+        /// <summary>
+        /// Get the application schema for a given application name
+        /// </summary>
+        /// <param name="applicationName"></param>
+        /// <returns></returns>
         public AppSchema GetAppSchema(string applicationName)
         {
 
@@ -91,7 +92,10 @@ return Get(t => t.ShardId > 0).ToList();
                 return appSchema;
             }
         }
-
+        /// <summary>
+        /// Update the schema setup status
+        /// </summary>
+        /// <param name="shardId"></param>
         internal void UpdateShard(long shardId)
         {
             using (var connection = GetConnection())
@@ -102,7 +106,10 @@ return Get(t => t.ShardId > 0).ToList();
                 connection.Execute(query, parameters);
             }
         }
-
+        /// <summary>
+        /// Updates the total count on a shard
+        /// </summary>
+        /// <param name="shardId"></param>
         internal void UpdateShardCount(long shardId)
         {
             using (var connection = GetConnection())
