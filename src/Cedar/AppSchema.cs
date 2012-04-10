@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,12 @@ using System.Text;
 namespace Cedar
 {
     /// <summary>
-    /// Keeps the schema information for an application
+    /// Keeps the schema information for an application. 
     /// </summary>
     public class AppSchema
     {
+	//TODO: public properties should not have underscores in its name. Naming convention issue.
+
         /// <summary>
         /// Application Id
         /// </summary>
